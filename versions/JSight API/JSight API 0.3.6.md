@@ -7,37 +7,6 @@ Document version: *0.1.19-en*
 
 Authors: *Reznitsky M., Ivanov A., Malyshev K.*
 
-## Edit history
-
-|    Date    | JSight API Version | Document version | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |       Author        |
-| :--------: | :----------------: | :--------------: |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| :-----------------: |
-| 11.02.2022 |     0.3.6          |      0.1.19-en   | <ul><li>The DIRECTIVE `DIR` has been replaced by DIRECTIVES `MACRO` and `PASTE`.</li><li>Minor improvements to COMMENTS.</li><li>Changed dependency to JSight Schema 0.3.5.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Andrei Ivanov       |
-| 13.01.2022 |     0.3.5          |      0.1.18-en   | Changed dependency on JSight Schema 0.3.4.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Konstantin Malyshev |
-| 12.01.2022 |     0.3.4          |      0.1.17-en?  | Minor change in principle 12.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Konstantin Malyshev |
-| 11.01.2022 |     0.3.4          |      0.1.16-en?  | An example was added in section “PARAMETER "Path"”.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Konstantin Malyshev |
-| 10.01.2022 |     0.3.4          |      0.1.15-en?  | <ul><li>The requirement req.japi.http_method.query 0.3 was changed, the new version is 0.4. DIRECTIVE `Query` now must have a DIRECTIVE `Body`.</li><li>The requirement req.japi.jsight 0.3 was changed, the new version is 0.4. DIRECTIVE `JSIGHT` now cannot be omitted.</li><li>The requirement req.japi.server.base_url 0.3 was changed, the new version is 0.4. DIRECTIVE `BaseUrl` now does not have a body.</li><li>The requirement req.japi.path_rules 0.3 was changed, the new version is 0.4. Paths `/cats/{id}` and `/cats/{catId}` now are considered identical and invalid.</li><li>Minor edits according to docusaurus format.</li></ul>                                                                                                                                                                                                                                            | Konstantin Malyshev |
-| 06.01.2022 |     0.3.3          |      0.1.14-en?  | Changed dependency on JSight Schema 0.3.3. Changes in formatting for Docusaurus. Small fixes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Konstantin Malyshev |
-| 29.12.2021 |     0.3.2          |      0.1.13-en   | Translation in English.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Konstantin Malyshev |
-| 22.12.2021 |     0.3.2          |      0.1.13      | Minor edits.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Konstantin Malyshev |
-| 22.12.2021 |     0.3.2          |      0.1.12      | Changed dependency to JSight Schema 0.3.2. Clarifications of some wordings without changing the meaning.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Konstantin Malyshev |
-| 17.12.2021 |     0.3.2          |      0.1.11      | Minor refinements about Markdown and comments.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Konstantin Malyshev |
-| 14.12.2021 |     0.3.2          |      0.1.10      | Minor clarifications of wordings within the same content.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Konstantin Malyshev |
-| 06.12.2021 |     0.3.2          |      0.1.9       | Minor edits beside the point.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Konstantin Malyshev |
-| 03.12.2021 |     0.3.2          |      0.1.8       | <ul><li>The principle of language design 12 (OpenAPI compliance) was added.</li><li>The concept of “relative PATH” has been abolished. All paths are now absolute. </li><li>The requirement req.japi.context.default_child was changed, the new version is 0.4. Now it is possible to omit the default DIRECTIVE only if it is the only one. </li><li>The requirement req.japi.url was changed,  the new version is 0.4. The change is due to the cancellation of relative paths.</li><li>The requirement req.japi.http_method was changed, the new version is 0.4. The change is due to the cancellation of relative paths.</li><li>The status of the requirement req.japi.enum 0.3 was changed to POSTPONED.</li><li>The requirement req.japi.path_rules was changed, the new version is 0.2. The change is due to the cancellation of relative paths.</li><li>Minor blots were fixed</li></ul> | Konstantin Malyshev |
-| 03.12.2021 |     0.3.1          |      0.1.7       | Clarifications of the rules for parentheses (explicit body boundaries).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Konstantin Malyshev |
-| 19.11.2021 |     0.3.1          |      0.1.6       | Adding TODO comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Konstantin Malyshev |
-| 12.11.2021 |     0.3.1          |      0.1.5       | Typo is fixed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Konstantin Malyshev |
-| 09.11.2021 |     0.3.1          |      0.1.4       | Minor inconsistencies in the use of quotes in directive parameters have been fixed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Konstantin Malyshev |
-| 02.11.2021 |     0.3.1          |      0.1.3       | Changed dependency to JSight Schema 0.3.1 (was 0.3.0).<br /> Minor edits beside the point.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Konstantin Malyshev |
-| 19.10.2021 |     0.3.0          |      0.1.2       | Typos are fixed, small clarifications are done.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Konstantin Malyshev |
-| 14.10.2021 |     0.3.0          |      0.1.1       | Typos are fixed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Konstantin Malyshev |
-| 13.10.2021 |     0.3.0          |      0.1.0       | Many changes have been made based on the testing results.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Konstantin Malyshev |
-| 13.12.2019 |     0.1            |      -           | The full language version that was approved for the development of a validator prototype.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Maxim Reznitsky |
-
-## Dependences
-
-- [JSight Schema 0.3.5](jsight-schema-0-3).
-
 ## Introduction
 
 This document describes the entire JSight API language specification.
@@ -57,9 +26,11 @@ The JSight API language is intended to be used in a number of API development to
 - generators of descriptions inherited by API,
 - and others.
 
-## Сoncept
+## Dependences
 
-> TODO: to edit the section.
+- [JSight Schema 0.3.5](jsight-schema-0-3).
+
+## Сoncept
 
 These are the principles that we follow while developing this language:
 
@@ -109,96 +80,94 @@ These are the principles that we follow while developing this language:
 
 ## Terms and Definitions
 
-- **PROJECT** — is a text in JSight API language that describes a single API. In this language version, it
-  is represented by a single file. In future language versions, it may be represented by one or more
-  files.
+- **ANNOTATION** — is a syntactic structure of the language that allows other syntactic structures to be
+  specified. It is actively used in the [JSight Schema language](jsight-schema-0-3) to specify
+  RULES, add text notes to EXAMPLE objects, etc. In the JSight API, it is also used to add text
+  notes to the DIRECTIVES.
 
 - **API** — is REST API, which is described in the PROJECT.
+
+- **BODY** of the DIRECTIVE — is a code block that starts on the following line after the DIRECTIVE is
+  declared and ends before the BODY of the DIRECTIVE is explicitly or implicitly terminated (see the
+  section [“Boundaries of the BODY of the DIRECTIVE”](#boundaries-of-the-body-of-the-directive)).
+
+- **CHILD DIRECTIVE** — is a DIRECTIVE that is nested in the BODY of another DIRECTIVE which is a PARENT
+  DIRECTIVE for it. The CHILD DIRECTIVE concept only applies to one nesting level.
+
+- **COMMENT** — is a text in the PROJECT separated from the code by special symbols, has no internal
+  JSight API syntax restrictions and is ignored by language parsers.
+
+- **CONTEXT** — is a certain semantic section of the code that affects syntax rules within that section.
+  For example, there is a ROOT CONTEXT. Each DIRECTIVE also has its own CONTEXT (see the section
+  [“CONTEXTS OF THE DIRECTIVE”](#context-of-directives)).
 
 - **DIRECTIVE** — is a key syntactic construct in the language that is used to describe one or more API
   properties. For example, there are DIRECTIVES for describing REST API elements such as
   HTTP-RESOURCE, HTTP-METHOD, and HTTP-HEADER. Each DIRECTIVE has a KEYWORD that is used to declare
   that DIRECTIVE. The keyword also serves as the name of the DIRECTIVE.  
 
-- **CHILD DIRECTIVE** — is a DIRECTIVE that is nested in the BODY of another DIRECTIVE which is a PARENT
-  DIRECTIVE for it. The CHILD DIRECTIVE concept only applies to one nesting level.
+- **DIRECTIVES-HTTP-METHODS** — are a name of a group of DIRECTIVES, that describe different
+  HTTP-request methods: `GET`, `POST`, `PUT` and others.
 
-- **PARENT DIRECTIVE** — is a DIRECTIVE in which another DIRECTIVE is nested which is a CHILD DIRECTIVE
-  for it. The PARENT DIRECTIVE concept only applies to one nesting level.
+- **DIRECTIVES-RESPONSES** — are a name of a group of DIRECTIVES, that describe HTTP-RESPONSES with
+  different http-status codes. For example, DIRECTIVES `200`, `301`, `404`, etc.
 
-- **NON-CHILD DIRECTIVE** — is a DIRECTIVE that is not CHILD to other DIRECTIVE we are dealing with.
+- **ENUMERATION** — is a clearly defined named set of values that can be used in rule `enum` in the JSight
+  Schema language.
+
+- **FORMAT** — is a set of certain rules for serializing structured data to a string.
 
 - **KEYWORD** of the DIRECTIVE — is the word that signals the start of the DIRECTIVE.
+
+- **NAME** — is a name of a certain named block that will be used repeatedly in the PROJECT. For example,
+  TYPES have a NAME.
+
+- **NON-CHILD DIRECTIVE** — is a DIRECTIVE that is not CHILD to other DIRECTIVE we are dealing with.
 
 - **PARAMETERS** of the DIRECTIVE — are text parameters that appear immediately after the KEYWORD of the
   DIRECTIVE in the same line and specify basic information about the DIRECTIVE operation. They may
   be omitted in some cases.
 
-- **ANNOTATION** — is a syntactic structure of the language that allows other syntactic structures to be
-  specified. It is actively used in the [JSight Schema language](jsight-schema-0-3) to specify
-  RULES, add text notes to EXAMPLE objects, etc. In the JSight API, it is also used to add text
-  notes to the DIRECTIVES.
+- **PARENT DIRECTIVE** — is a DIRECTIVE in which another DIRECTIVE is nested which is a CHILD DIRECTIVE
+  for it. The PARENT DIRECTIVE concept only applies to one nesting level.
 
-- **BODY** of the DIRECTIVE — is a code block that starts on the following line after the DIRECTIVE is
-  declared and ends before the BODY of the DIRECTIVE is explicitly or implicitly terminated (see the
-  section [“Boundaries of the BODY of the DIRECTIVE”](#boundaries-of-the-body-of-the-directive)).
-
-- **CONTEXT** — is a certain semantic section of the code that affects syntax rules within that section.
-  For example, there is a ROOT CONTEXT. Each DIRECTIVE also has its own CONTEXT (see the section
-  [“CONTEXTS OF THE DIRECTIVE”](#context-of-directives)).
-
-- **USER TYPE** — is a named description of the data schema specified using the DIRECTIVE `TYPE`. 
-
-- **ENUMERATION** — is a clearly defined named set of values that can be used in rule `enum` in the JSight
-  Schema language.
-
-- **NAME** — is a name of a certain named block that will be used repeatedly in the PROJECT. For example,
-  TYPES have a NAME.
+- **PROJECT** — is a text in JSight API language that describes a single API. In this language version, it
+  is represented by a single file. In future language versions, it may be represented by one or more
+  files.
 
 - **REFERENCE** — is specifying of a certain NAME, which means that instead of this NAME, some code block
   should be substituted, that is described and named in another part of the PROJECT.
 
-- **COMMENT** — is a text in the PROJECT separated from the code by special symbols, has no internal
-  JSight API syntax restrictions and is ignored by language parsers.
-
 - **ROOT CONTEXT** — is a CONTEXT containing DIRECTIVES that do not have PARENT DIRECTIVES (see the
   section [“ROOT CONTEXT”](#root-context)). 
-
-- **DIRECTIVES-RESPONSES** — are a name of a group of DIRECTIVES, that describe HTTP-RESPONSES with
-  different http-status codes. For example, DIRECTIVES `200`, `301`, `404`, etc.
-
-- **DIRECTIVES-HTTP-METHODS** — are a name of a group of DIRECTIVES, that describe different
-  HTTP-request methods: `GET`, `POST`, `PUT` and others.
-
-- **SCHEMA NOTATION** — is the language used to describe this or that SCHEMA, for example `jsight`,
-  `regex`.
-
-- **SCHEMA** — is a code that describes the structure of some data and is written using one or another
-  SCHEMA NOTATION. 
-
-- **FORMAT** — is a set of certain rules for serializing structured data to a string.
-
-- **SPACE CHARACTERS** — are characters that are perceived as spaces by readers. In the current language
-  version, SPACE CHARACTERS include the space and tab characters.
 
 - **RULES** — is a term from the [JSight Schema language](jsight-schema-0-3). RULES are additions to
   an EXAMPLE written in a certain way that specify the requirements for the data structure within
   the SCHEMA (for more information, see the [JSight Schema language specification, section
   “RULES”](jsight-schema-0-3#rules)).
 
+- **SCHEMA** — is a code that describes the structure of some data and is written using one or another
+  SCHEMA NOTATION. 
+
+- **SCHEMA NOTATION** — is the language used to describe this or that SCHEMA, for example `jsight`,
+  `regex`.
+
+- **SPACE CHARACTERS** — are characters that are perceived as spaces by readers. In the current language
+  version, SPACE CHARACTERS include the space and tab characters.
+
+- **USER TYPE** — is a named description of the data schema specified using the DIRECTIVE `TYPE`. 
+
 ### HTTP REST API terms
 
-> TODO: to describe HTTP REST API terms.
-
-- **REQUEST (HTTP-REQUEST)**
-- **RESPONSE (HTTP-RESPONSE)**
-- **RESOURCE (HTTP-RESOURCE)**
-- **METHOD (HTTP-METHOD)**
-- **PATH**
-- **PARAMETERS of the PATH**
-- **QUERY STRING** 
-- **HEADER (HTTP HEADER)**
 - **BODY (HTTP-BODY)**
+- **HEADER (HTTP HEADER)**
+- **METHOD (HTTP-METHOD)**
+- **REQUEST (HTTP-REQUEST)**
+- **RESOURCE (HTTP-RESOURCE)**
+- **RESPONSE (HTTP-RESPONSE)**
+- **PARAMETERS of the PATH**
+- **PATH**
+- **QUERY STRING** 
 
 ## Basic concepts
 
@@ -637,10 +606,7 @@ GET /cats // Single-line annotation.
 #### Multi-line ANNOTATIONS
 
 > Requirement: req.japi.annotation.multiline 0.3  
-> Status: APPROVED 12.10.2021.  
-> It is planned in future versions: 
->
-> - TODO: to add escaping.
+> Status: APPROVED 12.10.2021.
 
 Multi-line ANNOTATIONS begin with `/*` and continue until closed with `*/`. Multi-line ANNOTATIONS
 can span from a single to several lines.
@@ -803,103 +769,497 @@ Names can contain only the following characters:
 
 This section describes all the DIRECTIVES that can be used in the PROJECT.
 
-### DIRECTIVE **"URL"**
+### DIRECTIVE **"BaseUrl"**
 
-> Requirement: req.japi.url 0.4  
-> Status: APPROVED 12.10.2021.
+> Requirement: req.japi.server.base_url 0.4  
+> Status: APPROVED 10.01.2022.
 
-The DIRECTIVE `URL` declares new RESOURCE of API.
+The DIRECTIVE `BaseUrl` is intended to describe the base PATH of API that is linked to a specific
+server where the API is physically located.
 
-|        DIRECTIVE "URL"      |                    |
-| ----------------------------| :----------------: |
-| KEYWORD                     |        `URL`       |
-| PARENT DIRECTIVE            |    ROOT CONTEXT    |
-| PARAMETERS                  |        `Path` *    |
-| ANNOTATION                  |    Not allowed     |
-| BODY                        |  CHILD DIRECTIVES  |
-| CHILD DIRECTIVES (possible) | <ul align="left" style={{margin: 0}}><li>HTTP-METHODS</li><li>`Path`</li></ul> |
-| Default CHILD DIRECTIVE     |          No        |
-
-Any number of DIRECTIVES `URL` is allowed in the ROOT CONTEXT.
+|    DIRECTIVE "BaseUrl"  |                      |
+| ----------------------- | :------------------: |
+| KEYWORD                 |       `BaseUrl`      |
+| PARENT DIRECTIVE        |       `SERVER`       |
+| PARAMETERS              |        `Path` *      |
+| ANNOTATION              |      Not allowed     |
+| BODY                    |          No          |
+| CHILD DIRECTIVES        |          No          |
+| Default CHILD DIRECTIVE |          No          |
 
 ##### PARENT DIRECTIVES
 
-The DIRECTIVE `URL` can only be placed in the ROOT CONTEXT.
+The DIRECTIVE `BaseUrl` can only be placed inside the DIRECTIVE `SERVER`.
 
-Technically you can place DIRECTIVE `URL` in DIRECTIVE `MACRO`, but it does not make sense (see 
+Technically you can place DIRECTIVE `BaseUrl` in DIRECTIVE `MACRO`, but it does not make sense (see
 the section [“DIRECTIVE "MACRO"”](#directive-macro)).
 
 ##### PARAMETERS
 
-The DIRECTIVE `URL` has only one mandatory PARAMETER `Path`, which must contain RESOURCE PATH. The
-`Path` may contain PATH PARAMETERS in curly braces, for example: `/cats/{id}`. For more information
-on the PARAMETER of the DIRECTIVE `Path`, see the section “Reference of common PARAMETERS of
-DIRECTIVES”, subsection [“PARAMETER "Path"”](#parameter-path).
+The DIRECTIVE `BaseUrl` has one mandatory parameter `Path`, in which the URL of this server must be
+specified.
 
-Example of the directive `URL` with mandatory PARAMETER `Path`: 
+Example:
 
 ```jsight
-URL /cats
+SERVER @CATS_API_SERVER
+  BaseUrl "https://catsbook.com/api"
 ```
 
 ##### ANNOTATION
 
-It is not allowed to input an ANNOTATION to the DIRECTIVE `URL`.
+The DIRECTIVE `BaseUrl` CANNOT have ANNOTATION.
 
 ##### BODY
 
-A BODY of the DIRECTIVE `URL` is made up of one or more nested DIRECTIVES. There must be at least
-one CHILD DIRECTIVE in the BODY.
+The DIRECTIVE `BaseUrl` does not have a BODY.
 
-DIRECTIVE `URL` allows the following CHILD DIRECTIVES:
+### DIRECTIVE **"Body"**
 
-- DIRECTIVES-HTTP-METHODS (any number) — describe the HTTP-METHODS of this RESOURCE. HTTP-METHODS
-  cannot be repeated inside one DIRECTIVE `URL`(for example, one `URL` cannot have two directives
-  `GET`).
-- DIRECTIVE `Path` (not more than one) — describes the PARAMETERS of the PATH, declared in the
-  PARAMETER `Path`.
+> Requirement: req.japi.body 0.3  
+> Status: APPROVED 12.10.2021.  
+> It is planned:
+>
+>  - to add a third PARAMETER `Format`.
 
-For DIRECTIVE `URL`, the default CHILD DIRECTIVE is not defined (see the section [“CHILD DIRECTIVES
-by default”](#child-directives-by-default)).
+The DIRECTIVE `Body` is intended to describe the required HTTP-BODIES in the DIRECTIVE `Request` and
+DIRECTIVES-RESPONSES (`200`, `301`, etc.).
 
-Example of using the directive `URL` 
+|        DIRECTIVE "Body"      |                    |
+| ---------------------------- | :----------------: |
+| KEYWORD                      |       `Body`       |
+| PARENT DIRECTIVES (possible) | <ul align="left" style={{margin: 0}}><li>`Request`</li><li>DIRECTIVES-RESPONSES (e. g. `200`, `301`, etc.)</li></ul> |
+| PARAMETERS                   | <ul align="left" style={{margin: 0}}><li><code>Type</code></li><li><code>SchemaNotation</code></li></ul><p style={{"text-align": "left", margin: 0}}>In future versions also: `Format`</p> |
+| ANNOTATION                   |    Not allowed     |
+| BODY                         |       SCHEMA       |
+| CHILD DIRECTIVES             |        No          |
+| Default CHILD DIRECTIVE      |        No          | 
+
+##### PARENT DIRECTIVES
+
+The DIRECTIVE `Body` can be placed in the following CONTEXTS:
+
+- DIRECTIVE `Request`,
+- DIRECTIVES-RESPONSES (`200`, `301`, `404`, etc.).
+
+Also, the DIRECTIVE `Body` can be placed in the macro defined by the DIRECTIVE `MACRO` (see the 
+section [“DIRECTIVE "MACRO"”](#directive-macro)).
+
+##### PARAMETERS
+
+The DIRECTIVE `Body` can have two optional PARAMETERS:
+
+  - `SchemaNotation` — sets the SCHEMA NOTATION, which is used to describe the data SCHEMA in the
+    BODY of the DIRECTIVE `Body`. Examples of SCHEMA NOTATIONS: `jsight`, `regex`, `any`, `empty`
+    (see the section [“PARAMETER "SchemaNotation"”](#parameter-schemanotation)).
+  - `Type` — specifies the TYPE of data, which should be placed in the HTTP-BODY. The parameter
+    `Type` can be written in two ways:
+    1. <u>A USER TYPE name that starts with a symbol <code>@</code></u>, for example, <code>Body
+       @cat</code>. In this case, the BODY of HTTP REQUEST (or HTTP RESPONSE) must contain a JSON
+       document of the specified TYPE. In future language versions, it will be possible to set the
+       FORMAT of the document using the third PARAMETER <code>Format</code>, for example, XML rather
+       than JSON.
+
+    2. <u>A USER TYPE name that starts with a symbol <code>@</code> and <i>is enclosed in square
+       brackets</i></u>, for example <code>Body [@cat]</code>. In this case, the BODY of HTTP
+       REQUEST (or HTTP RESPONSE) must contain a JSON document that corresponds to <i>an array of
+       elements of the specified TYPE</i>. In future language versions, it will be possible to set
+       the FORMAT of the document using the third PARAMETER <code>Format</code>, for example, XML
+       rather than JSON.
+
+PARAMETERS `Type` and `SchemaNotation` cannot be declared simultaneously. Thus, the DIRECTIVE `Body`
+can have the following sets of PARAMETERS:
+
+1. The PARAMETER `Type` is specified. In this case, the BODY of the DIRECTIVE `Body` must be empty.
+2. The PARAMETER `SchemaNotation` is specified. In this case, the BODY of the DIRECTIVE `Body`
+   cannot be empty and must contain a SCHEMA in the specified NOTATION.
+3. There are no PARAMETERS. In this case, the PARAMETER `SchemaNotation` is considered equal to
+   `jsight`, and the BODY of the DIRECTIVE `Body` must contain the SCHEMA in the NOTATION `jsight`.
+
+Let's consider some examples: 
+
+**Example 1.**
 
 ```jsight
-URL /cats
-  GET // Get the list of cats.
-    200 [@cat]
-  POST // Create a new cat.
-    200 @cat
-
-URL /cats/{id}
-  Path
-    {
-      "id": 123 // {min: 1} - Cat identifier.
-    }
-  GET // Get a cat by its id. 
-    200 @cat
-  PUT // Change a cat by its id. 
-    200 @cat
+GET /cats/{id}
+  200
+    Body jsight
+      {
+        "id"  : 1,
+        "name": "Tom"
+      }
 ```
 
-In the given example: 
+In the given example, the PARAMETER `SchemaNotation` with the value `jsight` is specified in the
+DIRECTIVE `Body`. Accordingly, the BODY of the DIRECTIVE `Body` contains the SCHEMA in the NOTATION
+`jsight`.
 
-- The DIRECTIVE `URL /cats` declares that the API has a RESOURCE specified in the PARAMETER of the
-  DIRECTIVE `Path`, that is, the RESOURCE `/cats`.
-- The RESOURCE `/cats` accepts two HTTP-methods: `GET` and `POST`. 
-- The DIRECTIVE `URL /cats/{id}` declares that the API has a RESOURCE `/cats/{id}`. 
-- The DIRECTIVE `Path` specifies the requirements for the PARAMETER of the PATH `id`.
-- The resource `/cats/{id}` accepts two HTTP-methods: `GET` and `PUT`. 
+**Example 2.**
 
-While describing a RESOURCE tree using the DIRECTIVE `URL`, keep in mind the prohibition of
-duplication of PARAMETERS of RESOURCE PATH (see the section [“PARAMETER "Path"”](#parameter-path)).
+```jsight
+GET /cats/{id}
+  200
+    Body
+      {
+        "id"  : 1,
+        "name": "Tom"
+      }
+```
+
+In the given example, there are no PARAMETERS in the DIRECTIVE `Body`, so it is assumed by default
+that PARAMETER `SchemaNotation` has a value `jsight`. Accordingly, the BODY of the DIRECTIVE `Body`
+contains the SCHEMA in the NOTATION `jsight`, as in the previous example.
+
+**Example 3.**
+
+```jsight
+GET /cats/{id}
+  200
+    Body @cat
+```
+
+In this example, the PARAMETER `Type` with the value `@cat` is specified in the DIRECTIVE `Body`.
+This means that a JSON-document corresponding to the USER TYPE `@cat` should come in the RESPONSE to
+the REQUEST `GET /cats`.
+
+**Example 4.**
+
+```jsight
+GET /cats
+  200
+    Body [@cat]
+```
+In the given example, the PARAMETER `Type` with the value `[@cat]` is specified in the DIRECTIVE
+`Body`. This means that a JSON-document containing *an array of elements* and corresponding to the
+USER TYPE `@cat`, should come in the RESPONSE to the REQUEST `GET /cats`.
+
+##### ANNOTATION
+
+The DIRECTIVE `Body` CANNOT have ANNOTATION.
+
+##### BODY
+
+The BODY of the DIRECTIVE `Body` may contain a SCHEMA of that NOTATION, which is set by the
+PARAMETER `SchemaNotation` — either explicitly or by default. Some NOTATIONS compulsory require the
+presence of a SCHEMA (for example, the NOTATION `jsight`). Other NOTATIONS may not require a SCHEMA
+(for example, the NOTATION `any`).
+
+If the PARAMETER `Type` is specified in the DIRECTIVE, then the BODY of the DIRECTIVE must be empty.
+
+Let's consider some valid examples.
+
+**Example 1.** The BODY is not required since the PARAMETER `Type` is specified:
+
+```jsight
+GET /cats/{id}
+  200 // Returning JSON with a cat.
+    Body @cat
+```
+
+**Example 2.** The BODY is required since the PARAMETER `SchemaNotation` explicitly specifies the
+SCHEMA NOTATION `regex`:
+
+```jsight
+GET /cats/{id}/name
+  200 // Returning a string with the name of the cat.
+    Body regex
+      /[A-Z][a-z]*/
+```
+
+**Example 3.** The BODY is not required since the specified NOTATION `any` always implies an empty
+SCHEMA:
+
+```jsight
+POST /cats/counter
+  200 // BODY doesn't matter.
+    Body any
+```
+
+**Example 4.** The BODY in JSight Schema language is required, since the PARAMETER `SchemaNotation`
+implies the NOTATION `jsight` by default:
+
+```jsight
+GET /cats/{id}
+  200 // Returning a cat.
+    Body
+      {
+        "id"  : 123,
+        "name": "Tom"
+      }
+```
+
+##### Default FORMATS
+
+The same structured data can be serialized in different FORMATS. In the future language versions,
+the option to explicitly control the serialization FORMAT using the PARAMETER `Format` will be added
+in the DIRECTIVE `Body`. In the current language version, the FORMAT is set implicitly, depending on
+the specified SCHEMA NOTATION.
+
+The SCHEMA NOTATION, in turn, is specified either explicitly using the PARAMETER `SchemaNotation` or
+implicitly through the specified USER TYPE `Type`, which has its own NOTATION.
+
+The table below displays the default schema FORMATS for all currently supported SCHEMA NOTATIONS:
+
+| SCHEMA NOTATION |   Default FORMAT    |
+| :-------------: | :-----------------: |
+|     jsight      |         json        |
+|     regex       |     plainString     |
+|     any         |        binary       |
+|     empty       |        binary       |
+
+Let's consider an example:
+
+```jsight
+GET /json-endpoint
+  200
+    Body jsight
+      "Hello, World!" // {const: true}
+
+GET /plain-string-endpoint
+  200
+    Body regex
+      /Hello, World!/
+```
+
+In the given example, the same data structure is described in both RESOURCES in  DIRECTIVES `Body`.
+However, this is done using different NOTATIONS: `jsight` and `regex`. The NOTATION `jsight` implies
+the default FORMAT `json`, while the NOTATION `regex` implies the default FORMAT `plainString`. This
+means that if you send a request for the first resource `/json-endpoint`, then the response will
+contain the line `"Hello, World!"` (in quotes), which corresponds to the FORMAT `json`. And if you
+send a request for the second resource `/plain-string-endpoint`, then the response will contain  the
+line `Hello, World!` (without quotes), which corresponds to the FORMAT `plainString`. In other
+words:
+
+```
+$ curl /json-endpoint
+"Hello, World!"
+
+$ curl /plain-string-endpoint
+Hello, World!
+```
+
+### DIRECTIVE **"Description"**
+
+> Requirements:  
+> - req.japi.description 0.1 Status: APPROVED 12.10.2021.  
+> - req.japi.description.markdown 0.3 Status: APPROVED 12.10.2021.
+
+The DIRECTIVE `Description` is intended for detailed text descriptions of different DIRECTIVES.
+
+|       DIRECTIVE "Description" |                      |
+| ----------------------------- | :------------------: |
+| KEYWORD                       |     `Description`    |
+| PARENT DIRECTIVES (possible)  | <ul align="left"><li>`INFO`</li><li>DIRECTIVES-HTTP-METHODS (`GET`, `POST`, etc.)</li></ul> <p align="left">In future versions also: `Request`, `SERVER`, `TYPE`, `ENUM`</p> |
+| PARAMETERS                    |         No           |
+| ANNOTATION                    |      Not allowed     |
+| BODY                          |      Markdown Text   |
+| CHILD DIRECTIVES              |          No          |
+| Default CHILD DIRECTIVE       |          No          |
+
+##### PARENT DIRECTIVES
+
+The DIRECTIVE `Description` can be placed in the following DIRECTIVES:
+
+- DIRECTIVE `INFO`,
+- DIRECTIVES-HTTP-METHODS (`GET`, `POST`, etc.).
+
+Also, the DIRECTIVE `Description` can be placed in the macro defined by the DIRECTIVE `MACRO` (see 
+the section [“DIRECTIVE "MACRO"”](#directive-macro)).
+
+In future language versions, the DIRECTIVE `Description` will be added as a CHILD to some other
+DIRECTIVES. For example, it will be possible to specify `Description` inside DIRECTIVES: `Request`,
+`SERVER`, `TYPE`, `ENUM`.
+
+##### PARAMETERS
+
+The DIRECTIVE `Description` has no PARAMETERS.
+
+##### ANNOTATION
+
+The DIRECTIVE `Description` CANNOT have ANNOTATION.
+
+##### BODY
+
+The BODY of the DIRECTIVE `Description` must contain text in Markdown format.
+
+Example:
+
+```jsight
+GET /cats
+  
+  Description
+    With this method you can get a list of all cats that are registered on the Catsbook.
+
+  200 [@cat]
+```
+
+The same example with parentheses that explicitly specify the boundaries of the BODY of the
+DIRECTIVE `Description`:
+
+```jsight
+GET /cats
+  
+  Description
+  (
+    With this method you can get 
+    a list of all cats that are registered 
+    on the Catsbook
+  )
+
+  200 [@cat]
+```
+
+In the current language version, the escaping of KEYWORDS and the closing parenthesis in BODY of the
+DIRECTIVE `Description` is not supported. Escaping will be implemented in future versions. You need
+to avoid using keywords or closing parenthesis at the beginning of a line in the current version.
+Let's have a look at some examples.
+
+Example with error:
+
+```jsight
+GET /cats
+  
+  Description
+    With this method you can get 
+    200 cats, that are registered             --ERROR!!! Will be perceived as DIRECTIVE 200
+    on the Catsbook.
+
+  200 [@cat]
+```
+
+Let's fix the error:
+
+```jsight
+GET /cats
+  
+  Description
+  With this method you can get 200 
+  cats, that are registered             
+  on the Catsbook.
+
+
+  200 [@cat]
+```
+
+Another example with error:
+
+```jsight
+GET /cats
+  
+  Description
+  (
+    With this method
+    you can get a list of 
+    cats (and female cats
+  ), that are registered         --ERROR!!! The paranthesis will be perceived as the BODY completion
+    on the Catsbook.
+  )
+
+  200 [@cat]
+```
+
+Let's fix the error:
+
+```jsight
+GET /cats
+  
+  Description
+  (
+    With this method 
+    you can get a list of
+    cats (and female cats),
+    that are registered 
+    on the Catsbook
+  )
+
+  200 [@cat]
+```
+
+### DIRECTIVE **"Headers"**
+
+> Requirement: req.japi.headers 0.3  
+> Status: APPROVED 12.10.2021.
+
+The DIRECTIVE `Headers` is intended to describe the required HTTP-HEADERS in the DIRECTIVE `Request`
+and DIRECTIVES-RESPONSES.
+
+|        DIRECTIVE "Headers"   |                    |
+| ---------------------------- | :----------------: |
+| KEYWORD                      |     `Headers`      |
+| PARENT DIRECTIVES (possible) | <ul align="left" style={{margin: 0}}><li>`Request`</li><li>DIRECTIVES-RESPONSES (e. g. `200`, `301` etc.)</li></ul> |
+| PARAMETERS                   |        No          |
+| ANNOTATION                   |    Not Allowed     |
+| BODY                         |    SCHEMA `jsight` |
+| CHILD DIRECTIVES             |        No          |
+| Default CHILD DIRECTIVE      |        No          | 
+
+##### PARENT DIRECTIVES
+
+DIRECTIVE `Headers` can be placed in the following CONTEXTS:
+
+- DIRECTIVE `Request`,
+- DIRECTIVES-RESPONSES (`200`, `301`, `404`, etc.).
+
+Also, the DIRECTIVE `Headers` can be placed in the macro defined by the DIRECTIVE `MACRO` (see the 
+section [“DIRECTIVE "MACRO"”](#directive-macro)).
+
+##### PARAMETERS
+
+The DIRECTIVE `Headers` has no PARAMETERS.
+
+##### ANNOTATION
+
+The DIRECTIVE `Headers` CANNOT have ANNOTATION.
+
+##### BODY
+
+The BODY of the DIRECTIVE `Headers` must contain the SCHEMA NOTATION `jsight` (in the JSight Schema
+language). The SCHEMA describes the HEADERS that should be in the request or response. At the root
+of the SCHEMA, there should be an object, each of whose properties describes a separate HEADER. The
+property key describes the name of the HEADER, and the property value describes the value of the
+HEADER.
+
+The root SCHEMA object cannot have the RULE `nullable: true`.
+
+As an example, let's consider the following:
+
+```jsight
+GET /cats
+  200
+    Headers
+      {
+        "Authorization": "Basic dG9tQGNhdC5jb206YWJjMTIz=", // {regex: "Basic [A-Za-z0-9+\/=]+"}
+        "Content-Type": "application/json"                  // {const: true}
+      }
+    Body 
+      [@cat]
+```
+
+This example describes two commonly used HEADERS: `Authorization` and `Content-Type` using the
+syntax of the [JSight Schema language](jsight-schema-0-3).
+
+**IMPORTANT!!!** The rule `additionalProperties` of the SCHEMA root object in the DIRECTIVE
+`Headers` is `true` by default, not `false`, as [JSight Schema language](jsight-schema-0-3)
+defines it by default. It was developed to ensure that client and server applications, that send and
+respond to HTTP-REQUESTS, were allowed to add any extra headers of their choice, without violating
+the described requirements. You can explicitly restrict additional headers if necessary by
+specifying `additionalProperties: false` in the root object of the SCHEMA:
+
+
+```jsight
+GET /cats
+  200
+    Headers 
+      { // {additionalProperties: false}
+        "Content-Type": "application/json" // {const: true}
+      }
+    Body [@cat]
+```
 
 ### DIRECTIVES-**HTTP-METHODS**
 
 > Requirement: req.japi.http_method 0.4  
 > Status: APPROVED 12.10.2021.
-> It is planned:
-> - TODO: to add other http-methods.
 
 DIRECTIVES-HTTP-METHODS describe specific HTTP-REQUESTS. This language version supports the
 following DIRECTIVES-HTTP-METHODS: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`.
@@ -1055,6 +1415,604 @@ GET /pets/{id} // Get an animal by its id.
 
 The given example describes a number of HTTP-RESPONSES with the same code `200`. This means that the
 request `GET /pets/{id}` may result in one of the specified successful responses.
+
+### DIRECTIVE **"INFO"**
+
+> Requirement: req.japi.info 0.3  
+> Status: APPROVED 12.10.2021.
+
+The DIRECTIVE `INFO` is intended to describe the PROJECT in general.
+
+|        DIRECTIVE "INFO"     |                   |
+| --------------------------- | :---------------: |
+| KEYWORD                     |      `INFO`       |
+| PARENT DIRECTIVE            |    ROOT CONTEXT   |
+| PARAMETERS                  |         No        |
+| ANNOTATION                  |      Not allowed  |
+| BODY                        | CHILD DIRECTIVES  |
+| CHILD DIRECTIVES (possible) | <ul align="left" style={{margin: 0}}><li>`Title`</li><li>`Version`</li><li>`Description`</li></ul> |
+| Default CHILD DIRECTIVE     |         No        |
+
+In the ROOT CONTEXT only one DIRECTIVE `INFO` is allowed.
+
+##### PARENT DIRECTIVES
+
+The DIRECTIVE `INFO` can only be placed in the ROOT CONTEXT.
+
+Technically you can place DIRECTIVE `INFO` in DIRECTIVE `MACRO`, but it does not make sense (see
+the section [“DIRECTIVE "MACRO"”](#directive-macro)).
+
+##### PARAMETERS
+
+The DIRECTIVE `INFO` has no PARAMETERS.
+
+##### ANNOTATION
+
+The DIRECTIVE `INFO` CANNOT have ANNOTATION.
+
+##### BODY
+
+The BODY of the DIRECTIVE `INFO` may contain the following CHILD DIRECTIVES:
+
+- `Title` (not more than one) — sets the title of the PROJECT.
+- `Version` (not more than one) — indicates the version of the API PROJECT.
+- `Description` (not more than one) — gives a detailed description of the PROJECT.
+
+Example:
+
+```jsight
+INFO
+  Title "Catsbook API"
+  Version 1.0
+  Description
+    API of social network
+    for cats Catsbook.
+```
+
+### DIRECTIVE **"JSIGHT"**
+
+> Requirement: req.japi.jsight 0.4  
+> Status: APPROVED 10.01.2022.
+
+The DIRECTIVE `JSIGHT` is intended to specify the version of the JSight API language.
+
+|     DIRECTIVE "JSIGHT"    |                      |
+| ------------------------- | :------------------: |
+| KEYWORD                   |       `JSIGHT`       |
+| PARENT DIRECTIVES         |     ROOT CONTEXT     |
+| PARAMETERS                |       `Version` *    |
+| ANNOTATION                |      Not alowed      |
+| BODY                      |          No          |
+| CHILD DIRECTIVES          |          No          |
+| Default CHILD DIRECTIVE   |          No          |
+
+An important feature of the DIRECTIVE `JSIGHT` is that it must be placed the first in the root of
+the PROJECT, before any other DIRECTIVES.
+
+In one PROJECT only one DIRECTIVE `JSIGHT` is allowed.
+
+The directive `JSIGHT` cannot be omitted.
+
+Example:
+
+```jsight
+JSIGHT 0.3
+
+GET /cats
+  200 [@cat]
+```
+
+##### PARENT DIRECTIVES
+
+The DIRECTIVE `JSIGHT` can only be placed in the ROOT CONTEXT.
+
+##### PARAMETERS
+
+The DIRECTIVE `JSIGHT` has one PARAMETER `Version`. The PARAMETER `Version` must contain a string
+with the version number of the JSight API language that was used to write this PROJECT.
+
+Example:
+
+```jsight
+JSIGHT 0.3
+```
+
+##### ANNOTATION
+
+The DIRECTIVE `JSIGHT` CANNOT have ANNOTATION.
+
+##### BODY
+
+The DIRECTIVE `JSIGHT` does NOT have a BODY.
+
+### DIRECTIVE **"MACRO"**
+
+> Requirement: req.japi.macro 0.3  
+> Status: APPROVED 10.02.2022.  
+
+The DIRECTIVE `MACRO` is intended to declare a named macro (group of DIRECTIVES) that can be 
+pasted by DIRECTIVE `PASTE` (see the section [“DIRECTIVE "PASTE"”](#directive-paste)) at 
+different places within the PROJECT. 
+
+|        DIRECTIVE "MACRO"     |                       |
+| ---------------------------- | :-------------------: |
+| KEYWORD                      |        `MACRO`        |
+| PARENT DIRECTIVES (possible) |      ROOT CONTEXT     |
+| PARAMETERS                   |        `Name` *       |
+| ANNOTATION                   |     Not allowed       |
+| BODY                         |    CHILD DIRECTIVES   |
+| CHILD DIRECTIVES (possible)  |  Any, except `MACRO`  |
+| Default CHILD DIRECTIVE      |          No           |
+
+In the ROOT CONTEXT any number of DIRECTIVES `MACRO` is allowed.
+
+##### PARENT DIRECTIVES
+
+The DIRECTIVE `MACRO` can only be placed in the ROOT CONTEXT.
+
+##### PARAMETERS
+
+The DIRECTIVE `MACRO` has only one mandatory PARAMETER `Name`, in which the name of the macro is
+specified.
+
+The name of the macro must be distinct from all other names of macros within the PROJECT.
+
+Other requirements for the name of the macro are outlined in the subsection [“Names”](#names) of the
+section “Common Syntax Rules”.
+
+Example:
+
+```jsight
+MACRO @commonHeaders
+(
+  Headers
+    {
+      "Authorization": "Basic dG9tQGNhdC5jb206YWJjMTIz=", // {regex: "Basic [A-Za-z0-9+\/=]+"}
+      "Content-Type": "application/json"                  // {const: true}
+    }
+)
+```
+
+In the given example, a macro is declared with the name `@commonHeaders`.
+
+##### ANNOTATION
+
+It is not allowed to input an ANNOTATION to the DIRECTIVE `MACRO`.
+
+##### BODY
+
+The BODY of the DIRECTIVE `MACRO` is made up of one or more nested CHILD DIRECTIVES. It is required
+that there be at least one nested DIRECTIVE in the BODY.
+
+The DIRECTIVE `MACRO` allows any CHILD DIRECTIVE, except `MACRO`. CHILD DIRECTIVES, in turn, may
+have other CHILD DIRECTIVES.
+
+For DIRECTIVE `MACRO`, the default CHILD DIRECTIVE is not defined.
+
+Example:
+
+```jsight
+MACRO @commonErrors
+(
+  400
+    Body regex
+      /Bad request/
+  401 any
+  405 any
+  500 any
+)
+```
+
+In the given example, the macro `@commonErrors` is declared, which contains four 
+CHILD DIRECTIVES `400`,` 401`, `405`, and `500`.
+
+The directive `MACRO` is useful for specifying frequently repeated elements of the PROJECT.
+After a macro using the `MACRO` DIRECTIVE is declared, you may insert this macro as many times
+as you like throughout the PROJECT by referring to it by name using the `PASTE` DIRECTIVE. (see 
+the section [“DIRECTIVE "PASTE"”](#directive-paste))).
+
+Note, that the DIRECTIVE `MACRO` allows DIRECTIVE `PASTE` as a CHILD DIRECTIVE.
+
+Example:
+
+```jsight
+MACRO @errors
+(
+    PASTE @errors_3xx
+    PASTE @errors_4xx
+)
+
+MACRO @errors_3xx
+(
+    300 any
+    301 any
+)
+
+MACRO @errors_4xx
+(
+    400 any
+    404 any
+    409 any
+)
+```
+
+:::note
+
+The DIRECTIVE `MACRO` may have any CHILD DIRECTIVES, except DIRECTIVES `MACRO`. Considering this,
+it is advised to always explicitly mark the boundaries of its BODY with parenthesis, while using 
+the DIRECTIVE `MACRO`, otherwise the DIRECTIVE `MACRO` would contain all the remaining 
+directives until the next DIRECTIVE `MACRO`.
+
+:::
+
+### DIRECTIVE **"PASTE"**
+
+> Requirement: req.japi.paste 0.3  
+> Status: APPROVED 10.02.2022.
+
+The DIRECTIVE `PASTE` is intended to paste a named macro (group of DIRECTIVES) defined by
+DIRECTIVE `MACRO` (see the section [“DIRECTIVE "MACRO"”](#directive-macro)) to different places 
+within the PROJECT. 
+
+|        DIRECTIVE "PASTE"     |                       |
+| ---------------------------- | :-------------------: |
+| KEYWORD                      |        `PASTE`        |
+| PARENT DIRECTIVES (possible) |          Any          |
+| PARAMETERS                   |        `Name` *       |
+| ANNOTATION                   |     Not allowed       |
+| BODY                         |          No           |
+| CHILD DIRECTIVES (possible)  |          No           |
+| Default CHILD DIRECTIVE      |          No           |
+
+##### PARENT DIRECTIVES
+
+The DIRECTIVE `PASTE` can be placed in the CONTEXT of any DIRECTIVE.
+
+##### PARAMETERS
+
+The DIRECTIVE `PASTE` has only one mandatory PARAMETER `Name`, in which the name of the macro is
+specified. A macro with this name must be declared anywhere within the PROJECT using the DIRECTIVE 
+`MACRO`. 
+
+The DIRECTIVE `PASTE` can be placed anywhere within the PROJECT, where the syntax allows a 
+new DIRECTIVE to be placed. Also, the macro pasted by the DIRECTIVE `PASTE` should be 
+interpreted in the same way, as if the BODY of the DIRECTIVE `MACRO` on which the reference is 
+made, was used in the code instead of the DIRECTIVE `PASTE`.
+
+The directives `MACRO` and `PASTE` are useful for specifying frequently repeated elements of the
+PROJECT.
+
+Let us explain with an example:
+
+```jsight
+GET /cats
+
+  200 [@cat]
+  PASTE @commonErrors
+
+GET /dogs
+
+  200 [@dog]
+  PASTE @commonErrors
+
+MACRO @commonErrors
+(
+  400 any
+  401 any
+  405 any
+  500 any
+)
+```
+
+In the given example, we can see the declared macro `@commonErrors` by the DIRECTIVE `MACRO`. 
+Also, we see this macro referenced in the CONTEXT of DIRECTIVES `GET`, using DIRECTIVES `PASTE`. 
+This example should be interpreted as if the BODY of the DIRECTIVE `MACRO @commonErrors` is used 
+instead of the DIRECTIVE `PASTE @commonErrors`. That is, the given example is similar to the 
+following code: 
+
+```jsight
+GET /cats
+
+  200 [@cat]
+  400 any
+  401 any
+  405 any
+  500 any
+
+GET /dogs
+
+  200 [@dog]
+  400 any
+  401 any
+  405 any
+  500 any
+
+MACRO @commonErrors
+(
+  400 any
+  401 any
+  405 any
+  500 any
+)
+```
+
+##### ANNOTATION
+
+The DIRECTIVE `PASTE` CANNOT have ANNOTATION.
+
+##### BODY
+
+The DIRECTIVE `PASTE` has no BODY.
+
+### DIRECTIVE **"Path"**
+
+> Requirement: req.japi.http_method.path 0.3  
+> Status: APPROVED 12.10.2021.
+
+The DIRECTIVE `Path` is intended to describe the RESOURCE PATH PARAMETERS in the DIRECTIVE `URL` and
+in the DIRECTIVES-HTTP-METHODS (`GET`, `POST`, etc.).
+
+|        DIRECTIVE "Path"      |                      |
+| ---------------------------- | :------------------: |
+| KEYWORD                      |        `Path`        |
+| PARENT DIRECTIVES (possible) | <ul align="left" style={{margin: 0}}><li>`URL`</li><li>DIRECTIVES-HTTP-METHODS (`GET`, `POST`, etc.)</li></ul> |
+| PARAMETERS                   |         No           |
+| ANNOTATION                   |      Not allowed     |
+| BODY                         |     SCHEMA `jsight`  |
+| CHILD DIRECTIVES             |          No          |
+| Default CHILD DIRECTIVE      |          No          |
+
+##### PARENT DIRECTIVES
+
+The DIRECTIVE `Path` can be placed in the following CONTEXTS:
+
+- DIRECTIVE `URL`,
+- DIRECTIVES-HTTP-METHODS (`GET`, `POST` and etc.),
+
+Also, the DIRECTIVE `Path` can be placed in the macro defined by the DIRECTIVE `MACRO` (see the 
+section [“DIRECTIVE "MACRO"”](#directive-macro)).
+
+##### PARAMETERS
+
+The DIRECTIVE `Path` has no PARAMETERS.
+
+##### ANNOTATION
+
+The DIRECTIVE `Path` CANNOT have ANNOTATION.
+
+##### BODY
+
+The BODY of the DIRECTIVE `Path` must contain a SCHEMA of the TYPE `jsight` (in [JSight Schema
+language](jsight-schema-0-3)). The SCHEMA describes the requirements for the PATH PARAMETERS that
+are declared in the PARAMETER `Path` of the PARENT DIRECTIVE. (The PARENT DIRECTIVE can be either
+`URL` or DIRECTIVE-HTTP-METHOD). At the root of the SCHEMA an object should be placed, each of whose
+properties describes a separate PATH PARAMETER `Path`. The KEYS properties must match the names of
+PATH PARAMETERS that were declared in `Path`.
+
+The root object of the SCHEMA cannot have RULES: `nullable: true`, `or`,
+`additionalProperties: true`.
+
+It is not required to describe all PATH PARAMETERS, only a part of the PATH PARAMETERS can be
+described. There are no any requirements for undescribed PATH PARAMETERS.
+
+Let's consider an example:
+
+```jsight
+GET /cats/{id}
+
+  Path
+    {
+      "id": 12 // Cat identifier.
+    }
+
+  200 @cat
+```
+
+In the given example, a requirement is specified for the PATH PARAMETER `id` — it must be an
+integer. The caption of this PARAMETER is also indicated: “Cat identifier”.
+
+Another example with two PATH PARAMETERS:
+
+```jsight
+URL /cats/{id}/friends/{friendId}
+
+  Path
+    {
+      "id"      : 12, // Cat identifier.
+      "friendId": 13  // Anoher cat identifier.
+    }
+
+  GET
+    200 @cat
+```
+
+For one PATH PARAMETER, you can set only once the requirements using the DIRECTIVE `Path` (for more
+information, see the section [“PARAMETER "Path"”](#parameter-path)). Let's consider an example of a
+rule violation:
+
+```jsight
+URL /cats/{id}
+  Path
+    {
+      "id": 12
+    }
+  GET
+    200 @cat
+
+GET /cats/{id}/friends
+  Path
+    {
+      "id": 12      # --ERROR!!! The requirements to the PATH PARAMETER `id` 
+    }               #            have already been specified earlier.
+  200 @cat
+```
+
+The way of processing RESOURCES PATHS is a key algorithm of the JSight language. More information on
+the features of this algorithm, in which the DIRECTIVE `Path` also participates, can be seen in the
+section [“PARAMETER "Path"”](#parameter-path). 
+
+### DIRECTIVE **"Query"**
+
+> Requirement: req.japi.http_method.query 0.4  
+> Status: APPROVED 10.01.2022.
+
+The DIRECTIVE `Query` is intended to describe the URL QUERY STRING in DIRECTIVES-HTTP-METHODS.
+
+|    DIRECTIVE "Query"    |                       |
+| ----------------------- | :-------------------: |
+| KEYWORD                 |        `Query`        |
+| PARENT DIRECTIVES       | DIRECTIVES-HTTP-METHODS (`GET`, `POST`, etc.) |
+| PARAMETERS              | <ul align="left" style={{margin: 0}}><li>`QueryExample`</li><li>`Format`</li></ul> |
+| ANNOTATION              |      Not allowed      |
+| BODY                    |     SCHEMA `jsight`   |
+| CHILD DIRECTIVES        |          No           |
+| Default CHILD DIRECTIVE |          No           |
+
+##### PARENT DIRECTIVES
+
+The DIRECTIVE `Query` can only be placed in the CONTEXT of DIRECTIVES-HTTP-METHODS.
+
+Also, the DIRECTIVE `Query` can be placed in the macro defined by the DIRECTIVE `MACRO` (see the 
+section [“DIRECTIVE "MACRO"”](#directive-macro)).
+
+##### PARAMETERS
+
+The DIRECTIVE `Query` has two optional PARAMETERS:
+
+1. `QueryExample` — an example of a valid QUERY STRING that does not contain a leading question mark
+   `?`. The value `QueryExample` must be URL-encoded (see
+   https://datatracker.ietf.org/doc/html/rfc3986#section-1.3) and conform to the FORMAT, specified
+   in the PARAMETER `Format`. Also, `QueryExample` can be omitted.
+
+2. `Format` — the FORMAT, in which the data encoded in the QUERY STRING must be presented. In the
+   current lanuage version, only one FORMAT `htmlFormEncoded` is supported (see the specification
+   for the JSight Schema language, section [“Serialization FORMAT
+   "htmlFormEncoded"”](jsight-schema-0-3#serialization-format-htmlformencoded)). Furthermore, the PARAMETER `Format`
+   can take the value of `noFormat`, which means that there are no any requirements for the FORMAT
+   of the QUERY STRING. If the PARAMETER `Format` is omitted, the default value is
+   `htmlFormEncoded`.
+
+Examples of the DIRECTIVE `Format` with different PARAMETERS are given below in the subsection
+[“BODY”](#directive-query-body).
+
+##### ANNOTATION
+
+The DIRECTIVE `Query` CANNOT have ANNOTATION.
+
+##### BODY {#directive-query-body}
+
+The BODY of the DIRECTIVE `Query` must contain a SCHEMA in the NOTATION `jsight` (in [JSight Schema
+language](jsight-schema-0-3)). The SCHEMA describes the data structure that must be serialized into
+a QUERY STRING in the FORMAT specified.
+
+If the PARAMETER `QueryExample` is specified, then the value of the PARAMETER `QueryExample` must
+match the SCHEMA requirements taking into account the serialization FORMAT `Format`.
+
+Let's consider some examples.
+
+**Example 1.**
+
+```jsight
+GET /cats // Get a page with cats.
+
+  Query "page=1&per_page=50"
+    {
+      "page": 1,
+      "per_page": 50 // {optional: true}
+    }
+
+  200 [@cat]
+```
+
+The given example requires the mandatory parameter `page` and optional parameter `per_page` to be
+specified in the QUERY STRING.
+
+**Example 2.**
+
+```jsight
+GET /cats // Get a page with cats of the right size.
+
+  Query "page=1&per_page=50&filter[size]=XXL"
+    {
+      "page": 1,
+      "per_page": 50,  // {optional: true}
+      "filter": {      // {optional: true}
+        "size": "XXL", // {optional: true, enum: ["S", "L", "M"]} - Filter by cat's size.
+        "age" : 12     // {optional: true                       } - Filter by cat's age.
+      }
+    }
+
+  200 [@cat]
+```
+
+In the given example an optional object `filter` with the ability to specify parameters for
+filtering cats by `size` and `age` is added in the QUERY STRING.
+
+**Example 3.**
+
+```jsight
+GET /cats // Get a page with cats of the right size.
+
+  Query
+    {
+      "page": 1,
+      "per_page": 50,  // {optional: true}
+      "filter": {      // {optional: true}
+        "size": "XXL", // {optional: true, enum: ["S", "L", "M"]} - Filter by cat's size.
+        "age" : 12     // {optional: true                       } - Filter by cat's age.
+      }
+    }
+
+  200 [@cat]
+```
+
+The given example is similar to the previous one, but the PARAMETER `QueryExample` is omitted in the
+the DIRECTIVE `Query`. It is preferable to always specify the PARAMETER `QueryExample` because it
+helps to faster understand the structure of the QUERY STRING. However, if the example of a valid
+QUERY LINE is too long to be inserted in the documentation, it can be omitted.
+
+**Example 4.**
+
+```jsight
+GET /cats // Get a page with cats.
+
+  Query "page=1&per_page=50" htmlFormEncoded
+    {
+      "page": 1,
+      "per_page": 50 // {optional: true}
+    }
+
+  200 [@cat]
+```
+
+In the given example, the FORMAT of serialization of data into a QUERY STRING is explicitly
+specified.
+
+**Example 5.**
+
+Unfortunately, there are no strict standards in the world for the FORMAT of data serialization in
+the QUERY STRING. It might happen, that the JSight API language will not be able to describe the
+requirements for the QUERY STRING, nevertheless, this QUERY STRING should be given at least as an
+example.
+
+In this case, you must specify `noFormat` in the DIRECTIVE `Query` in the PARAMETER `Format`.
+
+```jsight
+GET /cats // Get a page with cats.
+
+  Query "myVeryStrange[way]of%20query=string&encoding" noFormat
+    {
+      "myVeryStrange": [
+        "way"
+      ],
+      "of query": [
+        "string",
+        "encoding"
+      ]
+    }
+
+  200 [@cat]
+```
 
 ### DIRECTIVE **"Request"**
 
@@ -1375,822 +2333,115 @@ Please note that in the given example, the DIRECTIVE by default `Body` cannot be
 is not the only CHILD DIRECTIVE in the context of the DIRECTIVE `Request` (for more information, see
 the section [“CHILD DIRECTIVES by default”](#child-directives-by-default)).
 
-### DIRECTIVE **"Headers"**
+### DIRECTIVE **"SERVER"**
 
-> Requirement: req.japi.headers 0.3  
+> Requirement: req.japi.server 0.3  
 > Status: APPROVED 12.10.2021.
 
-The DIRECTIVE `Headers` is intended to describe the required HTTP-HEADERS in the DIRECTIVE `Request`
-and DIRECTIVES-RESPONSES.
+The DIRECTIVE `SERVER` is intended to describe the server where the API is physically located.
 
-|        DIRECTIVE "Headers"   |                    |
-| ---------------------------- | :----------------: |
-| KEYWORD                      |     `Headers`      |
-| PARENT DIRECTIVES (possible) | <ul align="left" style={{margin: 0}}><li>`Request`</li><li>DIRECTIVES-RESPONSES (e. g. `200`, `301` etc.)</li></ul> |
-| PARAMETERS                   |        No          |
-| ANNOTATION                   |    Not Allowed     |
-| BODY                         |    SCHEMA `jsight` |
-| CHILD DIRECTIVES             |        No          |
-| Default CHILD DIRECTIVE      |        No          | 
+|   DIRECTIVE "SERVER"    |                   |
+| ----------------------- | :---------------: |
+| KEYWORD                 |     `SERVER`      |
+| PARENT DIRECTIVES       |   ROOT CONTEXT    |
+| PARAMETERS              |      `Name` *     |
+| ANNOTATION              |       Allowed     |
+| BODY                    |  CHILD DIRECTIVES |
+| CHILD DIRECTIVES        |      `BaseUrl` *  |
+| Default CHILD DIRECTIVE |         No        |
 
-##### PARENT DIRECTIVES
-
-DIRECTIVE `Headers` can be placed in the following CONTEXTS:
-
-- DIRECTIVE `Request`,
-- DIRECTIVES-RESPONSES (`200`, `301`, `404`, etc.).
-
-Also, the DIRECTIVE `Headers` can be placed in the macro defined by the DIRECTIVE `MACRO` (see the 
-section [“DIRECTIVE "MACRO"”](#directive-macro)).
-
-##### PARAMETERS
-
-The DIRECTIVE `Headers` has no PARAMETERS.
-
-##### ANNOTATION
-
-The DIRECTIVE `Headers` CANNOT have ANNOTATION.
-
-##### BODY
-
-The BODY of the DIRECTIVE `Headers` must contain the SCHEMA NOTATION `jsight` (in the JSight Schema
-language). The SCHEMA describes the HEADERS that should be in the request or response. At the root
-of the SCHEMA, there should be an object, each of whose properties describes a separate HEADER. The
-property key describes the name of the HEADER, and the property value describes the value of the
-HEADER.
-
-The root SCHEMA object cannot have the RULE `nullable: true`.
-
-As an example, let's consider the following:
-
-```jsight
-GET /cats
-  200
-    Headers
-      {
-        "Authorization": "Basic dG9tQGNhdC5jb206YWJjMTIz=", // {regex: "Basic [A-Za-z0-9+\/=]+"}
-        "Content-Type": "application/json"                  // {const: true}
-      }
-    Body 
-      [@cat]
-```
-
-This example describes two commonly used HEADERS: `Authorization` and `Content-Type` using the
-syntax of the [JSight Schema language](jsight-schema-0-3).
-
-**IMPORTANT!!!** The rule `additionalProperties` of the SCHEMA root object in the DIRECTIVE
-`Headers` is `true` by default, not `false`, as [JSight Schema language](jsight-schema-0-3)
-defines it by default. It was developed to ensure that client and server applications, that send and
-respond to HTTP-REQUESTS, were allowed to add any extra headers of their choice, without violating
-the described requirements. You can explicitly restrict additional headers if necessary by
-specifying `additionalProperties: false` in the root object of the SCHEMA:
-
-
-```jsight
-GET /cats
-  200
-    Headers 
-      { // {additionalProperties: false}
-        "Content-Type": "application/json" // {const: true}
-      }
-    Body [@cat]
-```
-
-### DIRECTIVE **"Body"**
-
-> Requirement: req.japi.body 0.3  
-> Status: APPROVED 12.10.2021.  
-> It is planned:
->
->  - to add a third PARAMETER `Format`.
-
-The DIRECTIVE `Body` is intended to describe the required HTTP-BODIES in the DIRECTIVE `Request` and
-DIRECTIVES-RESPONSES (`200`, `301`, etc.).
-
-|        DIRECTIVE "Body"      |                    |
-| ---------------------------- | :----------------: |
-| KEYWORD                      |       `Body`       |
-| PARENT DIRECTIVES (possible) | <ul align="left" style={{margin: 0}}><li>`Request`</li><li>DIRECTIVES-RESPONSES (e. g. `200`, `301`, etc.)</li></ul> |
-| PARAMETERS                   | <ul align="left" style={{margin: 0}}><li><code>Type</code></li><li><code>SchemaNotation</code></li></ul><p style={{"text-align": "left", margin: 0}}>In future versions also: `Format`</p> |
-| ANNOTATION                   |    Not allowed     |
-| BODY                         |       SCHEMA       |
-| CHILD DIRECTIVES             |        No          |
-| Default CHILD DIRECTIVE      |        No          | 
+In the ROOT CONTEXT any number of DIRECTIVES `SERVER` is allowed.
 
 ##### PARENT DIRECTIVES
 
-The DIRECTIVE `Body` can be placed in the following CONTEXTS:
+The DIRECTIVE `SERVER` can only be placed in the ROOT CONTEXT.
 
-- DIRECTIVE `Request`,
-- DIRECTIVES-RESPONSES (`200`, `301`, `404`, etc.).
-
-Also, the DIRECTIVE `Body` can be placed in the macro defined by the DIRECTIVE `MACRO` (see the 
-section [“DIRECTIVE "MACRO"”](#directive-macro)).
-
-##### PARAMETERS
-
-The DIRECTIVE `Body` can have two optional PARAMETERS:
-
-  - `SchemaNotation` — sets the SCHEMA NOTATION, which is used to describe the data SCHEMA in the
-    BODY of the DIRECTIVE `Body`. Examples of SCHEMA NOTATIONS: `jsight`, `regex`, `any`, `empty`
-    (see the section [“PARAMETER "SchemaNotation"”](#parameter-schemanotation)).
-  - `Type` — specifies the TYPE of data, which should be placed in the HTTP-BODY. The parameter
-    `Type` can be written in two ways:
-    1. <u>A USER TYPE name that starts with a symbol <code>@</code></u>, for example, <code>Body
-       @cat</code>. In this case, the BODY of HTTP REQUEST (or HTTP RESPONSE) must contain a JSON
-       document of the specified TYPE. In future language versions, it will be possible to set the
-       FORMAT of the document using the third PARAMETER <code>Format</code>, for example, XML rather
-       than JSON.
-
-    2. <u>A USER TYPE name that starts with a symbol <code>@</code> and <i>is enclosed in square
-       brackets</i></u>, for example <code>Body [@cat]</code>. In this case, the BODY of HTTP
-       REQUEST (or HTTP RESPONSE) must contain a JSON document that corresponds to <i>an array of
-       elements of the specified TYPE</i>. In future language versions, it will be possible to set
-       the FORMAT of the document using the third PARAMETER <code>Format</code>, for example, XML
-       rather than JSON.
-
-PARAMETERS `Type` and `SchemaNotation` cannot be declared simultaneously. Thus, the DIRECTIVE `Body`
-can have the following sets of PARAMETERS:
-
-1. The PARAMETER `Type` is specified. In this case, the BODY of the DIRECTIVE `Body` must be empty.
-2. The PARAMETER `SchemaNotation` is specified. In this case, the BODY of the DIRECTIVE `Body`
-   cannot be empty and must contain a SCHEMA in the specified NOTATION.
-3. There are no PARAMETERS. In this case, the PARAMETER `SchemaNotation` is considered equal to
-   `jsight`, and the BODY of the DIRECTIVE `Body` must contain the SCHEMA in the NOTATION `jsight`.
-
-Let's consider some examples: 
-
-**Example 1.**
-
-```jsight
-GET /cats/{id}
-  200
-    Body jsight
-      {
-        "id"  : 1,
-        "name": "Tom"
-      }
-```
-
-In the given example, the PARAMETER `SchemaNotation` with the value `jsight` is specified in the
-DIRECTIVE `Body`. Accordingly, the BODY of the DIRECTIVE `Body` contains the SCHEMA in the NOTATION
-`jsight`.
-
-**Example 2.**
-
-```jsight
-GET /cats/{id}
-  200
-    Body
-      {
-        "id"  : 1,
-        "name": "Tom"
-      }
-```
-
-In the given example, there are no PARAMETERS in the DIRECTIVE `Body`, so it is assumed by default
-that PARAMETER `SchemaNotation` has a value `jsight`. Accordingly, the BODY of the DIRECTIVE `Body`
-contains the SCHEMA in the NOTATION `jsight`, as in the previous example.
-
-**Example 3.**
-
-```jsight
-GET /cats/{id}
-  200
-    Body @cat
-```
-
-In this example, the PARAMETER `Type` with the value `@cat` is specified in the DIRECTIVE `Body`.
-This means that a JSON-document corresponding to the USER TYPE `@cat` should come in the RESPONSE to
-the REQUEST `GET /cats`.
-
-**Example 4.**
-
-```jsight
-GET /cats
-  200
-    Body [@cat]
-```
-In the given example, the PARAMETER `Type` with the value `[@cat]` is specified in the DIRECTIVE
-`Body`. This means that a JSON-document containing *an array of elements* and corresponding to the
-USER TYPE `@cat`, should come in the RESPONSE to the REQUEST `GET /cats`.
-
-##### ANNOTATION
-
-The DIRECTIVE `Body` CANNOT have ANNOTATION.
-
-##### BODY
-
-The BODY of the DIRECTIVE `Body` may contain a SCHEMA of that NOTATION, which is set by the
-PARAMETER `SchemaNotation` — either explicitly or by default. Some NOTATIONS compulsory require the
-presence of a SCHEMA (for example, the NOTATION `jsight`). Other NOTATIONS may not require a SCHEMA
-(for example, the NOTATION `any`).
-
-If the PARAMETER `Type` is specified in the DIRECTIVE, then the BODY of the DIRECTIVE must be empty.
-
-Let's consider some valid examples.
-
-**Example 1.** The BODY is not required since the PARAMETER `Type` is specified:
-
-```jsight
-GET /cats/{id}
-  200 // Returning JSON with a cat.
-    Body @cat
-```
-
-**Example 2.** The BODY is required since the PARAMETER `SchemaNotation` explicitly specifies the
-SCHEMA NOTATION `regex`:
-
-```jsight
-GET /cats/{id}/name
-  200 // Returning a string with the name of the cat.
-    Body regex
-      /[A-Z][a-z]*/
-```
-
-**Example 3.** The BODY is not required since the specified NOTATION `any` always implies an empty
-SCHEMA:
-
-```jsight
-POST /cats/counter
-  200 // BODY doesn't matter.
-    Body any
-```
-
-**Example 4.** The BODY in JSight Schema language is required, since the PARAMETER `SchemaNotation`
-implies the NOTATION `jsight` by default:
-
-```jsight
-GET /cats/{id}
-  200 // Returning a cat.
-    Body
-      {
-        "id"  : 123,
-        "name": "Tom"
-      }
-```
-
-##### Default FORMATS
-
-The same structured data can be serialized in different FORMATS. In the future language versions,
-the option to explicitly control the serialization FORMAT using the PARAMETER `Format` will be added
-in the DIRECTIVE `Body`. In the current language version, the FORMAT is set implicitly, depending on
-the specified SCHEMA NOTATION.
-
-The SCHEMA NOTATION, in turn, is specified either explicitly using the PARAMETER `SchemaNotation` or
-implicitly through the specified USER TYPE `Type`, which has its own NOTATION.
-
-The table below displays the default schema FORMATS for all currently supported SCHEMA NOTATIONS:
-
-| SCHEMA NOTATION |   Default FORMAT    |
-| :-------------: | :-----------------: |
-|     jsight      |         json        |
-|     regex       |     plainString     |
-|     any         |        binary       |
-|     empty       |        binary       |
-
-Let's consider an example:
-
-```jsight
-GET /json-endpoint
-  200
-    Body jsight
-      "Hello, World!" // {const: true}
-
-GET /plain-string-endpoint
-  200
-    Body regex
-      /Hello, World!/
-```
-
-In the given example, the same data structure is described in both RESOURCES in  DIRECTIVES `Body`.
-However, this is done using different NOTATIONS: `jsight` and `regex`. The NOTATION `jsight` implies
-the default FORMAT `json`, while the NOTATION `regex` implies the default FORMAT `plainString`. This
-means that if you send a request for the first resource `/json-endpoint`, then the response will
-contain the line `"Hello, World!"` (in quotes), which corresponds to the FORMAT `json`. And if you
-send a request for the second resource `/plain-string-endpoint`, then the response will contain  the
-line `Hello, World!` (without quotes), which corresponds to the FORMAT `plainString`. In other
-words:
-
-```
-$ curl /json-endpoint
-"Hello, World!"
-
-$ curl /plain-string-endpoint
-Hello, World!
-```
-
-### DIRECTIVE **"Query"**
-
-> Requirement: req.japi.http_method.query 0.4  
-> Status: APPROVED 10.01.2022.  
-> It is planned:
->
-> - TODO: to add the ability to specify a QueryExample without URL encoding.
-> - TODO: to add support for other Query FORMATS.
-
-The DIRECTIVE `Query` is intended to describe the URL QUERY STRING in DIRECTIVES-HTTP-METHODS.
-
-|    DIRECTIVE "Query"    |                       |
-| ----------------------- | :-------------------: |
-| KEYWORD                 |        `Query`        |
-| PARENT DIRECTIVES       | DIRECTIVES-HTTP-METHODS (`GET`, `POST`, etc.) |
-| PARAMETERS              | <ul align="left" style={{margin: 0}}><li>`QueryExample`</li><li>`Format`</li></ul> |
-| ANNOTATION              |      Not allowed      |
-| BODY                    |     SCHEMA `jsight`   |
-| CHILD DIRECTIVES        |          No           |
-| Default CHILD DIRECTIVE |          No           |
-
-##### PARENT DIRECTIVES
-
-The DIRECTIVE `Query` can only be placed in the CONTEXT of DIRECTIVES-HTTP-METHODS.
-
-Also, the DIRECTIVE `Query` can be placed in the macro defined by the DIRECTIVE `MACRO` (see the 
-section [“DIRECTIVE "MACRO"”](#directive-macro)).
-
-##### PARAMETERS
-
-The DIRECTIVE `Query` has two optional PARAMETERS:
-
-1. `QueryExample` — an example of a valid QUERY STRING that does not contain a leading question mark
-   `?`. The value `QueryExample` must be URL-encoded (see
-   https://datatracker.ietf.org/doc/html/rfc3986#section-1.3) and conform to the FORMAT, specified
-   in the PARAMETER `Format`. Also, `QueryExample` can be omitted.
-
-2. `Format` — the FORMAT, in which the data encoded in the QUERY STRING must be presented. In the
-   current lanuage version, only one FORMAT `htmlFormEncoded` is supported (see the specification
-   for the JSight Schema language, section [“Serialization FORMAT
-   "htmlFormEncoded"”](jsight-schema-0-3#serialization-format-htmlformencoded)). Furthermore, the PARAMETER `Format`
-   can take the value of `noFormat`, which means that there are no any requirements for the FORMAT
-   of the QUERY STRING. If the PARAMETER `Format` is omitted, the default value is
-   `htmlFormEncoded`.
-
-Examples of the DIRECTIVE `Format` with different PARAMETERS are given below in the subsection
-[“BODY”](#directive-query-body).
-
-##### ANNOTATION
-
-The DIRECTIVE `Query` CANNOT have ANNOTATION.
-
-##### BODY {#directive-query-body}
-
-The BODY of the DIRECTIVE `Query` must contain a SCHEMA in the NOTATION `jsight` (in [JSight Schema
-language](jsight-schema-0-3)). The SCHEMA describes the data structure that must be serialized into
-a QUERY STRING in the FORMAT specified.
-
-If the PARAMETER `QueryExample` is specified, then the value of the PARAMETER `QueryExample` must
-match the SCHEMA requirements taking into account the serialization FORMAT `Format`.
-
-Let's consider some examples.
-
-**Example 1.**
-
-```jsight
-GET /cats // Get a page with cats.
-
-  Query "page=1&per_page=50"
-    {
-      "page": 1,
-      "per_page": 50 // {optional: true}
-    }
-
-  200 [@cat]
-```
-
-The given example requires the mandatory parameter `page` and optional parameter `per_page` to be
-specified in the QUERY STRING.
-
-**Example 2.**
-
-```jsight
-GET /cats // Get a page with cats of the right size.
-
-  Query "page=1&per_page=50&filter[size]=XXL"
-    {
-      "page": 1,
-      "per_page": 50,  // {optional: true}
-      "filter": {      // {optional: true}
-        "size": "XXL", // {optional: true, enum: ["S", "L", "M"]} - Filter by cat's size.
-        "age" : 12     // {optional: true                       } - Filter by cat's age.
-      }
-    }
-
-  200 [@cat]
-```
-
-In the given example an optional object `filter` with the ability to specify parameters for
-filtering cats by `size` and `age` is added in the QUERY STRING.
-
-**Example 3.**
-
-```jsight
-GET /cats // Get a page with cats of the right size.
-
-  Query
-    {
-      "page": 1,
-      "per_page": 50,  // {optional: true}
-      "filter": {      // {optional: true}
-        "size": "XXL", // {optional: true, enum: ["S", "L", "M"]} - Filter by cat's size.
-        "age" : 12     // {optional: true                       } - Filter by cat's age.
-      }
-    }
-
-  200 [@cat]
-```
-
-The given example is similar to the previous one, but the PARAMETER `QueryExample` is omitted in the
-the DIRECTIVE `Query`. It is preferable to always specify the PARAMETER `QueryExample` because it
-helps to faster understand the structure of the QUERY STRING. However, if the example of a valid
-QUERY LINE is too long to be inserted in the documentation, it can be omitted.
-
-**Example 4.**
-
-```jsight
-GET /cats // Get a page with cats.
-
-  Query "page=1&per_page=50" htmlFormEncoded
-    {
-      "page": 1,
-      "per_page": 50 // {optional: true}
-    }
-
-  200 [@cat]
-```
-
-In the given example, the FORMAT of serialization of data into a QUERY STRING is explicitly
-specified.
-
-**Example 5.**
-
-Unfortunately, there are no strict standards in the world for the FORMAT of data serialization in
-the QUERY STRING. It might happen, that the JSight API language will not be able to describe the
-requirements for the QUERY STRING, nevertheless, this QUERY STRING should be given at least as an
-example.
-
-In this case, you must specify `noFormat` in the DIRECTIVE `Query` in the PARAMETER `Format`.
-
-```jsight
-GET /cats // Get a page with cats.
-
-  Query "myVeryStrange[way]of%20query=string&encoding" noFormat
-    {
-      "myVeryStrange": [
-        "way"
-      ],
-      "of query": [
-        "string",
-        "encoding"
-      ]
-    }
-
-  200 [@cat]
-```
-
-### DIRECTIVE **"Path"**
-
-> Requirement: req.japi.http_method.path 0.3  
-> Status: APPROVED 12.10.2021.
-
-The DIRECTIVE `Path` is intended to describe the RESOURCE PATH PARAMETERS in the DIRECTIVE `URL` and
-in the DIRECTIVES-HTTP-METHODS (`GET`, `POST`, etc.).
-
-|        DIRECTIVE "Path"      |                      |
-| ---------------------------- | :------------------: |
-| KEYWORD                      |        `Path`        |
-| PARENT DIRECTIVES (possible) | <ul align="left" style={{margin: 0}}><li>`URL`</li><li>DIRECTIVES-HTTP-METHODS (`GET`, `POST`, etc.)</li></ul> |
-| PARAMETERS                   |         No           |
-| ANNOTATION                   |      Not allowed     |
-| BODY                         |     SCHEMA `jsight`  |
-| CHILD DIRECTIVES             |          No          |
-| Default CHILD DIRECTIVE      |          No          |
-
-##### PARENT DIRECTIVES
-
-The DIRECTIVE `Path` can be placed in the following CONTEXTS:
-
-- DIRECTIVE `URL`,
-- DIRECTIVES-HTTP-METHODS (`GET`, `POST` and etc.),
-
-Also, the DIRECTIVE `Path` can be placed in the macro defined by the DIRECTIVE `MACRO` (see the 
-section [“DIRECTIVE "MACRO"”](#directive-macro)).
-
-##### PARAMETERS
-
-The DIRECTIVE `Path` has no PARAMETERS.
-
-##### ANNOTATION
-
-The DIRECTIVE `Path` CANNOT have ANNOTATION.
-
-##### BODY
-
-The BODY of the DIRECTIVE `Path` must contain a SCHEMA of the TYPE `jsight` (in [JSight Schema
-language](jsight-schema-0-3)). The SCHEMA describes the requirements for the PATH PARAMETERS that
-are declared in the PARAMETER `Path` of the PARENT DIRECTIVE. (The PARENT DIRECTIVE can be either
-`URL` or DIRECTIVE-HTTP-METHOD). At the root of the SCHEMA an object should be placed, each of whose
-properties describes a separate PATH PARAMETER `Path`. The KEYS properties must match the names of
-PATH PARAMETERS that were declared in `Path`.
-
-The root object of the SCHEMA cannot have RULES: `nullable: true`, `or`,
-`additionalProperties: true`.
-
-It is not required to describe all PATH PARAMETERS, only a part of the PATH PARAMETERS can be
-described. There are no any requirements for undescribed PATH PARAMETERS.
-
-Let's consider an example:
-
-```jsight
-GET /cats/{id}
-
-  Path
-    {
-      "id": 12 // Cat identifier.
-    }
-
-  200 @cat
-```
-
-In the given example, a requirement is specified for the PATH PARAMETER `id` — it must be an
-integer. The caption of this PARAMETER is also indicated: “Cat identifier”.
-
-Another example with two PATH PARAMETERS:
-
-```jsight
-URL /cats/{id}/friends/{friendId}
-
-  Path
-    {
-      "id"      : 12, // Cat identifier.
-      "friendId": 13  // Anoher cat identifier.
-    }
-
-  GET
-    200 @cat
-```
-
-For one PATH PARAMETER, you can set only once the requirements using the DIRECTIVE `Path` (for more
-information, see the section [“PARAMETER "Path"”](#parameter-path)). Let's consider an example of a
-rule violation:
-
-```jsight
-URL /cats/{id}
-  Path
-    {
-      "id": 12
-    }
-  GET
-    200 @cat
-
-GET /cats/{id}/friends
-  Path
-    {
-      "id": 12      # --ERROR!!! The requirements to the PATH PARAMETER `id` 
-    }               #            have already been specified earlier.
-  200 @cat
-```
-
-The way of processing RESOURCES PATHS is a key algorithm of the JSight language. More information on
-the features of this algorithm, in which the DIRECTIVE `Path` also participates, can be seen in the
-section [“PARAMETER "Path"”](#parameter-path). 
-
-### DIRECTIVE **"Description"**
-
-> Requirements:  
-> - req.japi.description 0.1 Status: APPROVED 12.10.2021.  
-> - req.japi.description.markdown 0.3 Status: APPROVED 12.10.2021.  
->
-> It is planned:
->
-> - TODO: To add escaping of KEYWORDS and parentheses.
-> - TODO: To describe the mechanism of comments in Markdown (`#` is the header).
-> - TODO: To describe specific markdown features that are currently supported.
-> - TODO: To describe the procedure for “cropping” the initial tab in the markdown text.
-> - TODO: To add an example of markdown text with line breaks and headers. 
-
-
-The DIRECTIVE `Description` is intended for detailed text descriptions of different DIRECTIVES.
-
-|       DIRECTIVE "Description" |                      |
-| ----------------------------- | :------------------: |
-| KEYWORD                       |     `Description`    |
-| PARENT DIRECTIVES (possible)  | <ul align="left"><li>`INFO`</li><li>DIRECTIVES-HTTP-METHODS (`GET`, `POST`, etc.)</li></ul> <p align="left">In future versions also: `Request`, `SERVER`, `TYPE`, `ENUM`</p> |
-| PARAMETERS                    |         No           |
-| ANNOTATION                    |      Not allowed     |
-| BODY                          |      Markdown Text   |
-| CHILD DIRECTIVES              |          No          |
-| Default CHILD DIRECTIVE       |          No          |
-
-##### PARENT DIRECTIVES
-
-The DIRECTIVE `Description` can be placed in the following DIRECTIVES:
-
-- DIRECTIVE `INFO`,
-- DIRECTIVES-HTTP-METHODS (`GET`, `POST`, etc.).
-
-Also, the DIRECTIVE `Description` can be placed in the macro defined by the DIRECTIVE `MACRO` (see 
+Technically you can place DIRECTIVE `SERVER` in DIRECTIVE `MACRO`, but it does not make sense (see
 the section [“DIRECTIVE "MACRO"”](#directive-macro)).
 
-In future language versions, the DIRECTIVE `Description` will be added as a CHILD to some other
-DIRECTIVES. For example, it will be possible to specify `Description` inside DIRECTIVES: `Request`,
-`SERVER`, `TYPE`, `ENUM`.
-
 ##### PARAMETERS
 
-The DIRECTIVE `Description` has no PARAMETERS.
+The  DIRECTIVE `SERVER` has one required PARAMETER `Name`, in which the server name is specified.
+The name must start with the symbol `@`.
+
+The server name must be distinct from all other server names within the PROJECT.
+
+For other requirements for server name, see the subsection [“Names”](#names) of the section “Common
+Syntax Rules”. 
+
+Example:
+
+```jsight
+SERVER @CATS_API_SERVER
+  BaseUrl "https://catsbook.com/api"
+```
 
 ##### ANNOTATION
 
-The DIRECTIVE `Description` CANNOT have ANNOTATION.
+The DIRECTIVE `SERVER` may have an ANNOTATION that briefly describes this server.
+
+Example:
+
+```jsight
+SERVER @CATS_API_SERVER // Real server catsbook.com API
+  BaseUrl "https://catsbook.com/api"
+```
 
 ##### BODY
 
-The BODY of the DIRECTIVE `Description` must contain text in Markdown format.
+The BODY of the DIRECTIVE `SERVER` may contain only one mandatory CHILD DIRECTIVE `BaseUrl`, which
+specifies the server URL.
 
 Example:
 
 ```jsight
-GET /cats
-  
-  Description
-    With this method you can get a list of all cats that are registered on the Catsbook.
-
-  200 [@cat]
+SERVER @CATS_API_SERVER
+  BaseUrl "https://catsbook.com/api"
 ```
 
-The same example with parentheses that explicitly specify the boundaries of the BODY of the
-DIRECTIVE `Description`:
+### DIRECTIVE **"Title"**
 
-```jsight
-GET /cats
-  
-  Description
-  (
-    With this method you can get 
-    a list of all cats that are registered 
-    on the Catsbook
-  )
+> Requirement: req.japi.info.title 0.3  
+> Status: APPROVED 12.10.2021.
 
-  200 [@cat]
-```
+The DIRECTIVE `Title` is intended to indicate the title of the PROJECT.
 
-In the current language version, the escaping of KEYWORDS and the closing parenthesis in BODY of the
-DIRECTIVE `Description` is not supported. Escaping will be implemented in future versions. You need
-to avoid using keywords or closing parenthesis at the beginning of a line in the current version.
-Let's have a look at some examples.
-
-Example with error:
-
-```jsight
-GET /cats
-  
-  Description
-    With this method you can get 
-    200 cats, that are registered             --ERROR!!! Will be perceived as DIRECTIVE 200
-    on the Catsbook.
-
-  200 [@cat]
-```
-
-Let's fix the error:
-
-```jsight
-GET /cats
-  
-  Description
-  With this method you can get 200 
-  cats, that are registered             
-  on the Catsbook.
-
-
-  200 [@cat]
-```
-
-Another example with error:
-
-```jsight
-GET /cats
-  
-  Description
-  (
-    With this method
-    you can get a list of 
-    cats (and female cats
-  ), that are registered         --ERROR!!! The paranthesis will be perceived as the BODY completion
-    on the Catsbook.
-  )
-
-  200 [@cat]
-```
-
-Let's fix the error:
-
-```jsight
-GET /cats
-  
-  Description
-  (
-    With this method 
-    you can get a list of
-    cats (and female cats),
-    that are registered 
-    on the Catsbook
-  )
-
-  200 [@cat]
-```
-
-### DIRECTIVE **"INCLUDE"** \[COMING SOON\]
-
-> Requirement: req.japi.include 0.1  
-> Status: TODO.
-
-:::danger COMING SOON
-
-This feature is not implemented yet. It is coming soon.
-
-:::
-
-The DIRECTIVE `INCLUDE` is intended to include other files with code in the JSight API language in
-the PROJECT.
-
-In this language version, the DIRECTIVE `INCLUDE` is not supported.
-
-### DIRECTIVE **"JSIGHT"**
-
-> Requirement: req.japi.jsight 0.4  
-> Status: APPROVED 10.01.2022.
-
-The DIRECTIVE `JSIGHT` is intended to specify the version of the JSight API language.
-
-|     DIRECTIVE "JSIGHT"    |                      |
-| ------------------------- | :------------------: |
-| KEYWORD                   |       `JSIGHT`       |
-| PARENT DIRECTIVES         |     ROOT CONTEXT     |
-| PARAMETERS                |       `Version` *    |
-| ANNOTATION                |      Not alowed      |
-| BODY                      |          No          |
-| CHILD DIRECTIVES          |          No          |
-| Default CHILD DIRECTIVE   |          No          |
-
-An important feature of the DIRECTIVE `JSIGHT` is that it must be placed the first in the root of
-the PROJECT, before any other DIRECTIVES.
-
-In one PROJECT only one DIRECTIVE `JSIGHT` is allowed.
-
-The directive `JSIGHT` cannot be omitted.
-
-Example:
-
-```jsight
-JSIGHT 0.3
-
-GET /cats
-  200 [@cat]
-```
+|    DIRECTIVE "Title"    |                    |
+| ----------------------- | :----------------: |
+| KEYWORD                 |      `Title`       |
+| PARENT DIRECTIVE        |      `INFO`        |
+| PARAMETERS              |     `Title` *      |
+| ANNOTATION              |     Not allowed    |
+| BODY                    |        No          |
+| CHILD DIRECTIVES        |        No          |
+| Default CHILD DIRECTIVE |        No          | 
 
 ##### PARENT DIRECTIVES
 
-The DIRECTIVE `JSIGHT` can only be placed in the ROOT CONTEXT.
+The DIRECTIVE `Title` can be placed only inside the DIRECTIVE `INFO`.
+
+Technically you can place DIRECTIVE `Title` in DIRECTIVE `MACRO`, but it does not make sense (see
+the section [“DIRECTIVE "MACRO"”](#directive-macro)).
 
 ##### PARAMETERS
 
-The DIRECTIVE `JSIGHT` has one PARAMETER `Version`. The PARAMETER `Version` must contain a string
-with the version number of the JSight API language that was used to write this PROJECT.
+The DIRECTIVE `Title` has one mandatory PARAMETER `Title`, in which the title of the PROJECT must be
+specified.
 
 Example:
 
 ```jsight
-JSIGHT 0.3
+INFO
+  Title "Catsbook API"
 ```
 
 ##### ANNOTATION
 
-The DIRECTIVE `JSIGHT` CANNOT have ANNOTATION.
+The DIRECTIVE `Title` CANNOT have ANNOTATION.
 
 ##### BODY
 
-The DIRECTIVE `JSIGHT` does NOT have a BODY.
-
-### DIRECTIVE **"Cookies"** \[COMING SOON\]
-
-:::danger COMING SOON
-
-This feature is not implemented yet. It is coming soon.
-
-:::
-
-The DIRECTIVE `Cookies` is not supported in this language version.
-
-### DIRECTIVE **"Authorization"** \[COMING SOON\]
-
-:::danger COMING SOON
-
-This feature is not implemented yet. It is coming soon.
-
-:::
-
-The DIRECTIVE `Authorization` is not supported in this language version.
+The DIRECTIVE `Title` has no BODY.
 
 ### DIRECTIVE **"TYPE"**
 
@@ -2282,209 +2533,96 @@ placed:
 - In SCHEMAS (for example, in SCHEMAS of the NOTATION `jsight`, see the specification for [JSight
   Schema language](jsight-schema-0-3)).
 
-### DIRECTIVE **"RULE"** \[COMING SOON\]
+### DIRECTIVE **"URL"**
 
-> Requirement: req.japi.rule 0.3  
-> Status: TODO.
+> Requirement: req.japi.url 0.4  
+> Status: APPROVED 12.10.2021.
 
-:::danger COMING SOON
+The DIRECTIVE `URL` declares new RESOURCE of API.
 
-This feature is not implemented yet. It is coming soon.
-
-:::
-
-The directive `RULE` in its original form is not supported in this language version.
-
-### DIRECTIVE **"ENUM"** \[COMING SOON\]
-
-> Requirement: req.japi.enum 0.3  
-> Status: IN DEVELOPMENT 22.12.2021.
-
-:::danger COMING SOON
-
-This feature is not implemented yet. It is coming ASAP!
-
-:::
-
-The directive `ENUM` is intended for the declaration and description of named ENUMERATION, which can
-be referred to from the rule `enum` in SCHEMAS of the NOTATION `jsight` (written in the [JSight
-Schema language](jsight-schema-0-3)).
-
-:::note
-
-Conceptually, the DIRECTIVE `ENUM` is an shorthand notation of the DIRECTIVE `RULE` for
-ENUMERATIONS. For example, the string `ENUM @catsEnum` means exactly the same as `RULE @catsEnum
-enum`. 
-However, because the DIRECTIVE `RULE` is not supported in the current JSight API version, we
-will describe the DIRECTIVE `ENUM` as a standalone DIRECTIVE in this section.
-
-:::
-
-|        DIRECTIVE "ENUM"     |                    |
-| --------------------------- | :----------------: |
-| KEYWORD                     |       `ENUM`       |
+|        DIRECTIVE "URL"      |                    |
+| ----------------------------| :----------------: |
+| KEYWORD                     |        `URL`       |
 | PARENT DIRECTIVE            |    ROOT CONTEXT    |
-| PARAMETERS                  |       `Name` *     |
-| ANNOTATION                  |      Allowed       |
-| BODY                        | <p align="left" style={{margin: 0}}>BODY of Default CHILD DIRECTIVE `EnumValue`</p> |
-| CHILD DIRECTIVES (possible) | <p align="left" style={{margin: 0}}>In this version no.<br />In future versions: `Description`, `EnumValue`.</p> |
-| Default CHILD DIRECTIVE     | In future versions: `EnumValue` | 
+| PARAMETERS                  |        `Path` *    |
+| ANNOTATION                  |    Not allowed     |
+| BODY                        |  CHILD DIRECTIVES  |
+| CHILD DIRECTIVES (possible) | <ul align="left" style={{margin: 0}}><li>HTTP-METHODS</li><li>`Path`</li></ul> |
+| Default CHILD DIRECTIVE     |          No        |
 
-In the ROOT CONTEXT any number of DIRECTIVES `ENUM` is allowed.
+Any number of DIRECTIVES `URL` is allowed in the ROOT CONTEXT.
 
 ##### PARENT DIRECTIVES
 
-The DIRECTIVE `ENUM` can only be placed in the ROOT CONTEXT.
+The DIRECTIVE `URL` can only be placed in the ROOT CONTEXT.
 
-Technically you can place DIRECTIVE `ENUM` in DIRECTIVE `MACRO`, but it does not make sense (see
+Technically you can place DIRECTIVE `URL` in DIRECTIVE `MACRO`, but it does not make sense (see 
 the section [“DIRECTIVE "MACRO"”](#directive-macro)).
 
 ##### PARAMETERS
 
-The DIRECTIVE `ENUM` has one mandatory PARAMETER `Name`, which specifies the name of the
-ENUMERATION. The name of the ENUMERATION must start with the symbol `@`. For example,
-`@catSizeEnum`.
+The DIRECTIVE `URL` has only one mandatory PARAMETER `Path`, which must contain RESOURCE PATH. The
+`Path` may contain PATH PARAMETERS in curly braces, for example: `/cats/{id}`. For more information
+on the PARAMETER of the DIRECTIVE `Path`, see the section “Reference of common PARAMETERS of
+DIRECTIVES”, subsection [“PARAMETER "Path"”](#parameter-path).
 
-The name of the ENUMERATION must be distinct from all other names of ENUMERATIONS within the
-PROJECT. (In future language versions, the name of the ENUMERATION must be distinct from all names
-of the named RULES as well).
+Example of the directive `URL` with mandatory PARAMETER `Path`: 
 
-Other requirements for names are specified in the subsection [“Names”](#names) of the section
-“Common Syntax Rules”.
+```jsight
+URL /cats
+```
 
 ##### ANNOTATION
 
-The DIRECTIVE `ENUM` may have an ANNOTATION, which is intended to briefly describe the ENUMERATION.
+It is not allowed to input an ANNOTATION to the DIRECTIVE `URL`.
 
 ##### BODY
 
-The BODY of the DIRECTIVE `ENUM` must contain the content of the rule `enum`, written according to
-the JSight Schema language rules (see the language specification, section [“RULE
-"enum"”](jsight-schema-0-3#rule-enum)).
+A BODY of the DIRECTIVE `URL` is made up of one or more nested DIRECTIVES. There must be at least
+one CHILD DIRECTIVE in the BODY.
 
-Example:
+DIRECTIVE `URL` allows the following CHILD DIRECTIVES:
 
-```jsight
-ENUM @animalEnum
-  [
-    // Pets
-    "CAT", // Cat
-    "DOG", // Dog
-    "PIG", // Pig
-    // Wild animals
-    "WOLF", // Wolf
-    "LION", // Lion
-    "TIGER" // Tiger
-  ]
-```
-An example of a reference to the described ENUMERATION:
+- DIRECTIVES-HTTP-METHODS (any number) — describe the HTTP-METHODS of this RESOURCE. HTTP-METHODS
+  cannot be repeated inside one DIRECTIVE `URL`(for example, one `URL` cannot have two directives
+  `GET`).
+- DIRECTIVE `Path` (not more than one) — describes the PARAMETERS of the PATH, declared in the
+  PARAMETER `Path`.
+
+For DIRECTIVE `URL`, the default CHILD DIRECTIVE is not defined (see the section [“CHILD DIRECTIVES
+by default”](#child-directives-by-default)).
+
+Example of using the directive `URL` 
 
 ```jsight
-GET /animals/{id}
-  200
+URL /cats
+  GET // Get the list of cats.
+    200 [@cat]
+  POST // Create a new cat.
+    200 @cat
+
+URL /cats/{id}
+  Path
     {
-      "id": 12,
-      "name": "Tom",
-      "animalType": "CAT" // {enum: "@animalEnum"}
+      "id": 123 // {min: 1} - Cat identifier.
     }
+  GET // Get a cat by its id. 
+    200 @cat
+  PUT // Change a cat by its id. 
+    200 @cat
 ```
 
-### DIRECTIVE **"INFO"**
+In the given example: 
 
-> Requirement: req.japi.info 0.3  
-> Status: APPROVED 12.10.2021.
+- The DIRECTIVE `URL /cats` declares that the API has a RESOURCE specified in the PARAMETER of the
+  DIRECTIVE `Path`, that is, the RESOURCE `/cats`.
+- The RESOURCE `/cats` accepts two HTTP-methods: `GET` and `POST`. 
+- The DIRECTIVE `URL /cats/{id}` declares that the API has a RESOURCE `/cats/{id}`. 
+- The DIRECTIVE `Path` specifies the requirements for the PARAMETER of the PATH `id`.
+- The resource `/cats/{id}` accepts two HTTP-methods: `GET` and `PUT`. 
 
-The DIRECTIVE `INFO` is intended to describe the PROJECT in general.
-
-|        DIRECTIVE "INFO"     |                   |
-| --------------------------- | :---------------: |
-| KEYWORD                     |      `INFO`       |
-| PARENT DIRECTIVE            |    ROOT CONTEXT   |
-| PARAMETERS                  |         No        |
-| ANNOTATION                  |      Not allowed  |
-| BODY                        | CHILD DIRECTIVES  |
-| CHILD DIRECTIVES (possible) | <ul align="left" style={{margin: 0}}><li>`Title`</li><li>`Version`</li><li>`Description`</li></ul> |
-| Default CHILD DIRECTIVE     |         No        |
-
-In the ROOT CONTEXT only one DIRECTIVE `INFO` is allowed.
-
-##### PARENT DIRECTIVES
-
-The DIRECTIVE `INFO` can only be placed in the ROOT CONTEXT.
-
-Technically you can place DIRECTIVE `INFO` in DIRECTIVE `MACRO`, but it does not make sense (see
-the section [“DIRECTIVE "MACRO"”](#directive-macro)).
-
-##### PARAMETERS
-
-The DIRECTIVE `INFO` has no PARAMETERS.
-
-##### ANNOTATION
-
-The DIRECTIVE `INFO` CANNOT have ANNOTATION.
-
-##### BODY
-
-The BODY of the DIRECTIVE `INFO` may contain the following CHILD DIRECTIVES:
-
-- `Title` (not more than one) — sets the title of the PROJECT.
-- `Version` (not more than one) — indicates the version of the API PROJECT.
-- `Description` (not more than one) — gives a detailed description of the PROJECT.
-
-Example:
-
-```jsight
-INFO
-  Title "Catsbook API"
-  Version 1.0
-  Description
-    API of social network
-    for cats Catsbook.
-```
-
-### DIRECTIVE **"Title"**
-
-> Requirement: req.japi.info.title 0.3  
-> Status: APPROVED 12.10.2021.
-
-The DIRECTIVE `Title` is intended to indicate the title of the PROJECT.
-
-|    DIRECTIVE "Title"    |                    |
-| ----------------------- | :----------------: |
-| KEYWORD                 |      `Title`       |
-| PARENT DIRECTIVE        |      `INFO`        |
-| PARAMETERS              |     `Title` *      |
-| ANNOTATION              |     Not allowed    |
-| BODY                    |        No          |
-| CHILD DIRECTIVES        |        No          |
-| Default CHILD DIRECTIVE |        No          | 
-
-##### PARENT DIRECTIVES
-
-The DIRECTIVE `Title` can be placed only inside the DIRECTIVE `INFO`.
-
-Technically you can place DIRECTIVE `Title` in DIRECTIVE `MACRO`, but it does not make sense (see
-the section [“DIRECTIVE "MACRO"”](#directive-macro)).
-
-##### PARAMETERS
-
-The DIRECTIVE `Title` has one mandatory PARAMETER `Title`, in which the title of the PROJECT must be
-specified.
-
-Example:
-
-```jsight
-INFO
-  Title "Catsbook API"
-```
-
-##### ANNOTATION
-
-The DIRECTIVE `Title` CANNOT have ANNOTATION.
-
-##### BODY
-
-The DIRECTIVE `Title` has no BODY.
+While describing a RESOURCE tree using the DIRECTIVE `URL`, keep in mind the prohibition of
+duplication of PARAMETERS of RESOURCE PATH (see the section [“PARAMETER "Path"”](#parameter-path)).
 
 ### DIRECTIVE **"Version"**
 
@@ -2530,460 +2668,7 @@ The DIRECTIVE `Version` CANNOT have ANNOTATION.
 
 The DIRECTIVE `Version` does not have a BODY.
 
-### DIRECTIVE **"SERVER"**
-
-> Requirement: req.japi.server 0.3  
-> Status: APPROVED 12.10.2021.
-
-The DIRECTIVE `SERVER` is intended to describe the server where the API is physically located.
-
-|   DIRECTIVE "SERVER"    |                   |
-| ----------------------- | :---------------: |
-| KEYWORD                 |     `SERVER`      |
-| PARENT DIRECTIVES       |   ROOT CONTEXT    |
-| PARAMETERS              |      `Name` *     |
-| ANNOTATION              |       Allowed     |
-| BODY                    |  CHILD DIRECTIVES |
-| CHILD DIRECTIVES        |      `BaseUrl` *  |
-| Default CHILD DIRECTIVE |         No        |
-
-In the ROOT CONTEXT any number of DIRECTIVES `SERVER` is allowed.
-
-##### PARENT DIRECTIVES
-
-The DIRECTIVE `SERVER` can only be placed in the ROOT CONTEXT.
-
-Technically you can place DIRECTIVE `SERVER` in DIRECTIVE `MACRO`, but it does not make sense (see
-the section [“DIRECTIVE "MACRO"”](#directive-macro)).
-
-##### PARAMETERS
-
-The  DIRECTIVE `SERVER` has one required PARAMETER `Name`, in which the server name is specified.
-The name must start with the symbol `@`.
-
-The server name must be distinct from all other server names within the PROJECT.
-
-For other requirements for server name, see the subsection [“Names”](#names) of the section “Common
-Syntax Rules”. 
-
-Example:
-
-```jsight
-SERVER @CATS_API_SERVER
-  BaseUrl "https://catsbook.com/api"
-```
-
-##### ANNOTATION
-
-The DIRECTIVE `SERVER` may have an ANNOTATION that briefly describes this server.
-
-Example:
-
-```jsight
-SERVER @CATS_API_SERVER // Real server catsbook.com API
-  BaseUrl "https://catsbook.com/api"
-```
-
-##### BODY
-
-The BODY of the DIRECTIVE `SERVER` may contain only one mandatory CHILD DIRECTIVE `BaseUrl`, which
-specifies the server URL.
-
-Example:
-
-```jsight
-SERVER @CATS_API_SERVER
-  BaseUrl "https://catsbook.com/api"
-```
-
-### DIRECTIVE **"BaseUrl"**
-
-> Requirement: req.japi.server.base_url 0.4  
-> Status: APPROVED 10.01.2022.  
-> It is planned: 
->
-> - TODO: to identify if PATH PARAMETERS in BaseUrl can conflict with PATH PARAMETERS of the
->   DIRECTIVE `Path` by name.
-> - TODO: To solve the Swagger compliance issue. 
-
-The DIRECTIVE `BaseUrl` is intended to describe the base PATH of API that is linked to a specific
-server where the API is physically located.
-
-|    DIRECTIVE "BaseUrl"  |                      |
-| ----------------------- | :------------------: |
-| KEYWORD                 |       `BaseUrl`      |
-| PARENT DIRECTIVE        |       `SERVER`       |
-| PARAMETERS              |        `Path` *      |
-| ANNOTATION              |      Not allowed     |
-| BODY                    |          No          |
-| CHILD DIRECTIVES        |          No          |
-| Default CHILD DIRECTIVE |          No          |
-
-##### PARENT DIRECTIVES
-
-The DIRECTIVE `BaseUrl` can only be placed inside the DIRECTIVE `SERVER`.
-
-Technically you can place DIRECTIVE `BaseUrl` in DIRECTIVE `MACRO`, but it does not make sense (see
-the section [“DIRECTIVE "MACRO"”](#directive-macro)).
-
-##### PARAMETERS
-
-The DIRECTIVE `BaseUrl` has one mandatory parameter `Path`, in which the URL of this server must be
-specified.
-
-Example:
-
-```jsight
-SERVER @CATS_API_SERVER
-  BaseUrl "https://catsbook.com/api"
-```
-
-##### ANNOTATION
-
-The DIRECTIVE `BaseUrl` CANNOT have ANNOTATION.
-
-##### BODY
-
-The DIRECTIVE `BaseUrl` does not have a BODY.
-
-### DIRECTIVE **"MACRO"**
-
-> Requirement: req.japi.macro 0.3  
-> Status: APPROVED 10.02.2022.  
-
-The DIRECTIVE `MACRO` is intended to declare a named macro (group of DIRECTIVES) that can be 
-pasted by DIRECTIVE `PASTE` (see the section [“DIRECTIVE "PASTE"”](#directive-paste)) at 
-different places within the PROJECT. 
-
-|        DIRECTIVE "MACRO"     |                       |
-| ---------------------------- | :-------------------: |
-| KEYWORD                      |        `MACRO`        |
-| PARENT DIRECTIVES (possible) |      ROOT CONTEXT     |
-| PARAMETERS                   |        `Name` *       |
-| ANNOTATION                   |     Not allowed       |
-| BODY                         |    CHILD DIRECTIVES   |
-| CHILD DIRECTIVES (possible)  |  Any, except `MACRO`  |
-| Default CHILD DIRECTIVE      |          No           |
-
-In the ROOT CONTEXT any number of DIRECTIVES `MACRO` is allowed.
-
-##### PARENT DIRECTIVES
-
-The DIRECTIVE `MACRO` can only be placed in the ROOT CONTEXT.
-
-##### PARAMETERS
-
-The DIRECTIVE `MACRO` has only one mandatory PARAMETER `Name`, in which the name of the macro is
-specified.
-
-The name of the macro must be distinct from all other names of macros within the PROJECT.
-
-Other requirements for the name of the macro are outlined in the subsection [“Names”](#names) of the
-section “Common Syntax Rules”.
-
-Example:
-
-```jsight
-MACRO @commonHeaders
-(
-  Headers
-    {
-      "Authorization": "Basic dG9tQGNhdC5jb206YWJjMTIz=", // {regex: "Basic [A-Za-z0-9+\/=]+"}
-      "Content-Type": "application/json"                  // {const: true}
-    }
-)
-```
-
-In the given example, a macro is declared with the name `@commonHeaders`.
-
-##### ANNOTATION
-
-It is not allowed to input an ANNOTATION to the DIRECTIVE `MACRO`.
-
-##### BODY
-
-The BODY of the DIRECTIVE `MACRO` is made up of one or more nested CHILD DIRECTIVES. It is required
-that there be at least one nested DIRECTIVE in the BODY.
-
-The DIRECTIVE `MACRO` allows any CHILD DIRECTIVE, except `MACRO`. CHILD DIRECTIVES, in turn, may
-have other CHILD DIRECTIVES.
-
-For DIRECTIVE `MACRO`, the default CHILD DIRECTIVE is not defined.
-
-Example:
-
-```jsight
-MACRO @commonErrors
-(
-  400
-    Body regex
-      /Bad request/
-  401 any
-  405 any
-  500 any
-)
-```
-
-In the given example, the macro `@commonErrors` is declared, which contains four 
-CHILD DIRECTIVES `400`,` 401`, `405`, and `500`.
-
-The directive `MACRO` is useful for specifying frequently repeated elements of the PROJECT.
-After a macro using the `MACRO` DIRECTIVE is declared, you may insert this macro as many times
-as you like throughout the PROJECT by referring to it by name using the `PASTE` DIRECTIVE. (see 
-the section [“DIRECTIVE "PASTE"”](#directive-paste))).
-
-Note, that the DIRECTIVE `MACRO` allows DIRECTIVE `PASTE` as a CHILD DIRECTIVE.
-
-Example:
-
-```jsight
-MACRO @errors
-(
-    PASTE @errors_3xx
-    PASTE @errors_4xx
-)
-
-MACRO @errors_3xx
-(
-    300 any
-    301 any
-)
-
-MACRO @errors_4xx
-(
-    400 any
-    404 any
-    409 any
-)
-```
-
-:::note
-
-The DIRECTIVE `MACRO` may have any CHILD DIRECTIVES, except DIRECTIVES `MACRO`. Considering this,
-it is advised to always explicitly mark the boundaries of its BODY with parenthesis, while using 
-the DIRECTIVE `MACRO`, otherwise the DIRECTIVE `MACRO` would contain all the remaining 
-directives until the next DIRECTIVE `MACRO`.
-
-:::
-
-### DIRECTIVE **"PASTE"**
-
-> Requirement: req.japi.paste 0.3  
-> Status: APPROVED 10.02.2022.
-
-The DIRECTIVE `PASTE` is intended to paste a named macro (group of DIRECTIVES) defined by
-DIRECTIVE `MACRO` (see the section [“DIRECTIVE "MACRO"”](#directive-macro)) to different places 
-within the PROJECT. 
-
-|        DIRECTIVE "PASTE"     |                       |
-| ---------------------------- | :-------------------: |
-| KEYWORD                      |        `PASTE`        |
-| PARENT DIRECTIVES (possible) |          Any          |
-| PARAMETERS                   |        `Name` *       |
-| ANNOTATION                   |     Not allowed       |
-| BODY                         |          No           |
-| CHILD DIRECTIVES (possible)  |          No           |
-| Default CHILD DIRECTIVE      |          No           |
-
-##### PARENT DIRECTIVES
-
-The DIRECTIVE `PASTE` can be placed in the CONTEXT of any DIRECTIVE.
-
-##### PARAMETERS
-
-The DIRECTIVE `PASTE` has only one mandatory PARAMETER `Name`, in which the name of the macro is
-specified. A macro with this name must be declared anywhere within the PROJECT using the DIRECTIVE 
-`MACRO`. 
-
-The DIRECTIVE `PASTE` can be placed anywhere within the PROJECT, where the syntax allows a 
-new DIRECTIVE to be placed. Also, the macro pasted by the DIRECTIVE `PASTE` should be 
-interpreted in the same way, as if the BODY of the DIRECTIVE `MACRO` on which the reference is 
-made, was used in the code instead of the DIRECTIVE `PASTE`.
-
-The directives `MACRO` and `PASTE` are useful for specifying frequently repeated elements of the
-PROJECT.
-
-Let us explain with an example:
-
-```jsight
-GET /cats
-
-  200 [@cat]
-  PASTE @commonErrors
-
-GET /dogs
-
-  200 [@dog]
-  PASTE @commonErrors
-
-MACRO @commonErrors
-(
-  400 any
-  401 any
-  405 any
-  500 any
-)
-```
-
-In the given example, we can see the declared macro `@commonErrors` by the DIRECTIVE `MACRO`. 
-Also, we see this macro referenced in the CONTEXT of DIRECTIVES `GET`, using DIRECTIVES `PASTE`. 
-This example should be interpreted as if the BODY of the DIRECTIVE `MACRO @commonErrors` is used 
-instead of the DIRECTIVE `PASTE @commonErrors`. That is, the given example is similar to the 
-following code: 
-
-```jsight
-GET /cats
-
-  200 [@cat]
-  400 any
-  401 any
-  405 any
-  500 any
-
-GET /dogs
-
-  200 [@dog]
-  400 any
-  401 any
-  405 any
-  500 any
-
-MACRO @commonErrors
-(
-  400 any
-  401 any
-  405 any
-  500 any
-)
-```
-
-##### ANNOTATION
-
-The DIRECTIVE `PASTE` CANNOT have ANNOTATION.
-
-##### BODY
-
-The DIRECTIVE `PASTE` has no BODY.
-
 ## Reference of common PARAMETERS of DIRECTIVES
-
-### PARAMETER "SchemaNotation" 
-
-> Requirement: req.japi.schema_notation 0.1  
-> Status: APPROVED 12.10.2021.  
-> It is planned: 
->
-> - To add the NOTATION multipart and the DIRECTIVE Part. 
-
-Several DIRECTIVES use the PARAMETER `SchemaNotation`, in which name of SCHEMA NOTATION must be
-specified. (For example, DIRECTIVES `Request`, `Body`, `TYPE`, DIRECTIVES-RESPONSES `200`, `301`,
-etc.). This language version supports the following SCHEMA NOTATIONS:
-
-- `jsight`,
-- `regex`,
-- `any`,
-- `empty`.
-
-In future language versions, other NOTATIONS will be also supported, for example `multipart`.
-
-Given NOTATIONS are briefly described below.
-
-#### NOTATION "jsight" 
-
-> Requirement: req.japi.schema_notation.jsight 0.3  
-> Status: APPROVED 12.10.2021.
-
-The NOTATION `jsight` implies the use of the [JSight Schema language](jsight-schema-0-3).
-
-The NOTATION `jsight` is the base SCHEMA NOTATION in the JSight API language. In all DIRECTIVES that
-implies specifying a NOTATION, the PARAMETER `SchemaNotation` is `jsight` by default.
-
-An example of using SCHEMA NOTATION `jsight`:
-
-```jsight
-TYPE @cat jsight
-{
-  "id"  : 1,
-  "name": "Tom",
-  "email": "tom@catsbook.com" // {type: "email"}
-}
-```
-
-More information about the NOTATION `jsight` can be found in the official [JSight Schema language
-specification](jsight-schema-0-3). 
-
-#### NOTATION "regex"
-
-> Requirement: req.japi.schema_notation.regex 0.3  
-> Status: APPROVED 12.10.2021.  
-> It is planned:
->
-> - TODO: to add a reference to the standard.
-
-The NOTATION `regex` is created using regular expressions. 
-
-It is used when the data being described is a simple string.
-
-The SCHEMA in the NOTATION `regex` represents a string of regular expressions. The line should begin
-and end with a slash `/`.
-
-An example of using SCHEMA NOTATION `regex`:
-
-```jsight
-TYPE @okResponse regex
-  /OK/
-```
-
-#### Pseudo-NOTATION "any"
-
-> Requirement: req.japi.schema_notation.any 0.3  
-> Status: APPROVED 12.10.2021.
-
-The NOTATION `any` is a “pseudo”-NOTATION in the sense that it has no rules for describing the
-SCHEMA. The NOTATION `any` means that data can have absolutely any structure, therefore, the SCHEMA
-is not required when specifying this NOTATION.
-
-An example of using the NOTATION `any`:
-
-```jsight
-GET /cats
-  200 @cat
-  400 any
-```
-
-This example indicates that if the RESOURCE `/cat` returns the 400 error, it can be data with any
-structure in the RESPONSE BODY.
-
-#### Pseudo-NOTATION "empty"
-
-> Requirement: req.japi.schema_notation.empty 0.3  
-> Status: APPROVED 12.10.2021.
-
-The NOTATION `empty` is a “pseudo”-NOTATION in the sense that it has no rules for describing the
-SCHEMA. The NOTATION `empty` means that data must be completely empty, therefore, the SCHEMA is not
-required when specifying this NOTATION.
-
-An example of using the NOTATION `empty`:
-
-```jsight
-GET /cats
-  200 @cat
-  400 empty
-```
-
-This example indicates that if the RESOURCE `/cat` returns the 400 error, the RESPONSE BODY should
-be strictly empty. 
-
-#### NOTATION "multipart" 
-
-> Requirement: req.japi.schema_notation.multipart 0.1  
-> Status: TODO. 
-
-:::warning COMING SOON
-
-This multipart form data feature is not implemented yet. But it is coming soon.
-
-:::
 
 ### PARAMETER "Path"
 
@@ -3206,42 +2891,133 @@ GET /dogs/{id}
   200 @dog
 ```
 
-## Appendix 1. Map of the DIRECTIVES hierarchy 
+### PARAMETER "SchemaNotation" 
 
-> TODO: to make the map clear for users.
+> Requirement: req.japi.schema_notation 0.1  
+> Status: APPROVED 12.10.2021.  
+> It is planned: 
+>
+> - To add the NOTATION multipart and the DIRECTIVE Part. 
 
-- JSIGHT (Version) 1–1
-- INFO 0-1
-  - Title (Title) 0-1
-  - Version (Version) 0-1
-  - Description 0-1
-- SERVER (Name *) // annotation is allowed
-  - BaseUrl (Path *) 1–1
-- URL (Path *) 0-\*
-  - Path 0-1
-  - HTTP-METHODS 0-* // annotation is allowed
-    - ...
-- HTTP-METHODS (Path) 0-* // annotation is allowed
-  - Description 0-1
-  - Path 0-1
-  - Query (QueryExample, Format) 0-1
-  - Authorization \[Coming soon\]
-  - Cookies \[Coming soon\]
-  - Request (Type, SchemaNotation) 0-1
-    - Headers 0-1
-    - Body (Type, SchemaNotation) 1-1 Def
-  - DIRECTIVES-RESPONSES (Type, SchemaNotation) 0-* // annotation is allowed
-    - Headers 0-1
-    - Body (Type, SchemaNotation) 1-1 Def
-- TYPE (Name *, SchemaNotation) // annotation is allowed
-  - Description \[Coming soon\]
-  - Schema \[Coming soon\]
-- RULE (Name, RuleType) \[Coming soon\]
-  - Description \[Coming soon\]
-  - RuleValue \[Coming soon\]
-- ENUM (Name *) \[Coming soon\]
-  - Description \[Coming soon\]
-  - EnumValue \[Coming soon\]
-- MACRO (Name \*) 0-\*
-  - Any directives, except MACRO
-- INCLUDE (File) \[Coming soon\]
+Several DIRECTIVES use the PARAMETER `SchemaNotation`, in which name of SCHEMA NOTATION must be
+specified. (For example, DIRECTIVES `Request`, `Body`, `TYPE`, DIRECTIVES-RESPONSES `200`, `301`,
+etc.). This language version supports the following SCHEMA NOTATIONS:
+
+- `jsight`,
+- `regex`,
+- `any`,
+- `empty`.
+
+In future language versions, other NOTATIONS will be also supported, for example `multipart`.
+
+Given NOTATIONS are briefly described below.
+
+#### NOTATION "jsight" 
+
+> Requirement: req.japi.schema_notation.jsight 0.3  
+> Status: APPROVED 12.10.2021.
+
+The NOTATION `jsight` implies the use of the [JSight Schema language](jsight-schema-0-3).
+
+The NOTATION `jsight` is the base SCHEMA NOTATION in the JSight API language. In all DIRECTIVES that
+implies specifying a NOTATION, the PARAMETER `SchemaNotation` is `jsight` by default.
+
+An example of using SCHEMA NOTATION `jsight`:
+
+```jsight
+TYPE @cat jsight
+{
+  "id"  : 1,
+  "name": "Tom",
+  "email": "tom@catsbook.com" // {type: "email"}
+}
+```
+
+More information about the NOTATION `jsight` can be found in the official [JSight Schema language
+specification](jsight-schema-0-3). 
+
+#### NOTATION "regex"
+
+> Requirement: req.japi.schema_notation.regex 0.3  
+> Status: APPROVED 12.10.2021.
+
+The NOTATION `regex` is created using regular expressions. 
+
+It is used when the data being described is a simple string.
+
+The SCHEMA in the NOTATION `regex` represents a string of regular expressions. The line should begin
+and end with a slash `/`.
+
+An example of using SCHEMA NOTATION `regex`:
+
+```jsight
+TYPE @okResponse regex
+  /OK/
+```
+
+#### Pseudo-NOTATION "any"
+
+> Requirement: req.japi.schema_notation.any 0.3  
+> Status: APPROVED 12.10.2021.
+
+The NOTATION `any` is a “pseudo”-NOTATION in the sense that it has no rules for describing the
+SCHEMA. The NOTATION `any` means that data can have absolutely any structure, therefore, the SCHEMA
+is not required when specifying this NOTATION.
+
+An example of using the NOTATION `any`:
+
+```jsight
+GET /cats
+  200 @cat
+  400 any
+```
+
+This example indicates that if the RESOURCE `/cat` returns the 400 error, it can be data with any
+structure in the RESPONSE BODY.
+
+#### Pseudo-NOTATION "empty"
+
+> Requirement: req.japi.schema_notation.empty 0.3  
+> Status: APPROVED 12.10.2021.
+
+The NOTATION `empty` is a “pseudo”-NOTATION in the sense that it has no rules for describing the
+SCHEMA. The NOTATION `empty` means that data must be completely empty, therefore, the SCHEMA is not
+required when specifying this NOTATION.
+
+An example of using the NOTATION `empty`:
+
+```jsight
+GET /cats
+  200 @cat
+  400 empty
+```
+
+This example indicates that if the RESOURCE `/cat` returns the 400 error, the RESPONSE BODY should
+be strictly empty. 
+
+## Edit history
+
+|    Date    | JSight API Version | Document version | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |       Author        |
+| :--------: | :----------------: | :--------------: |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| :-----------------: |
+| 11.02.2022 |     0.3.6          |      0.1.19-en   | <ul><li>The DIRECTIVE `DIR` has been replaced by DIRECTIVES `MACRO` and `PASTE`.</li><li>Minor improvements to COMMENTS.</li><li>Changed dependency to JSight Schema 0.3.5.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Andrei Ivanov       |
+| 13.01.2022 |     0.3.5          |      0.1.18-en   | Changed dependency on JSight Schema 0.3.4.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Konstantin Malyshev |
+| 12.01.2022 |     0.3.4          |      0.1.17-en   | Minor change in principle 12.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Konstantin Malyshev |
+| 11.01.2022 |     0.3.4          |      0.1.16-en   | An example was added in section “PARAMETER "Path"”.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Konstantin Malyshev |
+| 10.01.2022 |     0.3.4          |      0.1.15-en   | <ul><li>The requirement req.japi.http_method.query 0.3 was changed, the new version is 0.4. DIRECTIVE `Query` now must have a DIRECTIVE `Body`.</li><li>The requirement req.japi.jsight 0.3 was changed, the new version is 0.4. DIRECTIVE `JSIGHT` now cannot be omitted.</li><li>The requirement req.japi.server.base_url 0.3 was changed, the new version is 0.4. DIRECTIVE `BaseUrl` now does not have a body.</li><li>The requirement req.japi.path_rules 0.3 was changed, the new version is 0.4. Paths `/cats/{id}` and `/cats/{catId}` now are considered identical and invalid.</li><li>Minor edits according to docusaurus format.</li></ul>                                                                                                                                                                                                                                            | Konstantin Malyshev |
+| 06.01.2022 |     0.3.3          |      0.1.14-en   | Changed dependency on JSight Schema 0.3.3. Changes in formatting for Docusaurus. Small fixes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Konstantin Malyshev |
+| 29.12.2021 |     0.3.2          |      0.1.13-en   | Minor edits.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Konstantin Malyshev |
+| 22.12.2021 |     0.3.2          |      0.1.13      | Minor edits.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Konstantin Malyshev |
+| 22.12.2021 |     0.3.2          |      0.1.12      | Changed dependency to JSight Schema 0.3.2. Clarifications of some wordings without changing the meaning.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Konstantin Malyshev |
+| 17.12.2021 |     0.3.2          |      0.1.11      | Minor refinements about Markdown and comments.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Konstantin Malyshev |
+| 14.12.2021 |     0.3.2          |      0.1.10      | Minor clarifications of wordings within the same content.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Konstantin Malyshev |
+| 06.12.2021 |     0.3.2          |      0.1.9       | Minor edits beside the point.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Konstantin Malyshev |
+| 03.12.2021 |     0.3.2          |      0.1.8       | <ul><li>The principle of language design 12 (OpenAPI compliance) was added.</li><li>The concept of “relative PATH” has been abolished. All paths are now absolute. </li><li>The requirement req.japi.context.default_child was changed, the new version is 0.4. Now it is possible to omit the default DIRECTIVE only if it is the only one. </li><li>The requirement req.japi.url was changed,  the new version is 0.4. The change is due to the cancellation of relative paths.</li><li>The requirement req.japi.http_method was changed, the new version is 0.4. The change is due to the cancellation of relative paths.</li><li>The status of the requirement req.japi.enum 0.3 was changed to POSTPONED.</li><li>The requirement req.japi.path_rules was changed, the new version is 0.2. The change is due to the cancellation of relative paths.</li><li>Minor blots were fixed</li></ul> | Konstantin Malyshev |
+| 03.12.2021 |     0.3.1          |      0.1.7       | Clarifications of the rules for parentheses (explicit body boundaries).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Konstantin Malyshev |
+| 19.11.2021 |     0.3.1          |      0.1.6       | Adding TODO comments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Konstantin Malyshev |
+| 12.11.2021 |     0.3.1          |      0.1.5       | Typo is fixed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Konstantin Malyshev |
+| 09.11.2021 |     0.3.1          |      0.1.4       | Minor inconsistencies in the use of quotes in directive parameters have been fixed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Konstantin Malyshev |
+| 02.11.2021 |     0.3.1          |      0.1.3       | Changed dependency to JSight Schema 0.3.1 (was 0.3.0).<br /> Minor edits beside the point.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Konstantin Malyshev |
+| 19.10.2021 |     0.3.0          |      0.1.2       | Typos are fixed, small clarifications are done.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Konstantin Malyshev |
+| 14.10.2021 |     0.3.0          |      0.1.1       | Typos are fixed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Konstantin Malyshev |
+| 13.10.2021 |     0.3.0          |      0.1.0       | Many changes have been made based on the testing results.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Konstantin Malyshev |
+| 13.12.2019 |     0.1            |      -           | The full language version that was approved for the development of a validator prototype.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Maxim Reznitsky |
