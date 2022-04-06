@@ -8,27 +8,6 @@ Document version: *0.9.20-en*
 Authors: *Ivanov A., Malyshev K.*  
 Checked by: *Reznitsky M.*
 
-## Edit history
-
-|    Date    |  JSight Schema Version | Document version | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |        Author       |
-| :--------: | :--------------------: |:----------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| :-----------------: |
-| 14.02.2022 |     0.3.5              |    0.9.20-en     | <ul><li>Prohibiting on using numbers in exponent notation in the EXAMPLE of the SCHEMA.</li><li>Minor improvements to COMMENTS.</li><li>The RULE `regex` now applies to VALUES of TYPES `string`, `email`, `uri`, `date` and `datetime`.</li><li>The RULE `const` is incompatible with the TYPE `any`.</li></ul>  The following requirements were changed: <ul><li>req.jschema.example.number 0.1 to 0.2,</li><li>req.jschema.rules.regex 0.2 to 0.3,</li><li>req.jschema.rules.const 0.3 to 0.4.</li></ul> | Andrei Ivanov       |
-| 13.01.2022 |     0.3.4              |    0.9.19-en     | The RULE `nullable: true` is allowed in conjunction with user type, type `enum` and type `mixed`. The following requirements were changed:<ul><li>req.jschema.rules.type.reference 0.2 to 0.3,</li><li>req.jschema.rules.or 0.2 to 0.3,</li><li>req.jschema.rules.enum 0.2 to 0.3,</li>  <li>req.jschema.shortcuts.value_type 0.3 to 0.4,</li><li>req.jschema.shortcuts.value_or 0.3 to 0.4.</li></ul>                                                                                                      | Konstantin Malyshev |
-| 07.01.2022 |     0.3.3              |    0.9.18-en?    | Some fixes in format.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Konstantin Malyshev |
-| 04.01.2022 |     0.3.3              |    0.9.17-en?    | Requirement changed: req.jschema.rules.type.datetime (new version 0.3). Requirement added: req.jschema.rules.type.date 0.2.                                                                                                                                                                                                                                                                                                                                                                                 | Konstantin Malyshev |
-| 04.01.2022 |     0.3.2              |    0.9.16-en     | Fix format for docusaurus.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Konstantin Malyshev |
-| 28.12.2021 |     0.3.2              |    0.9.15-en     | Translation in English.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Konstantin Malyshev |
-| 14.12.2021 |     0.3.2              |      0.9.15      | Minor clarifications of wordings within the same content.                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Konstantin Malyshev |
-| 09.12.2021 |     0.3.2              |      0.9.14      | Errors in the previous version have been fixed. The version number of the language has not been changed as the document has not yet entered development.                                                                                                                                                                                                                                                                                                                                                    | Konstantin Malyshev |
-| 06.12.2021 |     0.3.2              |      0.9.13      | <p>The ability to use stubs [] and &#123;&#125; for USER TYPES is removed. Due to this, new versions of requirements are as follows: </p><ul>  <li>req.jschema.rules.type.reference 0.2,</li>  <li>req.jschema.rules.or 0.2,</li>  <li>req.jschema.shortcuts 0.3,</li>  <li>req.jschema.shortcuts.value_type 0.3,</li>  <li>req.jschema.shortcuts.value_or 0.3,</li>  <li>req.jschema.shortcuts.key_type 0.3.</li></ul>                                                                                     | Konstantin Malyshev |
-| 19.11.2021 |     0.3.1              |      0.9.12      | Adding TODO comments.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Konstantin Malyshev |
-| 02.11.2021 |     0.3.1              |      0.9.11      | The requirement req.jschema.rules.const (the RULE `const`) has been clarified, the new requirement version is 0.3. A typo in the rule `regex` has been fixed (before it was `regexp`) — new requirement is req.jschema.rules.regex 0.2. Minor edits beside the point.                                                                                                                                                                                                                                       | Konstantin Malyshev |
-| 19.10.2021 |     0.3.0              |      0.8.10      | Correcting typos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Konstantin Malyshev |
-| 13.10.2021 |     0.3.0              |      0.8.9       | Correcting typos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Konstantin Malyshev |
-| 13.10.2021 |     0.3.0              |      0.8.8       | Renaming languages to JSight Schema and JSight API. Changing the name of the FORMAT `htmlFormEncoded`. The language version was left the same since the changes had not yet been developed at that time.                                                                                                                                                                                                                                                                                                    | Konstantin Malyshev |
-| 23.09.2021 |     0.3.0              |      0.8.7       | Many changes have been made based on the testing results.                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Konstantin Malyshev |
-| 09.12.2019 |     0.2.1              |      0.7.4       | The first language version that was approved for the development of a validator prototype.                                                                                                                                                                                                                                                                                                                                                                                                                  |   Andrey Ivanov    |
-
 ## Introduction
 
 This document covers all aspects of JSight Schema language of the specified version. The language is
@@ -46,19 +25,41 @@ wings.
 
 The JSight Schema language is widely used as part of the [JSight API language](jsight-api-0-3),
 which is intended to describe the HTTP REST JSON API. For this reason, the JSight Schema language
-contains constructs that, apart from the HTTP REST JSON API, may appear strange. For example, the
-RULE `serializedFormat: "htmlFormEncoded"` (see the section [“RULE
-"serializeFormat"”](#rule-serializeformat)). 
+contains constructs that, apart from the HTTP REST JSON API, may appear strange. For example, see
+the section [“References to USER TYPES in the EXAMPLE”](#references-to-user-types-in-the-example).
 
 ## Terms and Definitions
 
+- **ANNOTATION** — is the syntactic structure of the language that allows other syntactic structures
+  to be specified.
+- **COMMENT** — is the syntactic structure of the language that allows adding random textual remarks
+  to any SCHEMA section. It is important to distinguish a COMMENT from a textual note to the group
+  of RULES in the ANNOTATION. A note to the group of RULES refers to the corresponding element of
+  the EXAMPLE and means the textual documentation of this element. A user COMMENT is a random
+  comment made by the SCHEMA developer that has no specific relevance in the context of SCHEMA (see
+  the sections [“User COMMENTS”](#user-comments), [“Text notes to RULES”](#text-notes-to-rules)). 
+- Array **ELEMENT** — is some VALUE from a set of which the array's internal structure is composed.
+- **DOCUMENT** — is some structured data recorded in a сertain FORMAT, which must be VALIDATED for
+  compliance with the SCHEMA.
+- **DOCUMENT FORMAT** — is the notation used to serialize structured data into a string and form a
+  DOCUMENT.
+- **ENUMERATION** — is a particular data type that limits the possible VALUE by a certain set of
+  valid VALUES.
+- **EXAMPLE** —  is a JSON document that is an example of correct data structure and is used as the
+  basis of the SCHEMA. 
+- Object **KEY** — is the name of the object PROPERTY.
+- Object **PROPERTY** — is a pair of KEY-VALUE, its set composes the internal structure of the
+  object.
+- **RULES** — are additions to the EXAMPLE written in a certain manner, specifying  additional
+  requirements for the data structure within the SCHEMA.
+- **STANDARD TYPE** — is the TYPE that is built into the language out of the box. In contrast to
+  USER TYPE names, STANDARD TYPE names never start with the symbol `@`.
 - **SCHEMA** — is a document in the JSight Schema language that describes the requirements for a
   certain data structure. It can be used for validation, documentation, and generation of specific
   data.
-- **EXAMPLE** —  is a JSON document that is an example of correct data structure and is used as the
-  basis of the SCHEMA. 
-- **RULES** — are additions to the EXAMPLE written in a certain manner, specifying  additional
-  requirements for the data structure within the SCHEMA.
+- **SCHEMA ATTRIBUTES** — is a tool for adding some additional information to the SCHEMA, e.g.,
+  SCHEMA title, SCHEMA description, SCHEMA version, USER TYPES description, links to external
+  SCHEMAS, etc. The ATTRIBUTES mechanism is not implemented in the current language version.
 - **TYPE** — is a named set of requirements for the VALUE in the DOCUMENT. The TYPE name is intended
   to reflect the essence of the corresponding VALUE. TYPES might be STANDARD (built into the
   language) and USER (user-defined).
@@ -68,34 +69,11 @@ RULE `serializedFormat: "htmlFormEncoded"` (see the section [“RULE
   as a part of the JSight API language which already has its own mechanism for declaring USER TYPES,
   i.e. naming SCHEMAS (for more information, see the [JSight API language
   specification](jsight-api-0-3)). USER TYPE names always start with the symbol `@`.
-- **STANDARD TYPE** — is the TYPE that is built into the language out of the box. In contrast to
-  USER TYPE names, STANDARD TYPE names never start with the symbol `@`.
 - **VALIDATION** — is the procedure for ensuring that the DOCUMENT data structure complies with the
   SCHEMA.
-- **DOCUMENT** — is some structured data recorded in a сertain FORMAT, which must be VALIDATED for
-  compliance with the SCHEMA.
-- **DOCUMENT FORMAT** — is the notation used to serialize structured data into a string and form a
-  DOCUMENT.
-- Object **PROPERTY** — is a pair of KEY-VALUE, its set composes the internal structure of the
-  object.
-- Object **KEY** — is the name of the object PROPERTY.
-- Array **ELEMENT** — is some VALUE from a set of which the array's internal structure is composed.
 - **VALUE** — is some data element in the DOCUMENT (object, array, line, number, etc.). In objects,
   the PROPERTY VALUE should be distinguished from the PROPERTY KEY. The PROPERTY KEY essentially is
   not the VALUE of an object PROPERTY; rather, it names this PROPERTY within the object. 
-- **ANNOTATION** — is the syntactic structure of the language that allows other syntactic structures
-  to be specified.
-- **COMMENT** — is the syntactic structure of the language that allows adding random textual remarks
-  to any SCHEMA section. It is important to distinguish a COMMENT from a textual note to the group
-  of RULES in the ANNOTATION. A note to the group of RULES refers to the corresponding element of
-  the EXAMPLE and means the textual documentation of this element. A user COMMENT is a random
-  comment made by the SCHEMA developer that has no specific relevance in the context of SCHEMA (see
-  the sections [“User COMMENTS”](#user-comments), [“Text notes to RULES”](#text-notes-to-rules)). 
-- **ENUMERATION** — is a particular data type that limits the possible VALUE by a certain set of
-  valid VALUES.
-- **SCHEMA ATTRIBUTES** — is a tool for adding some additional information to the SCHEMA, e.g.,
-  SCHEMA title, SCHEMA description, SCHEMA version, USER TYPES description, links to external
-  SCHEMAS, etc. The ATTRIBUTES mechanism is not implemented in the current language version.
 
 ## Concept
 
@@ -615,11 +593,6 @@ Example of single-line ANNOTATION:
 
 > Requirement: req.jschema.annotation.multiline 0.2  
 > Status: APPROVED 16.09.2021.
->
-> Future versions will include: 
->
-> - TODO: Escaping.
-> - TODO: Nested ANNOTATIONS, such as `/* /* */ */` (this is important for attributes, enums).
 
 Multi-line ANNOTATIONS begin with symbols `/*` and continue until closed with symbols `*/`.
 Multi-line ANNOTATIONS can span from a single to several lines.
@@ -721,10 +694,6 @@ following cases:
 
 > Requirement: req.jschema.comments.multiline 0.2  
 > Status: APPROVED 06.01.2022.
->
-> In the following versions it is planned:
->
-> - TODO: Escaping.
 
 Block COMMENT opens with the symbol `###`. Thereafter, all subsequent lines are
 considered a COMMENT until it is closed by the following symbol `###`.
@@ -767,8 +736,6 @@ following cases:
 
 > Requirement: req.jschema.rules 0.1  
 > Status: APPROVED 09.12.2019.
->
-> TODO: To add rules from link to ECMAScript.
 
 RULES allow to supplement the EXAMPLE and thereby specify additional requirements for the DOCUMENT.
 
@@ -1000,502 +967,443 @@ comment from the SCHEMA developer, which has no special meaning according to the
 
 :::
 
-### RULE "type"
+### RULE "additionalProperties"
 
-> Requirement: req.jschema.rules.type 0.1  
-> Status: APPROVED 06.12.2021.
+> Requirement: req.jschema.rules.additionalProperties 0.2  
+> Status: APPROVED.  
 
-The RULE `type` explicitly specifies the TYPE of the VALUE.
+The RULE `additionalProperties` is required in order to impose requirements for the PROPERTIES of
+object which were not explicitly described in the SCHEMA. For instance, you can disable additional
+PROPERTIES in the object using random KEYS; you can just enable them; or you can enable them and
+specify the TYPE of the PROPERTY VALUE, etc. 
 
-The RULE applies to scalar VALUES, objects or arrays. 
+The RULE `additionalProperties` is only applicable to objects.
 
-Possible values:
+In the RULE `additionalProperties`, you can specify either a boolean value, or a string, or an
+object. (For example, `additionalProperties: true` or `additionalProperties: "@cat"`, or
+`additionalProperties: {type:" @cat "}`). The RULE is interpreted differently depending on the type
+of the value:
 
-- `object`,
-- `array`,
-- `integer`,
-- `float`,
-- `decimal`,
-- `boolean`,
-- `string`,
-- `email`,
-- `uri`,
-- `date`,
-- `datetime`,
-- `uuid`,
-- `enum`,
-- `mixed`,
-- `any`,
-- `null`,
-- name of any USER TYPE.
+1. **The value of the RULE is `boolean`.**  
+   In this case, the RULE means whether additional PROPERTIES are allowed in the object in general
+   or not (for more information, see [below](#rule-additionalproperties-with-the-value-boolean)).
+2. **The value of the RULE is `string`.**  
+   In this case, the RULE states that the object is only allowed to have additional PROPERTIES with
+   values of TYPE indicated in `additionalProperties` (for more information, see
+   [below](#rule-additionalproperties-with-the-value-string)).
 
-It is not recommended to explicitly specify the TYPES `object`, `array`, `integer`, `float`,
-`decimal`, `boolean`, `string`, since it is enough to look at the corresponding value in the EXAMPLE
-to specify these types (see the section [“Correspondence of the EXAMPLE data TYPES and the
-SCHEMA”](#correspondence-between-example-and-schema-data-types)). It is also not recommended to
-explicitly specify the types `enum` and `mixed`, since it is enough to look at other RULES to
-specify these types (`enum` and `or`).
+The RULE `additionalProperties` is set to `false` by default.
 
-Example of a SCHEMA with explicit `type`:
+##### RULE "additionalProperties" with the value "boolean" 
+
+> Requirement: req.jschema.rules.additionalProperties.boolean 0.2  
+> Status: APPROVED 17.09.2021.
+
+If the RULE `additionalProperties: true` is specified, it indicates that additional PROPERTIES with
+any undeclared KEYS in the SCHEMA and any VALUES can be added to the corresponding object in the
+DOCUMENT. 
+
+If the RULE `additionalProperties: false` is specified, it indicates that additional PROPERTIES
+cannot be added to the corresponding object in the DOCUMENT whose KEYS were not stated in the SCHEMA
+of this object. I.e., the RULE `additionalProperties: false` meets the requirements for objects by
+default.
+
+Example:
 
 ```jsight
+# Schema
+
+{ // {additionalProperties: true}
+  "id": 4,
+  "name": "Kitty"
+}
+
+# Valid document
 {
-  "contact": "name@domain.com" // {type: "email"}
+    "id"  : 123,
+    "name": "Tom"
+    "bla-bla-bla-bla-bla-bla": "Hurray, add whatever you want!"
 }
 ```
 
-Example of a SCHEMA without defining `type` which has the value `type: mixed` by default, as there
-is the RULE `or` in the group of RULES:
+##### RULE "additionalProperties" with the value "string"
+
+> Requirement: req.jschema.rules.additionalProperties.string 0.2  
+> Status: APPROVED 09.12.2019.
+
+ If a string is specified in the RULE `additionalProperties`, then this string should contain the
+ name of STANDARD or USER TYPE.
+
+In this case, the RULE `additionalProperties` states that additional PROPERTIES with any random KEYS
+are allowed in addition to the explicitly described PROPERTIES in the object. Also, the value of
+additional PROPERTIES must match the TYPE specified in `additionalProperties`.
+
+Examples of a SCHEMA using the STANDARD TYPE `string` in `additionalProperties`.
 
 ```jsight
-{
-  "data": "abc" // {or: [{type: "string"}, {type: "integer"}]}
+{ // {additionalProperties: "string"}
+    "id": 1
 }
 ```
 
-#### Specifying the USER TYPE in the RULE "type"
-
-> Requirement: req.jschema.rules.type.reference 0.3  
-> Status: APPROVED 13.01.2022.
->
-> It is planned:
->
-> - TODO: To allow the RULE nullable along with the RULE type and USER TYPE. 
-
-You can specify not only a STANDARD TYPE, but also a USER TYPE in the RULE `type` (for more
-information, see the section [“USER TYPES”](#user-types)).
-
-For example:
+Example of a VALID DOCUMENT corresponding to the given SCHEMA:
 
 ```jsight
 {
-  "passport": "AA 234555" // {type: "@pasportNumber"}
+    "id": 1, 
+    "any_key": "any string", 
+    "some_key": "some string", 
+    "extra_key": "extra string"
 }
 ```
 
-Such a SCHEMA states that the VALUE of the PROPERTY `passport` must meet the requirements specified
-in a USER TYPE named `@passportNumber`.
+Examples of a SCHEMA using the TYPE `any` in `additionalProperties`:
 
-:::caution IMPORTANT!
+```jsight
+{ // {additionalProperties: "any"}
+    "id": 1
+}
+```
 
-If the USER TYPE is specified in the RULE `type`, then **an object or an array, or a
-reference to the USER TYPE cannot be specified** in the EXAMPLE. 
+:::note
+
+*The RULE `additionalProperties: "any"` has the same effect as the RULE `additionalProperties:
+true`.*
 
 :::
 
-For example, you cannot write as follows:  
+Example of a document corresponding to the given SCHEMA:
 
 ```jsight
 {
-  "myCat": { // {type: "@cat"}  # --ERROR! It is wrong! 
-    "id"  : 123,
-    "name": "Tom"
-  }
+    "id": 1,
+    "any_key": true,
+    "some_key": "value", 
+    "extra_key": null
 }
 ```
 
-It is also not correct to write as follows: 
+Examples of a SCHEMA using the USER TYPE in `additionalProperties`:
+
+```jsight
+{} // {additionalProperties: "@cat"}
+```
+
+Suppose, the USER TYPE `@cat` has the following SCHEMA:
 
 ```jsight
 {
-  "myCatList": [ // {type: "@catList"}  # -- ERROR! It is wrong! 
-    @cat
+    "name": "Bob"
+}
+```
+
+Then the following DOCUMENT will satisfy the given SCHEMA:
+
+```jsight
+{
+    "myFirstCat" : {"name": "Tom" },
+    "mySecondCat": {"name": "Loli"}
+}
+```
+
+### RULE "allOf"
+
+> Requirement: req.jschema.rules.allOf 0.1  
+> Status: APPROVED 09.12.2019.
+
+The RULE applies only to objects.
+
+The RULE `allOf` allows you to extend the set of PROPERTIES of an object with the PROPERTIES of
+another object (objects). In this case, any duplication of PROPERTIES should be considered as a
+SCHEMA error.
+
+Assume that we have a USER TYPE `@pet` which is specified by the following SCHEMA (for more
+information about USER TYPES, see the section [“USER TYPES”](#user-types)):
+
+```jsight
+# USER TYPE @pet
+
+{
+  "petId": 123,
+  "name" : "Tom"
+}
+```
+
+This USER TYPE `@pet` can now be "inherited" in another USER TYPE `@cat` in the following way:
+
+```jsight
+# USER TYPE @cat
+
+{ // {allOf: "@pet"}
+  "favoriteFood": "MOUSE" // {enum: ["MOUSE", "MILK"]}
+}
+```
+
+Example of a DOCUMENT that matches the given SCHEMA of TYPE `@cat`:
+
+```jsight
+{
+  "petId": 4,
+  "name" : "Marmalade",
+  "favoriteFood" : "MILK"
+}
+```
+
+The so-called "multiple inheritance" is allowed.
+
+For example, assume we also have a USER TYPE `@astronaut`:
+
+```jsight
+# USER TYPE @austronaut
+
+{
+  "astronautId" : 223,
+  "spaceSuitSize": "XXL" // {enum: ["S", "M", "L", "XL", "XXL"]}
+}
+```
+
+Then we can create the object and inherit the properties `@pet` and `@astronaut` in the following
+way:
+
+```jsight
+
+{ // {allOf: ["@pet", "@astronaut"]}
+}
+
+```
+Example of a DOCUMENT that matches the given SCHEMA:
+
+```jsight
+{
+  "petId"         : 123,
+  "name"          : "Marmalade",
+  "astronautId"   : 222,
+  "spaceSuitSize" : "XXL"
+}
+
+```
+
+### RULE "const"
+
+> Requirement: req.jschema.rules.const 0.4  
+> Status: APPROVED 14.02.2022.  
+
+The rule `const` can be applied to any VALUE except arrays and objects.
+
+The rule `const` is incompatible with USER TYPES, i.e., when the `type` contains some USER TYPE, for
+example `type: "@catId"`.
+
+Also, the RULE `const` is incompatible with the TYPE `mixed` and the TYPE `any`.
+
+The rule `const` can take a value of type `boolean`. Furthermore, `const: true` means that the VALUE
+in the DOCUMENT must exactly match the value specified in the EXAMPLE.
+
+The value of the RULE `const: false` does not impose any additional requirements for the VALUE in
+DOCUMENT.
+
+The value of the RULE `const` is `false` by default.
+
+Examples:
+
+```jsight
+# SCHEMA
+{
+    "responseCode": "OK" // {const: true}
+}
+
+# VALID DOCUMENT
+{"responseCode": "OK"}
+
+# INVALID DOCUMENT
+{"responseCode": "FAIL"}
+```
+
+### RULE "enum"
+
+> Requirement: req.jschema.rules.enum 0.3  
+> Status: APPROVED 13.01.2022.
+
+The RULE is used for VALUES of TYPE `enum`.
+
+The RULE specifies a set of scalar JSON values (of types `string`, `number`, `boolean` or `null`).
+Only a single value from this list can be used in a VALID DOCUMENT.
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": 3 /* { enum: [
+                  1.2, 
+                  3, 
+                  "abc", 
+                  true, 
+                  false, 
+                  null]} */
+}
+```
+
+Only the RULES `type`, `optional` and `nullable` can be used together with `enum` in one group of
+RULES. Other RULES cannot be used. In this case, the RULE `type` can only have the value `enum`,
+since the RULE `enum` automatically implies `type: "enum"`.
+
+An integer and a floating point number are considered different values for `enum`. For example, the
+following SCHEMA contains an error:
+
+```jsight
+{
+  "data": 2.0 // {enum: [2]} # ERROR!
+}
+```
+
+### RULE "exclusiveMaximum"
+
+> Requirement: req.jschema.rules.exclusiveMaximum 0.1  
+> Status: APPROVED 09.12.2019.
+
+The RULE applies to VALUES of TYPES `integer`, `float` and `decimal`.
+
+It can be either `true` or `false`. By default, it is `false`.
+
+If the value is `true`, then the value of the RULE `max` (specified in the same group of RULES) is
+excluded from the valid range of numeric values.
+
+Example of a SCHEMA: 
+
+```jsight
+{
+  "data": 1 // {max: 2, exclusiveMaximum: true}
+}
+```
+
+### RULE "exclusiveMinimum"
+
+> Requirement: req.jschema.rules.exclusiveMinimum 0.1  
+> Status: APPROVED 09.12.2019.
+
+The RULE applies to VALUES of TYPES `integer`, `float` and `decimal`.
+
+It can be either `true` or `false`. By default, it is `false`.
+
+If the value is `true`, then the value of the RULE `min` (specified in the same group of RULES) is
+excluded from the valid range of numeric values.
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": 1 // {min: 0, exclusiveMinimum: true}
+}
+```
+
+### RULE "max"
+
+> Requirement: req.jschema.rules.max 0.1  
+> Status: APPROVED 09.12.2019.
+
+The RULE applies to VALUES of TYPES `integer`, `float` and `decimal`.
+
+It defines the maximum numeric value.
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": 1.2 // {max: 3.4}
+}
+```
+
+### RULE "maxItems"
+
+> Requirement: req.jschema.rules.maxItems 0.1  
+> Status: APPROVED 09.12.2019.
+
+The RULE applies only to arrays.
+
+It defines the maximum number of elements in an array (inclusive). The property `maxItems` is not
+set by default (the maximum number of elements in the array is not limited).
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": [ // {maxItems: 10}
+    1
   ]
 }
 ```
 
-It is also not correct to write as follows: 
-```jsight
-{
-  "myCat": @cat // {type: "@cat"}  # -- ERROR! It is wrong! 
-}
-```
+The given SCHEMA states that an array can only have 10 or fewer elements of type `integer`. 
 
-If the USER TYPE is specified as a value in the RULE `type`, then only RULES `optional` and
-`nullable` can be used in conjunction with this `type` in one group of RULES. Other rules cannot be
-used.
+### RULE "maxLength"
 
-#### TYPE "string"
-
-> Requirement: req.jschema.rules.type.string 0.1  
+> Requirement: req.jschema.rules.maxLength 0.1  
 > Status: APPROVED 09.12.2019.
 
-The TYPE `string` requires a string to be in the VALUE.
+The RULE applies to VALUES of TYPE `string`.
+
+It defines the maximum length of a string (inclusive). The RULE `maxLength` is not set by default
+(maximum string length is not limited).
 
 Example of a SCHEMA:
 
 ```jsight
 {
-  "name": "Tom" // {type: "string"}
+  "data": "Any string" // {maxLength: 255}
 }
 ```
 
-You can always omit the RULE `type: "string"`, since the TYPE `string` is implicitly specified by
-the VALUE in the EXAMPLE:
+### RULE "min"
 
-```jsight
-{
-  "name": "Tom"
-}
-```
-
-#### TYPE "integer"
-
-> Requirement: req.jschema.rules.type.integer 0.1  
+> Requirement: req.jschema.rules.min 0.1  
 > Status: APPROVED 09.12.2019.
 
-The TYPE `integer` requires an integer to be in the VALUE.
+The RULE applies to VALUES of TYPES `integer`, `float` and `decimal`.
+
+It defines the minimum numeric value.
 
 Example of a SCHEMA:
 
 ```jsight
 {
-  "data": 123 // {type: "integer"}
+  "data": 1 // {min: 0}
 }
 ```
 
-You can always omit the RULE `type: "integer"`, since the TYPE `integer` is implicitly specified by
-the VALUE in the EXAMPLE:
+### RULE "minItems"
 
-```jsight
-{
-  "data": 123
-}
-```
-
-#### TYPE "float"
-
-> Requirement: req.jschema.rules.type.float 0.1  
+> Requirement: req.jschema.rules.minItems 0.1  
 > Status: APPROVED 09.12.2019.
 
-The TYPE `float` requires an integer or fractional number to be in the VALUE.
+The RULE applies only to arrays.
+
+It defines the minimum number of elements in an array (inclusive). The default value is 0.
 
 Example of a SCHEMA:
 
 ```jsight
 {
-  "data": 36.6 // {type: "float"}
+  "data": [ // {minItems: 1}
+    1
+  ] 
 }
 ```
 
-You can omit the RULE `type: "float"`, since the TYPE `float` is implicitly specified by the
-fractional number in the EXAMPLE:
+The given SCHEMA states that an array can have one or more ELEMENTS of TYPE `integer`. 
 
-```jsight
-{
-  "data": 36.6
-}
-```
+### RULE "minLength"
 
-#### TYPE "decimal"
-
-> Requirement: req.jschema.rules.type.decimal 0.1  
+> Requirement: req.jschema.rules.minLength 0.1  
 > Status: APPROVED 09.12.2019.
 
-The TYPE `decimal` requires a fixed-precise number to be in the VALUE (with a certain number of
-digits after the decimal point).
+The RULE applies to VALUES of TYPE `string`.
 
-If the TYPE `decimal` is specified in RULES, then the RULE `precision`, which sets the required
-precision in the number of decimals (see the section [“RULE precision”](#rule-precision)), must be
-specified in the same group of RULES.
+It defines the minimum string length (inclusive). The default value is 0.
 
 Example of a SCHEMA:
 
 ```jsight
 {
-  "data": 0.12 // {type: "decimal", precision: 2}
-}
-```
-
-You can omit the RULE `type: "decimal"` since the RULE `precision` implicitly specifies the TYPE
-`decimal`:
-
-```jsight
-{
-  "data": 0.12 // {precision: 2}
-}
-```
-
-#### TYPE "boolean"
-
-> Requirement: req.jschema.rules.type.boolean 0.1  
-> Status: APPROVED 09.12.2019.
-
-The TYPE `boolean` requires the VALUE to be either `true` or `false`.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": true // {type: "boolean"}
-}
-```
-
-You can always omit the RULE `type: "boolean"`, since the TYPE `boolean` is implicitly specified by
-the boolean VALUE in the EXAMPLE:
-
-```jsight
-{
-  "data": true
-}
-```
-
-#### TYPE "object"
-
-> Requirement: req.jschema.rules.type.object 0.1  
-> Status: APPROVED 09.12.2019.
-
-The TYPE `object` requires an object to be in the VALUE.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": { // {type: "object"}
-    "someKey": "someValue"
-  }
-}
-```
-
-You can always omit the RULE `type: "object"`, since the TYPE `object` is implicitly specified by
-the object in the EXAMPLE:
-
-```jsight
-{
-  "data": {
-    "someKey": "someValue"
-  }
-}
-```
-
-#### TYPE "array"
-
-> Requirement: req.jschema.rules.type.array 0.1  
-> Status: APPROVED 09.12.2019.
-
-The TYPE `array` requires an array to be in the VALUE.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": [ // {type: "array"}
-    "element1",
-    "element2"
-  ]
-}
-```
-
-You can always omit the RULE `type: "array"`, since the TYPE `array` is implicitly specified by the
-array in the EXAMPLE:
-
-```jsight
-{
-  "data": [
-    "element1",
-    "element2"
-  ]
-}
-```
-
-#### TYPE "any"
-
-> Requirement: req.jschema.rules.type.any 0.1  
-> Status: APPROVED 09.12.2019.
-
-The TYPE `any` accepts any VALUE of any TYPE.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": 1 // {type: "any"}
-}
-```
-
-#### TYPE "null"
-
-> Requirement: req.jschema.rules.type.null 0.1  
-> Status: APPROVED 09.12.2019.
-
-The TYPE `null` requires null to always be in the VALUE.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": null // {type: "null"}
-}
-```
-
-You can always omit the RULE `type: "null"`, since the TYPE `null` is implicitly specified by
-the null VALUE in the EXAMPLE:
-
-```jsight
-{
-  "data": null // {type: "null"}
-}
-```
-
-#### TYPE "email"
-
-> Requirement: req.jschema.rules.type.email 0.1  
-> Status: APPROVED 09.12.2019.
-
-When the RULE `type` has the value `email`, it is assumed that the VALUE in the DOCUMENT must be a
-string containing a valid Email address. (see [RFC 5322, section
-3.4.1](https://tools.ietf.org/html/rfc5322#section-3.4.1)).
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": "tom@cats.com" // {type: "email"}
-}
-```
-
-#### TYPE "uri"
-
-> Requirement: req.jschema.rules.type.uri 0.1  
-> Status: APPROVED 09.12.2019.
-
-When the RULE `type` has the value `uri`, it is assumed that the VALUE in the DOCUMENT must be a
-string containing a valid URI (see [RFC 3986](https://tools.ietf.org/html/rfc3986)).
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": "http://cats.com" // {type: "uri"}
-}
-```
-
-#### TYPE "uuid"
-
-> Requirement: req.jschema.rules.type.uuid 0.1  
-> Status: APPROVED 09.12.2019.
->
-> It is planned:
->
-> - TODO: To add a reference to the standard.
-
-When the RULE `type` has the value `uuid`, it is assumed that the DOCUMENT contains a string
-containing a UUID.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": "550e8400-e29b-41d4-a716-446655440000" // {type: "uuid"}
-}
-```
-
-#### TYPE "date"
-
-> Requirement: req.jschema.rules.type.date 0.2  
-> Status: APPROVED 04.01.2022.
-
-When the RULE `type` has the value `date`, it is assumed that the VALUE in the DOCUMENT must be a
-string containing the date as defined by "full-date" in
-[RFC3339](https://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14).
-
-Example of a schema with the type `date`: 
-
-```jsight
-{
-  "data": "2006-01-02" // {type: "date"}
-}
-```
-
-#### TYPE "datetime"
-
-> Requirement: req.jschema.rules.type.datetime 0.3  
-> Status: APPROVED 17.09.2021.
-
-When the RULE `type` has the value `datetime`, it is assumed that the VALUE in the DOCUMENT must be
-a string containing the date and time as defined by "date-time" in
-[RFC3339](https://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14).
-
-Example of a schema with the type `datetime`: 
-
-```jsight
-{
-  "data": "2006-01-02T15:04:05+07:00" // {type: "datetime"}
-}
-```
-
-#### TYPE "enum"
-
-> Requirement: req.jschema.rules.type.enum 0.1  
-> Status: APPROVED 09.12.2019.
-
-The TYPE `enum` indicates that the VALUE in the DOCUMENT can only be one of a list of valid values,
-which are specified in the RULE `enum` (see the section [“RULE "enum"”](#rule-enum)). 
-
-If the TYPE `type: "enum"` is specified, then this group of RULES must also contain the RULE `enum`.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "color": "white" // {type: "enum", enum: ["white", "blue", "red"]}
-}
-```
-
-You can always omit the RULE `type: "enum"` since the RULE `enum` implicitly specifies the TYPE
-`decimal`:
-
-```jsight
-{
-  "color": "white" // {enum: ["white", "blue", "red"]}
-}
-```
-
-#### TYPE "mixed"
-
-> Requirement: req.jschema.rules.type.mixed 0.1  
-> Status: APPROVED 09.12.2019.
-
-The TYPE `mixed` indicates that the VALUE in the DOCUMENT must satisfy one of the sets of RULES
-listed in the RULE `or` (see the section [“RULE "or"”](#rule-or)).
-
-If the TYPE `type: "mixed"` is specified, then this group of RULES must also contain the RULE `or`.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": 123 // {type: "mixed", or: [{type: "integer"}, {type: "string"}]}
-}
-```
-
-You can always omit the RULE `type: "mixed"` since the RULE `or` implicitly specifies the TYPE
-`mixed`:
-
-```jsight
-{
-  "data": 123 // {or: [{type: "integer"}, {type: "string"}]}
-}
-```
-
-For more information about the TYPE `mixed`, see the section [“RULE "or"”](#rule-or).
-
-### RULE "optional"
-
-> Requirement: req.jschema.rules.optional 0.1  
-> Status: APPROVED 09.12.2019.
-
-The RULE determines whether or not a property of the object can be missing.
-
-The RULE applies only to the PROPERTIES of objects.
-
-The RULE `optional` can be either `true` or `false`. By default, it is `false`.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": 1 // {optional: true}
+  "data": "Any string" // {minLength: 3}
 }
 ```
 
@@ -1526,205 +1434,24 @@ Example of a valid DOCUMENT:
 }
 ```
 
-### RULE "min"
+### RULE "optional"
 
-> Requirement: req.jschema.rules.min 0.1  
+> Requirement: req.jschema.rules.optional 0.1  
 > Status: APPROVED 09.12.2019.
 
-The RULE applies to VALUES of TYPES `integer`, `float` and `decimal`.
+The RULE determines whether or not a property of the object can be missing.
 
-It defines the minimum numeric value.
+The RULE applies only to the PROPERTIES of objects.
+
+The RULE `optional` can be either `true` or `false`. By default, it is `false`.
 
 Example of a SCHEMA:
 
 ```jsight
 {
-  "data": 1 // {min: 0}
+  "data": 1 // {optional: true}
 }
 ```
-
-### RULE "max"
-
-> Requirement: req.jschema.rules.max 0.1  
-> Status: APPROVED 09.12.2019.
-
-The RULE applies to VALUES of TYPES `integer`, `float` and `decimal`.
-
-It defines the maximum numeric value.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": 1.2 // {max: 3.4}
-}
-```
-
-### RULE "exclusiveMinimum"
-
-> Requirement: req.jschema.rules.exclusiveMinimum 0.1  
-> Status: APPROVED 09.12.2019.
-
-The RULE applies to VALUES of TYPES `integer`, `float` and `decimal`.
-
-It can be either `true` or `false`. By default, it is `false`.
-
-If the value is `true`, then the value of the RULE `min` (specified in the same group of RULES) is
-excluded from the valid range of numeric values.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": 1 // {min: 0, exclusiveMinimum: true}
-}
-```
-
-### RULE "exclusiveMaximum"
-
-> Requirement: req.jschema.rules.exclusiveMaximum 0.1  
-> Status: APPROVED 09.12.2019.
-
-The RULE applies to VALUES of TYPES `integer`, `float` and `decimal`.
-
-It can be either `true` or `false`. By default, it is `false`.
-
-If the value is `true`, then the value of the RULE `max` (specified in the same group of RULES) is
-excluded from the valid range of numeric values.
-
-Example of a SCHEMA: 
-
-```jsight
-{
-  "data": 1 // {max: 2, exclusiveMaximum: true}
-}
-```
-
-### RULE "precision"
-
-> Requirement: req.jschema.rules.precision 0.1  
-> Status: APPROVED 09.12.2019.
-
-The RULE applies to VALUES of TYPE `decimal`.
-
-It defines the maximum number of decimal places that a number can have after the decimal point
-(cannot be negative).
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": 0.12 // {precision: 2}
-}
-```
-
-### RULE "minLength"
-
-> Requirement: req.jschema.rules.minLength 0.1  
-> Status: APPROVED 09.12.2019.
-
-The RULE applies to VALUES of TYPE `string`.
-
-It defines the minimum string length (inclusive). The default value is 0.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": "Any string" // {minLength: 3}
-}
-```
-
-### RULE "maxLength"
-
-> Requirement: req.jschema.rules.maxLength 0.1  
-> Status: APPROVED 09.12.2019.
-
-The RULE applies to VALUES of TYPE `string`.
-
-It defines the maximum length of a string (inclusive). The RULE `maxLength` is not set by default
-(maximum string length is not limited).
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": "Any string" // {maxLength: 255}
-}
-```
-
-### RULE "regex"
-
-> Requirement: req.jschema.rules.regex 0.3  
-> Status: APPROVED 14.02.2022.
-
-> It is planned:
->
-> - TODO: A reference to the regex standard is needed.
-
-The RULE applies to VALUES of TYPES `string`, `email`, `uri`, `date` and `datetime`.
-
-It defines the regex that the string should match.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": "Any string" // {regex: "[A-Za-z ]+"}
-}
-```
-
-### RULE "minItems"
-
-> Requirement: req.jschema.rules.minItems 0.1  
-> Status: APPROVED 09.12.2019.
->
-> It is planned:
->
-> - TODO: To consider cases of large minItems, in which you don't need to write the whole example.
-
-The RULE applies only to arrays.
-
-It defines the minimum number of elements in an array (inclusive). The default value is 0.
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": [ // {minItems: 1}
-    1
-  ] 
-}
-```
-
-The given SCHEMA states that an array can have one or more ELEMENTS of TYPE `integer`. 
-
-### RULE "maxItems"
-
-> Requirement: req.jschema.rules.maxItems 0.1  
-> Status: APPROVED 09.12.2019.
->
-> It is planned:
->
-> - TODO: To write explicitly that if there are more elements in the EXAMPLE than are allowed by
->   maxItems, a schema error will be shown.
-
-The RULE applies only to arrays.
-
-It defines the maximum number of elements in an array (inclusive). The property `maxItems` is not
-set by default (the maximum number of elements in the array is not limited).
-
-Example of a SCHEMA:
-
-```jsight
-{
-  "data": [ // {maxItems: 10}
-    1
-  ]
-}
-```
-
-The given SCHEMA states that an array can only have 10 or fewer elements of type `integer`. 
 
 ### RULE "or"
 
@@ -1732,13 +1459,6 @@ The given SCHEMA states that an array can only have 10 or fewer elements of type
 >
 > - req.jschema.rules.or 0.3  
 >   Status: APPROVED 13.01.2022.  
->   It is planned:
->   - TODO: To consider the possibility of allowing the RULE nullable at the same time as the rule or.
->   - TODO: To consider whether the following is correct: "If the TYPE is not explicitly specified in the
->     group of RULES in the `or`, then the TYPE is determined by the value of the EXAMPLE".
->     Furthermore, there is a doubt that this contradicts the requirement that in type should be
->     only mixed, if or is present.
->   - TODO: To add a determinant of polymorphism (discriminator).
 > - req.jschema.rules.or.type_shortcuts 0.1  
 >   Status: APPROVED 09.12.2019.
 
@@ -1858,603 +1578,512 @@ Example of a SCHEMA with `type`, `optional` and `nullable`:
 }
 ```
 
-### RULE "additionalProperties"
+### RULE "precision"
 
-> Requirement: req.jschema.rules.additionalProperties 0.2  
-> Status: APPROVED.  
-> It is planned:
->
-> - TODO: To consider an alternative to additionalProperties so that new properties can be added by
->   analogy with an existing property.
-
-The RULE `additionalProperties` is required in order to impose requirements for the PROPERTIES of
-object which were not explicitly described in the SCHEMA. For instance, you can disable additional
-PROPERTIES in the object using random KEYS; you can just enable them; or you can enable them and
-specify the TYPE of the PROPERTY VALUE, etc. 
-
-The RULE `additionalProperties` is only applicable to objects.
-
-In the RULE `additionalProperties`, you can specify either a boolean value, or a string, or an
-object. (For example, `additionalProperties: true` or `additionalProperties: "@cat"`, or
-`additionalProperties: {type:" @cat "}`). The RULE is interpreted differently depending on the type
-of the value:
-
-1. **The value of the RULE is `boolean`.**  
-   In this case, the RULE means whether additional PROPERTIES are allowed in the object in general
-   or not (for more information, see [below](#rule-additionalproperties-with-the-value-boolean)).
-2. **The value of the RULE is `string`.**  
-   In this case, the RULE states that the object is only allowed to have additional PROPERTIES with
-   values of TYPE indicated in `additionalProperties` (for more information, see
-   [below](#rule-additionalproperties-with-the-value-string)).
-3. **The value of the RULE is `object`.**  
-   In this case, the RULE states that the object is allowed to have additional PROPERTIES that must
-   conform to the set of RULES indicated in `additionalProperties` (for more information, see
-   [below](#rule-additionalproperties-with-the-value-object)).
-
-The RULE `additionalProperties` is set to `false` by default.
-
-##### RULE "additionalProperties" with the value "boolean" 
-
-> Requirement: req.jschema.rules.additionalProperties.boolean 0.2  
-> Status: APPROVED 17.09.2021.
-
-If the RULE `additionalProperties: true` is specified, it indicates that additional PROPERTIES with
-any undeclared KEYS in the SCHEMA and any VALUES can be added to the corresponding object in the
-DOCUMENT. 
-
-If the RULE `additionalProperties: false` is specified, it indicates that additional PROPERTIES
-cannot be added to the corresponding object in the DOCUMENT whose KEYS were not stated in the SCHEMA
-of this object. I.e., the RULE `additionalProperties: false` meets the requirements for objects by
-default.
-
-Example:
-
-```jsight
-# Schema
-
-{ // {additionalProperties: true}
-  "id": 4,
-  "name": "Kitty"
-}
-
-# Valid document
-{
-    "id"  : 123,
-    "name": "Tom"
-    "bla-bla-bla-bla-bla-bla": "Hurray, add whatever you want!"
-}
-```
-
-##### RULE "additionalProperties" with the value "string"
-
-> Requirement: req.jschema.rules.additionalProperties.string 0.2  
+> Requirement: req.jschema.rules.precision 0.1  
 > Status: APPROVED 09.12.2019.
 
- If a string is specified in the RULE `additionalProperties`, then this string should contain the
- name of STANDARD or USER TYPE.
+The RULE applies to VALUES of TYPE `decimal`.
 
-In this case, the RULE `additionalProperties` states that additional PROPERTIES with any random KEYS
-are allowed in addition to the explicitly described PROPERTIES in the object. Also, the value of
-additional PROPERTIES must match the TYPE specified in `additionalProperties`.
-
-Examples of a SCHEMA using the STANDARD TYPE `string` in `additionalProperties`.
-
-```jsight
-{ // {additionalProperties: "string"}
-    "id": 1
-}
-```
-
-Example of a VALID DOCUMENT corresponding to the given SCHEMA:
-
-```jsight
-{
-    "id": 1, 
-    "any_key": "any string", 
-    "some_key": "some string", 
-    "extra_key": "extra string"
-}
-```
-
-Examples of a SCHEMA using the TYPE `any` in `additionalProperties`:
-
-```jsight
-{ // {additionalProperties: "any"}
-    "id": 1
-}
-```
-
-:::note
-
-*The RULE `additionalProperties: "any"` has the same effect as the RULE `additionalProperties:
-true`.*
-
-:::
-
-Example of a document corresponding to the given SCHEMA:
-
-```jsight
-{
-    "id": 1,
-    "any_key": true,
-    "some_key": "value", 
-    "extra_key": null
-}
-```
-
-Examples of a SCHEMA using the USER TYPE in `additionalProperties`:
-
-```jsight
-{} // {additionalProperties: "@cat"}
-```
-
-Suppose, the USER TYPE `@cat` has the following SCHEMA:
-
-```jsight
-{
-    "name": "Bob"
-}
-```
-
-Then the following DOCUMENT will satisfy the given SCHEMA:
-
-```jsight
-{
-    "myFirstCat" : {"name": "Tom" },
-    "mySecondCat": {"name": "Loli"}
-}
-```
-
-##### RULE "additionalProperties" with the value "object"
-
-> Requirement: req.jschema.rules.additionalProperties.object 0.2
->
-> Status: TODO 17.09.2021.
-
-:::danger COMING SOON
-
-This feature is not implemented yet. It is coming soon.
-
-:::
-
-### RULE "const"
-
-> Requirement: req.jschema.rules.const 0.4  
-> Status: APPROVED 14.02.2022.  
-> It is planned:
->
-> - TODO: To consider constant objects and arrays.
-
-The rule `const` can be applied to any VALUE except arrays and objects.
-
-The rule `const` is incompatible with USER TYPES, i.e., when the `type` contains some USER TYPE, for
-example `type: "@catId"`.
-
-Also, the RULE `const` is incompatible with the TYPE `mixed` and the TYPE `any`.
-
-The rule `const` can take a value of type `boolean`. Furthermore, `const: true` means that the VALUE
-in the DOCUMENT must exactly match the value specified in the EXAMPLE.
-
-The value of the RULE `const: false` does not impose any additional requirements for the VALUE in
-DOCUMENT.
-
-The value of the RULE `const` is `false` by default.
-
-Examples:
-
-```jsight
-# SCHEMA
-{
-    "responseCode": "OK" // {const: true}
-}
-
-# VALID DOCUMENT
-{"responseCode": "OK"}
-
-# INVALID DOCUMENT
-{"responseCode": "FAIL"}
-```
-
-### RULE "serializeFormat"
-
-> Requirement: req.jschema.rules.serializeFormat 0.2  
-> Status: POSTPONED 07.01.2021.  
-> In future versions:
->
-> - TODO: To consider what might happen if the serialized string example is too large.
-> - TODO: To consider the fact that the RULE `serializeFormat` can exist without the RULE
->   `serializedType`.
-
-:::danger COMING SOON
-
-This feature  is not implemented yet. It is coming soon.
-
-:::
-
-The RULE `serializeFormat` can only be specified for the TYPE `string`.
-
-In the RULE `serializeFormat`, the name of the FORMAT is specified. This FORMAT defines how the
-other VALUE of certain TYPE has to be serialized in the string VALUE. Furthermore, the TYPE of the
-serialized VALUE is set using the RULE `serializedType`.
-
-The RULE `serializeFormat` is always used only in conjunction with the RULE `serializedType`.
-
-Let's look at some examples.
-
-**Example 1.**
-
-```jsight
-# Schema 
-{
-    "stringId": "234" // {serializeFormat: "json", serializedType: "integer"}
-}
-
-# Examples of valid DOCUMENTS
-{ "stringId": "1" }
-{ "stringId": "-45"}
-
-# Examples of invalid DOCUMENTS
-{ "stringId": "one"} # "one" is not a serialized integer
-{ "stringId": "1.2"} # "1.2" is not a serialized integer
-```
-
-In the given example, we see a SCHEMA that requires an integer (`serializedType: "integer"`) to be
-serialized in the value of the PROPERTY `stringId`, while the `json` FORMAT must be used for
-serialization.
-
-:::note
-
-*The string `234` is a full-fledged JSON document, with an element of type `number` at its
-root. Contrary to popular belief, a JSON document is not required to have an array or object as the
-root element.*
-
-:::
-
-**Example 2.**
-
-Let's imagine that there is a USER TYPE `@cat` which is described by the following schema:
-
-```jsight
-# @cat TYPE schema 
-{
-    "name": "Tom"
-}
-```
-
-Let's write down a SCHEMA in which the same TYPE `@cat` is serialized in different FORMATS: `json`
-and `xml`.
-
-```jsight
-# Schema
-{
-    "catInJson": "{\"name\":\"Tom\"}" // {serializeFormat: "json", serializedType: "@cat"}
-    "catInXml" : "<name>Tom</name>"   // {serializeFormat: "xml" , serializedType: "@cat"}
-}
-
-# Example of a valid DOCUMENT
-{
-    "catInJson": "{ \"name\" : \"Marmalade\" }"
-    "catInXml" : "<name>Marmalade</name>"
-}
-```
-
-As we can see, the same object can be serialized to a string in multiple FORMATS.
-
-In this version of the language specification, only two serialize FORMATS must be followed:
-
-1. `serializeFormat: "json"`.
-2. `serializeFormat: "htmlFormEncoded"`.
-
-:::note
-
-*At first glance, the ability to select the FORMAT for serializing some data into a string may
-seem like an overkill and not a very useful function. But actually, this function is critical. In
-fact, any DOCUMENT, the requirements for which are defined by the SCHEMA, is nothing more than a
-string into which some structured data is serialized in a specific FORMAT. Thus, the operation of
-verifying the DOCUMENT's validity is nothing more than applying the RULES serializeFormat and
-serializedType to the string with the DOCUMENT, where the serializeFormat specifies the notation in
-which the document is written, for example, json, and the serializedType specifies the reference to
-the whole SCHEMA as a USER TYPE:*
-
-:::
-
-```jsight
-"<all checked DOCUMENT in its original form>" /* {serializeFormat: "<DOCUMENT FORMAT>",
-                                              serializedType: "<reference to the whole SCHEMA>"} */
-
-# Example:
-
-"{name:\"Kitty\"}" // {serializeFormat: "json", serializedType: "@schema"}
-
-#, where @schema is the name of the whole SCHEMA
-```
-
-:::note
-
-*This feature, among other things, also allows you to use the same SCHEMA for DOCUMENTS validation
-in completely different FORMATS (JSON, XML, YAML, etc.).*
-
-:::
-
-##### Serialization FORMAT "json"
-
-> Requirement: req.jschema.rules.serializeFormat.json 0.2  
-> Status: POSTPONED 17.09.2021.
->
-> It is planned:
->
-> - TODO: To add a reference to the standard.
-
-This FORMAT assumes the serialization according to the rules of the JSON notation.
-
-##### Serialization FORMAT "htmlFormEncoded"
-
->  Requirement: req.jschema.rules.serializeFormat.htmlFormEncoded 0.2  
->  Status: TODO 17.09.2021.
->
-> It is planned:
->
-> - TODO: To add a reference to the standard.
-
-This FORMAT assumes the serialization according to the rules of the x-www-form-urlencoded notation.
-
-### RULE "serializedType"
-
-> Requirement: req.jschema.rules.serializedType 0.2  
-> Status: POSTPONED 17.09.2021.
-
-:::danger COMING SOON
-
-This feature is not implemented yet. It is coming soon.
-
-:::
-
-This RULE can be specified only if the VALUE is of TYPE `string`, and also the RULE
-`serializeFormat` is explicitly specified.
-
-The RULE `serializedType` specifies the TYPE name to which the VALUE serialized to a string must
-correspond. Furthermore, the serialization FORMAT is specified in the RULE `serializeFormat`.
-
-You can specify both STANDARD and USER TYPES in the RULE `serializedType`.
+It defines the maximum number of decimal places that a number can have after the decimal point
+(cannot be negative).
 
 Example of a SCHEMA:
 
 ```jsight
 {
-    "mySerializedBoolean" : "true" // {serializeFormat: "json", serializedType: "boolean"}
-    "mySerializedCat"     : "{\"name\":\"Tom\"}" /* {serializeFormat: "json", 
-                                                     serializedType : "@cat"} */
+  "data": 0.12 // {precision: 2}
 }
 ```
 
-For more information about the RULES `serializedType` and `serializeFormat`, see the section [“RULE
-"serializeFormat"”](#rule-serializeformat).
+### RULE "regex"
 
-### RULE "enum"
+> Requirement: req.jschema.rules.regex 0.3  
+> Status: APPROVED 14.02.2022.
 
-> Requirement: req.jschema.rules.enum 0.3  
+The RULE applies to VALUES of TYPES `string`, `email`, `uri`, `date` and `datetime`.
+
+It defines the regex that the string should match.
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": "Any string" // {regex: "[A-Za-z ]+"}
+}
+```
+
+### RULE "type"
+
+> Requirement: req.jschema.rules.type 0.1  
+> Status: APPROVED 06.12.2021.
+
+The RULE `type` explicitly specifies the TYPE of the VALUE.
+
+The RULE applies to scalar VALUES, objects or arrays. 
+
+Possible values:
+
+- `object`,
+- `array`,
+- `integer`,
+- `float`,
+- `decimal`,
+- `boolean`,
+- `string`,
+- `email`,
+- `uri`,
+- `date`,
+- `datetime`,
+- `uuid`,
+- `enum`,
+- `mixed`,
+- `any`,
+- `null`,
+- name of any USER TYPE.
+
+It is not recommended to explicitly specify the TYPES `object`, `array`, `integer`, `float`,
+`decimal`, `boolean`, `string`, since it is enough to look at the corresponding value in the EXAMPLE
+to specify these types (see the section [“Correspondence of the EXAMPLE data TYPES and the
+SCHEMA”](#correspondence-between-example-and-schema-data-types)). It is also not recommended to
+explicitly specify the types `enum` and `mixed`, since it is enough to look at other RULES to
+specify these types (`enum` and `or`).
+
+Example of a SCHEMA with explicit `type`:
+
+```jsight
+{
+  "contact": "name@domain.com" // {type: "email"}
+}
+```
+
+Example of a SCHEMA without defining `type` which has the value `type: mixed` by default, as there
+is the RULE `or` in the group of RULES:
+
+```jsight
+{
+  "data": "abc" // {or: [{type: "string"}, {type: "integer"}]}
+}
+```
+
+#### Specifying the USER TYPE in the RULE "type"
+
+> Requirement: req.jschema.rules.type.reference 0.3  
 > Status: APPROVED 13.01.2022.
 
-The RULE is used for VALUES of TYPE `enum`.
+You can specify not only a STANDARD TYPE, but also a USER TYPE in the RULE `type` (for more
+information, see the section [“USER TYPES”](#user-types)).
 
-The RULE specifies a set of scalar JSON values (of types `string`, `number`, `boolean` or `null`).
-Only a single value from this list can be used in a VALID DOCUMENT.
+For example:
+
+```jsight
+{
+  "passport": "AA 234555" // {type: "@pasportNumber"}
+}
+```
+
+Such a SCHEMA states that the VALUE of the PROPERTY `passport` must meet the requirements specified
+in a USER TYPE named `@passportNumber`.
+
+:::caution IMPORTANT!
+
+If the USER TYPE is specified in the RULE `type`, then **an object or an array, or a
+reference to the USER TYPE cannot be specified** in the EXAMPLE. 
+
+:::
+
+For example, you cannot write as follows:  
+
+```jsight
+{
+  "myCat": { // {type: "@cat"}  # --ERROR! It is wrong! 
+    "id"  : 123,
+    "name": "Tom"
+  }
+}
+```
+
+It is also not correct to write as follows: 
+
+```jsight
+{
+  "myCatList": [ // {type: "@catList"}  # -- ERROR! It is wrong! 
+    @cat
+  ]
+}
+```
+
+It is also not correct to write as follows: 
+```jsight
+{
+  "myCat": @cat // {type: "@cat"}  # -- ERROR! It is wrong! 
+}
+```
+
+If the USER TYPE is specified as a value in the RULE `type`, then only RULES `optional` and
+`nullable` can be used in conjunction with this `type` in one group of RULES. Other rules cannot be
+used.
+
+#### TYPE "any"
+
+> Requirement: req.jschema.rules.type.any 0.1  
+> Status: APPROVED 09.12.2019.
+
+The TYPE `any` accepts any VALUE of any TYPE.
 
 Example of a SCHEMA:
 
 ```jsight
 {
-  "data": 3 /* { enum: [
-                  1.2, 
-                  3, 
-                  "abc", 
-                  true, 
-                  false, 
-                  null]} */
+  "data": 1 // {type: "any"}
 }
 ```
 
-Only the RULES `type`, `optional` and `nullable` can be used together with `enum` in one group of
-RULES. Other RULES cannot be used. In this case, the RULE `type` can only have the value `enum`,
-since the RULE `enum` automatically implies `type: "enum"`.
+#### TYPE "array"
 
-An integer and a floating point number are considered different values for `enum`. For example, the
-following SCHEMA contains an error:
-
-```jsight
-{
-  "data": 2.0 // {enum: [2]} # ERROR!
-}
-```
-
-##### Reference to the named RULE from "enum"
-
-> - req.jschema.rules.enum.reference 0.2  
-> Status: POSTPONED 23.09.2021.
-
-:::danger COMING SOON
-
-This feature is not implemented yet. It is coming soon.
-
-:::
-
-In the rule `enum`, you can specify a reference to the named RULE of type `enum` (see the section
-[“Named RULES”](#named-rules)). In this case, the requirement of the RULE `enum` will be determined by the
-requirement of the named RULE that is referenced.
-
-Example of a SCHEMA with a reference to the named RULE from the RULE `enum`:
-
-```jsight
-{
-  "id"      : 24,
-  "name"    : "Tom",
-  "catSize" : "XXL" // {enum: "@catSizeEnum"}
-}
-```
-
-##### ANNOTATIONS in RULE "enum"
-
-> Requirement: req.jschema.rules.enum.annotation 0.2  
-> Status: APPROVED 16.09.2021.
->
-> In the following versions:
->
-> - TODO: To add the ability to add annotations for enum directly inside RULES in the schema.
-
-:::danger COMING SOON
-
-This feature is not implemented yet. It is coming soon.
-
-:::
-
-In case the RULE `enum` is specified, inline ANNOTATIONS can appear on lines with ENUMERATION
-elements. Such ANNOTATIONS contain textual notes for ENUMERATION elements.
-
-Examples of inline ANNOTATIONS in the RULE `enum`:
-
-```jsight
-{
-  "animalType": "CAT" /* {enum: [
-                                  "CAT", // Cat.
-                                  "DOG", /* Dog
-                                            (Watch dog) */
-                                  "FROG" /* Frog. */
-                                ]
-                      */
-}
-```
-
-Interline ANNOTATIONS may appear before strings with ENUMERATION elements. In this case, they
-provide textual notes that refer to the ENUMERATION group of elements. Wherein a group of
-ENUMERATION elements begins with one interline ANNOTATION and ends with another interline ANNOTATION
-(or by the end of the ENUMERATION).
-
-Examples of interline ANNOTATIONS in the RULE `enum`:
-
-```jsight
-{
-  "animalType": "CAT" /* {enum: [
-                                  // Pets
-                                  "CAT",
-                                  "DOG",
-                                  "PIG",
-                                  /* Wild animals */
-                                  "WOLF",
-                                  "LION",
-                                  "TIGER"
-                                ]
-                      */
-}
-```
-
-In this example, we see two groups of ENUMERATION elements: `CAT`, `DOG`, `PIG` and `WOLF`, `LION`,
-`TIGER`.
-
-### RULE "allOf"
-
-> Requirement: req.jschema.rules.allOf 0.1  
+> Requirement: req.jschema.rules.type.array 0.1  
 > Status: APPROVED 09.12.2019.
 
-The RULE applies only to objects.
+The TYPE `array` requires an array to be in the VALUE.
 
-The RULE `allOf` allows you to extend the set of PROPERTIES of an object with the PROPERTIES of
-another object (objects). In this case, any duplication of PROPERTIES should be considered as a
-SCHEMA error.
-
-Assume that we have a USER TYPE `@pet` which is specified by the following SCHEMA (for more
-information about USER TYPES, see the section [“USER TYPES”](#user-types)):
-
-```jsight
-# USER TYPE @pet
-
-{
-  "petId": 123,
-  "name" : "Tom"
-}
-```
-
-This USER TYPE `@pet` can now be "inherited" in another USER TYPE `@cat` in the following way:
-
-```jsight
-# USER TYPE @cat
-
-{ // {allOf: "@pet"}
-  "favoriteFood": "MOUSE" // {enum: ["MOUSE", "MILK"]}
-}
-```
-
-Example of a DOCUMENT that matches the given SCHEMA of TYPE `@cat`:
+Example of a SCHEMA:
 
 ```jsight
 {
-  "petId": 4,
-  "name" : "Marmalade",
-  "favoriteFood" : "MILK"
+  "data": [ // {type: "array"}
+    "element1",
+    "element2"
+  ]
 }
 ```
 
-The so-called "multiple inheritance" is allowed.
-
-For example, assume we also have a USER TYPE `@astronaut`:
-
-```jsight
-# USER TYPE @austronaut
-
-{
-  "astronautId" : 223,
-  "spaceSuitSize": "XXL" // {enum: ["S", "M", "L", "XL", "XXL"]}
-}
-```
-
-Then we can create the object and inherit the properties `@pet` and `@astronaut` in the following
-way:
-
-```jsight
-
-{ // {allOf: ["@pet", "@astronaut"]}
-}
-
-```
-Example of a DOCUMENT that matches the given SCHEMA:
+You can always omit the RULE `type: "array"`, since the TYPE `array` is implicitly specified by the
+array in the EXAMPLE:
 
 ```jsight
 {
-  "petId"         : 123,
-  "name"          : "Marmalade",
-  "astronautId"   : 222,
-  "spaceSuitSize" : "XXL"
+  "data": [
+    "element1",
+    "element2"
+  ]
 }
-
 ```
 
-## ATTRIBUTES
+#### TYPE "boolean"
 
-:::danger COMING SOON
+> Requirement: req.jschema.rules.type.boolean 0.1  
+> Status: APPROVED 09.12.2019.
 
-This feature is not implemented yet. It is coming soon.
+The TYPE `boolean` requires the VALUE to be either `true` or `false`.
 
-:::
+Example of a SCHEMA:
 
-The option to declare the so-called SCHEMA ATTRIBUTES will be added in the future versions of the
-JSight Schema language. SCHEMA ATTRIBUTES will be intended to describe additional SCHEMA parameters,
-like:
+```jsight
+{
+  "data": true // {type: "boolean"}
+}
+```
 
-- SCHEMA version,
-- SCHEMA name,
-- SCHEMA textual description,
-- description of named elements:
-  - description of USER TYPES (see the section [“USER TYPES“](#user-types)),
-  - description of named RULES (see the section [“Named RULES”](#named-rules)).
+You can always omit the RULE `type: "boolean"`, since the TYPE `boolean` is implicitly specified by
+the boolean VALUE in the EXAMPLE:
 
-Due to the absence of ATTRIBUTES in this version of the JSight Schema language, there is no way to
-describe USER TYPES and named RULES. Despite this, the current version of the language extensively
-uses the USER TYPES tool, also uses the named RULES mechanism for the RULE `enum`. This apparent
-contradiction is explained in the following manner. This version of the language is not intended for
-standalone use, but rather as an integral part of the [JSight API language](jsight-api-0-3). In
-addition, the JSight API language has its own way for describing USER TYPES and named RULES. Thus,
-USER TYPES and named RULES will be described using the [JSight API language](jsight-api-0-3), but at
-the same time they can also be used within the framework of SCHEMAS in the current version of the
-JSight Schema language.
+```jsight
+{
+  "data": true
+}
+```
+
+#### TYPE "date"
+
+> Requirement: req.jschema.rules.type.date 0.2  
+> Status: APPROVED 04.01.2022.
+
+When the RULE `type` has the value `date`, it is assumed that the VALUE in the DOCUMENT must be a
+string containing the date as defined by "full-date" in
+[RFC3339](https://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14).
+
+Example of a schema with the type `date`: 
+
+```jsight
+{
+  "data": "2006-01-02" // {type: "date"}
+}
+```
+
+#### TYPE "datetime"
+
+> Requirement: req.jschema.rules.type.datetime 0.3  
+> Status: APPROVED 17.09.2021.
+
+When the RULE `type` has the value `datetime`, it is assumed that the VALUE in the DOCUMENT must be
+a string containing the date and time as defined by "date-time" in
+[RFC3339](https://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14).
+
+Example of a schema with the type `datetime`: 
+
+```jsight
+{
+  "data": "2006-01-02T15:04:05+07:00" // {type: "datetime"}
+}
+```
+
+#### TYPE "decimal"
+
+> Requirement: req.jschema.rules.type.decimal 0.1  
+> Status: APPROVED 09.12.2019.
+
+The TYPE `decimal` requires a fixed-precise number to be in the VALUE (with a certain number of
+digits after the decimal point).
+
+If the TYPE `decimal` is specified in RULES, then the RULE `precision`, which sets the required
+precision in the number of decimals (see the section [“RULE precision”](#rule-precision)), must be
+specified in the same group of RULES.
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": 0.12 // {type: "decimal", precision: 2}
+}
+```
+
+You can omit the RULE `type: "decimal"` since the RULE `precision` implicitly specifies the TYPE
+`decimal`:
+
+```jsight
+{
+  "data": 0.12 // {precision: 2}
+}
+```
+
+#### TYPE "email"
+
+> Requirement: req.jschema.rules.type.email 0.1  
+> Status: APPROVED 09.12.2019.
+
+When the RULE `type` has the value `email`, it is assumed that the VALUE in the DOCUMENT must be a
+string containing a valid Email address. (see [RFC 5322, section
+3.4.1](https://tools.ietf.org/html/rfc5322#section-3.4.1)).
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": "tom@cats.com" // {type: "email"}
+}
+```
+
+#### TYPE "enum"
+
+> Requirement: req.jschema.rules.type.enum 0.1  
+> Status: APPROVED 09.12.2019.
+
+The TYPE `enum` indicates that the VALUE in the DOCUMENT can only be one of a list of valid values,
+which are specified in the RULE `enum` (see the section [“RULE "enum"”](#rule-enum)). 
+
+If the TYPE `type: "enum"` is specified, then this group of RULES must also contain the RULE `enum`.
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "color": "white" // {type: "enum", enum: ["white", "blue", "red"]}
+}
+```
+
+You can always omit the RULE `type: "enum"` since the RULE `enum` implicitly specifies the TYPE
+`decimal`:
+
+```jsight
+{
+  "color": "white" // {enum: ["white", "blue", "red"]}
+}
+```
+
+#### TYPE "float"
+
+> Requirement: req.jschema.rules.type.float 0.1  
+> Status: APPROVED 09.12.2019.
+
+The TYPE `float` requires an integer or fractional number to be in the VALUE.
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": 36.6 // {type: "float"}
+}
+```
+
+You can omit the RULE `type: "float"`, since the TYPE `float` is implicitly specified by the
+fractional number in the EXAMPLE:
+
+```jsight
+{
+  "data": 36.6
+}
+```
+
+#### TYPE "integer"
+
+> Requirement: req.jschema.rules.type.integer 0.1  
+> Status: APPROVED 09.12.2019.
+
+The TYPE `integer` requires an integer to be in the VALUE.
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": 123 // {type: "integer"}
+}
+```
+
+You can always omit the RULE `type: "integer"`, since the TYPE `integer` is implicitly specified by
+the VALUE in the EXAMPLE:
+
+```jsight
+{
+  "data": 123
+}
+```
+
+#### TYPE "mixed"
+
+> Requirement: req.jschema.rules.type.mixed 0.1  
+> Status: APPROVED 09.12.2019.
+
+The TYPE `mixed` indicates that the VALUE in the DOCUMENT must satisfy one of the sets of RULES
+listed in the RULE `or` (see the section [“RULE "or"”](#rule-or)).
+
+If the TYPE `type: "mixed"` is specified, then this group of RULES must also contain the RULE `or`.
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": 123 // {type: "mixed", or: [{type: "integer"}, {type: "string"}]}
+}
+```
+
+You can always omit the RULE `type: "mixed"` since the RULE `or` implicitly specifies the TYPE
+`mixed`:
+
+```jsight
+{
+  "data": 123 // {or: [{type: "integer"}, {type: "string"}]}
+}
+```
+
+For more information about the TYPE `mixed`, see the section [“RULE "or"”](#rule-or).
+
+#### TYPE "null"
+
+> Requirement: req.jschema.rules.type.null 0.1  
+> Status: APPROVED 09.12.2019.
+
+The TYPE `null` requires null to always be in the VALUE.
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": null // {type: "null"}
+}
+```
+
+You can always omit the RULE `type: "null"`, since the TYPE `null` is implicitly specified by
+the null VALUE in the EXAMPLE:
+
+```jsight
+{
+  "data": null // {type: "null"}
+}
+```
+
+#### TYPE "object"
+
+> Requirement: req.jschema.rules.type.object 0.1  
+> Status: APPROVED 09.12.2019.
+
+The TYPE `object` requires an object to be in the VALUE.
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": { // {type: "object"}
+    "someKey": "someValue"
+  }
+}
+```
+
+You can always omit the RULE `type: "object"`, since the TYPE `object` is implicitly specified by
+the object in the EXAMPLE:
+
+```jsight
+{
+  "data": {
+    "someKey": "someValue"
+  }
+}
+```
+
+#### TYPE "string"
+
+> Requirement: req.jschema.rules.type.string 0.1  
+> Status: APPROVED 09.12.2019.
+
+The TYPE `string` requires a string to be in the VALUE.
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "name": "Tom" // {type: "string"}
+}
+```
+
+You can always omit the RULE `type: "string"`, since the TYPE `string` is implicitly specified by
+the VALUE in the EXAMPLE:
+
+```jsight
+{
+  "name": "Tom"
+}
+```
+
+#### TYPE "uri"
+
+> Requirement: req.jschema.rules.type.uri 0.1  
+> Status: APPROVED 09.12.2019.
+
+When the RULE `type` has the value `uri`, it is assumed that the VALUE in the DOCUMENT must be a
+string containing a valid URI (see [RFC 3986](https://tools.ietf.org/html/rfc3986)).
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": "http://cats.com" // {type: "uri"}
+}
+```
+
+#### TYPE "uuid"
+
+> Requirement: req.jschema.rules.type.uuid 0.1  
+> Status: APPROVED 09.12.2019.
+
+When the RULE `type` has the value `uuid`, it is assumed that the DOCUMENT contains a string
+containing a UUID.
+
+Example of a SCHEMA:
+
+```jsight
+{
+  "data": "550e8400-e29b-41d4-a716-446655440000" // {type: "uuid"}
+}
+```
 
 ## Named SCHEMA elements
 
@@ -2502,64 +2131,6 @@ that in the DOCUMENT, the VALUE of the PROPERTY `id` must match all the requirem
 SCHEMA of USER TYPE `@catId` (for more information, see the section [“References to USER TYPES in
 the example”](#references-to-user-types-in-the-example)).
 
-### Named RULES
-
-:::danger COMING SOON
-
-This feature is not implemented yet. It is coming soon.
-
-:::
-
-The JSight Schema language will extensively use the so-called "Named RULES mechanism" in future
-versions. 
-
-The nearest version of the JSight Schema language will use this mechanism only partially, and solely
-in relation to the RULE `enum`. However, in order to understand how named RULES for `enum` will
-work, the general principle of operation of the named RULES mechanism must be described.
-
-The named RULES mechanism allows to declare and describe the content of RULES of a specific type,
-assign NAMES to them explicitly, and then refer to those named RULES from the groups of RULES in the
-SCHEMA.
-
-There is currently no way to declare and describe named RULES in JSight Schema language. (This is
-due to the fact that there is no ATTRIBUTE mechanism for declaring named RULES in this language
-version). However, in the current version of the JSight Schema language, this is not required since
-this version is not intended for standalone use, but rather as an integral part of the [JSight API
-language](jsight-api-0-3), which has its own way of declaring named RULES. In this regard, we will
-use the syntax of the [JSight API language](jsight-api-0-3) for further clarification. 
-
-Let's consider the following example in the [JSight API language](jsight-api-0-3) (using the JSight
-Schema language):
-
-```jsight
-TYPE @cat
-  {
-    "id"     : 123,
-    "name"   : "Tom",
-    "catSize": "XXL" // {enum: "@catSizeEnum"}
-  }
-
-RULE @catSizeEnum enum
-  [
-    "S",
-    "M",
-    "L",
-    "XL",
-    "XXL"
-  ]
-  
-```
-
-In this example, we сan see that in the named TYPE `@cat` in the PROPERTY of the root object
-`catSize` in the RULE `enum`, the intended content of the RULE `enum` is not specified, but there is
-a reference to the named RULE `@catSizeEnum`. This named RULE itself is declared below using the
-directive `RULE @catSizeEnum enum`. After the directive, in fact, the content of a named RULE is
-described, on which the RULE `enum` is referenced in the property `catSize`.
-
-In future versions of the JSight Schema language, you will be able to refer in the same way to named
-RULES from any other type of RULE, not only from `enum`. The only exception is the RULE `type`, from
-which you can refer only to USER TYPE and not to a named RULE.
-
 ## References to USER TYPES in the EXAMPLE 
 
 > Requirement: req.jschema.shortcuts 0.3  
@@ -2568,13 +2139,10 @@ which you can refer only to USER TYPE and not to a named RULE.
 The JSight Schema language allows you to directly refer to USER TYPES from the EXAMPLE. This section
 describes all possible options of such references.
 
-### Reference to the USER TYPE in the EXAMPLE VALUE.
+### Reference to the USER TYPE in the EXAMPLE VALUE
 
 > Requirement: req.jschema.shortcuts.value_type 0.4  
-> Status: APPROVED 13.01.2022.  
-> It is planned:
->
-> - TODO:  To allow the use of `nullable` along with a reference. 
+> Status: APPROVED 13.01.2022.
 
 If some VALUE in the EXAMPLE has some USER TYPE, then the name of this USER TYPE can be specified
 directly in the EXAMPLE instead of this VALUE.
@@ -2654,10 +2222,7 @@ For example, the following two SCHEMAS are essentially the same (have the same r
 ### Reference to several USER TYPES in the VALUE of the EXAMPLE 
 
 > Requirement: req.jschema.shortcuts.value_or 0.4  
-> Status: APPROVED 13.01.2022.  
-> It is planned:
->
-> - TODO: To allow the use of `nullable` along with a reference.
+> Status: APPROVED 13.01.2022.
 
 If some VALUE in the EXAMPLE can match one of several USER TYPES, then the names of these USER TYPES
 can be specified directly in the EXAMPLE instead of this VALUE. Names of USER TYPES should be placed
@@ -2757,26 +2322,47 @@ from the PROPERTY KEY means an implicit specification of the RULE `key.type`. Ri
 
 :::
 
+## Edit history
+
+|    Date    |  JSight Schema Version | Document version | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |        Author       |
+| :--------: | :--------------------: |:----------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| :-----------------: |
+| 14.02.2022 |     0.3.5              |    0.9.20-en     | <ul><li>Prohibiting on using numbers in exponent notation in the EXAMPLE of the SCHEMA.</li><li>Minor improvements to COMMENTS.</li><li>The RULE `regex` now applies to VALUES of TYPES `string`, `email`, `uri`, `date` and `datetime`.</li><li>The RULE `const` is incompatible with the TYPE `any`.</li></ul>  The following requirements were changed: <ul><li>req.jschema.example.number 0.1 to 0.2,</li><li>req.jschema.rules.regex 0.2 to 0.3,</li><li>req.jschema.rules.const 0.3 to 0.4.</li></ul> | Andrei Ivanov       |
+| 13.01.2022 |     0.3.4              |    0.9.19-en     | The RULE `nullable: true` is allowed in conjunction with user type, type `enum` and type `mixed`. The following requirements were changed:<ul><li>req.jschema.rules.type.reference 0.2 to 0.3,</li><li>req.jschema.rules.or 0.2 to 0.3,</li><li>req.jschema.rules.enum 0.2 to 0.3,</li>  <li>req.jschema.shortcuts.value_type 0.3 to 0.4,</li><li>req.jschema.shortcuts.value_or 0.3 to 0.4.</li></ul>                                                                                                      | Konstantin Malyshev |
+| 07.01.2022 |     0.3.3              |    0.9.18-en?    | Some fixes in format.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Konstantin Malyshev |
+| 04.01.2022 |     0.3.3              |    0.9.17-en?    | Requirement changed: req.jschema.rules.type.datetime (new version 0.3). Requirement added: req.jschema.rules.type.date 0.2.                                                                                                                                                                                                                                                                                                                                                                                 | Konstantin Malyshev |
+| 04.01.2022 |     0.3.2              |    0.9.16-en     | Fix format for docusaurus.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Konstantin Malyshev |
+| 28.12.2021 |     0.3.2              |    0.9.15-en     | Translation in English.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Konstantin Malyshev |
+| 14.12.2021 |     0.3.2              |      0.9.15      | Minor clarifications of wordings within the same content.                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Konstantin Malyshev |
+| 09.12.2021 |     0.3.2              |      0.9.14      | Errors in the previous version have been fixed. The version number of the language has not been changed as the document has not yet entered development.                                                                                                                                                                                                                                                                                                                                                    | Konstantin Malyshev |
+| 06.12.2021 |     0.3.2              |      0.9.13      | <p>The ability to use stubs [] and &#123;&#125; for USER TYPES is removed. Due to this, new versions of requirements are as follows: </p><ul>  <li>req.jschema.rules.type.reference 0.2,</li>  <li>req.jschema.rules.or 0.2,</li>  <li>req.jschema.shortcuts 0.3,</li>  <li>req.jschema.shortcuts.value_type 0.3,</li>  <li>req.jschema.shortcuts.value_or 0.3,</li>  <li>req.jschema.shortcuts.key_type 0.3.</li></ul>                                                                                     | Konstantin Malyshev |
+| 19.11.2021 |     0.3.1              |      0.9.12      | Adding TODO comments.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Konstantin Malyshev |
+| 02.11.2021 |     0.3.1              |      0.9.11      | The requirement req.jschema.rules.const (the RULE `const`) has been clarified, the new requirement version is 0.3. A typo in the rule `regex` has been fixed (before it was `regexp`) — new requirement is req.jschema.rules.regex 0.2. Minor edits beside the point.                                                                                                                                                                                                                                       | Konstantin Malyshev |
+| 19.10.2021 |     0.3.0              |      0.8.10      | Correcting typos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Konstantin Malyshev |
+| 13.10.2021 |     0.3.0              |      0.8.9       | Correcting typos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Konstantin Malyshev |
+| 13.10.2021 |     0.3.0              |      0.8.8       | Renaming languages to JSight Schema and JSight API. Changing the name of the FORMAT `htmlFormEncoded`. The language version was left the same since the changes had not yet been developed at that time.                                                                                                                                                                                                                                                                                                    | Konstantin Malyshev |
+| 23.09.2021 |     0.3.0              |      0.8.7       | Many changes have been made based on the testing results.                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Konstantin Malyshev |
+| 09.12.2019 |     0.2.1              |      0.7.4       | The first language version that was approved for the development of a validator prototype.                                                                                                                                                                                                                                                                                                                                                                                                                  |   Andrey Ivanov    |
+
 ## APPENDIX 1. A table of all built-in types and rules
 
 The table below shows all types as well as all of the rules that can be applied to them.
 
 | Type                         | Rules for this type |
 | ---------------------------- | ------------------- |
-| [`object`](#type-object)     | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`additionalProperties`](#rule-additionalproperties), [`allOf`](#rule-allof) |
+| [`any`](#type-any)           | [`optional`](#rule-optional), [`nullable`](#rule-nullable) |
 | [`array`](#type-array)       | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`minItems`](#rule-minitems), [`maxItems`](#rule-maxitems) |
-| [`integer`](#type-integer)   | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`min`](#rule-min), [`max`](#rule-max), [`exclusiveMinimum`](#rule-exclusiveminimum), [`exclusiveMaximum`](#rule-exclusivemaximum) |
-| [`float`](#type-float)       | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`min`](#rule-min), [`max`](#rule-max), [`exclusiveMinimum`](#rule-exclusiveminimum), [`exclusiveMaximum`](#rule-exclusivemaximum)                    |
-| [`decimal`](#type-decimal)   | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`min`](#rule-min), [`max`](#rule-max), [`exclusiveMinimum`](#rule-exclusiveminimum), [`exclusiveMaximum`](#rule-exclusivemaximum), [`precision`](#rule-precision)         |
 | [`boolean`](#type-boolean)   | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const) |
-| [`string`](#type-string)     | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`minLength`](#rule-minlength), [`maxLength`](#rule-maxlength), [`regex`](#rule-regex), [`serializeFormat`](#rule-serializeformat), [`serializedType`](#rule-serializedtype)     |
-| [`email`](#type-email)       | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`regex`](#rule-regex) |
-| [`uri`](#type-uri)           | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`regex`](#rule-regex) |
 | [`date`](#type-date)         | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`regex`](#rule-regex) |
 | [`datetime`](#type-datetime) | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`regex`](#rule-regex) |
-| [`uuid`](#type-uuid)         | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const) |
+| [`decimal`](#type-decimal)   | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`min`](#rule-min), [`max`](#rule-max), [`exclusiveMinimum`](#rule-exclusiveminimum), [`exclusiveMaximum`](#rule-exclusivemaximum), [`precision`](#rule-precision)         |
+| [`email`](#type-email)       | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`regex`](#rule-regex) |
 | [`enum`](#type-enum)         | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`enum`](#rule-enum) |
+| [`float`](#type-float)       | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`min`](#rule-min), [`max`](#rule-max), [`exclusiveMinimum`](#rule-exclusiveminimum), [`exclusiveMaximum`](#rule-exclusivemaximum)                    |
+| [`integer`](#type-integer)   | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`min`](#rule-min), [`max`](#rule-max), [`exclusiveMinimum`](#rule-exclusiveminimum), [`exclusiveMaximum`](#rule-exclusivemaximum) |
 | [`mixed`](#type-mixed)       | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`or`](#rule-or) |
-| [`any`](#type-any)           | [`optional`](#rule-optional), [`nullable`](#rule-nullable) |
 | [`null`](#type-null)         | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const) |
+| [`object`](#type-object)     | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`additionalProperties`](#rule-additionalproperties), [`allOf`](#rule-allof) |
+| [`string`](#type-string)     | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`minLength`](#rule-minlength), [`maxLength`](#rule-maxlength), [`regex`](#rule-regex)     |
+| [`uri`](#type-uri)           | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const), [`regex`](#rule-regex) |
+| [`uuid`](#type-uuid)         | [`optional`](#rule-optional), [`nullable`](#rule-nullable), [`const`](#rule-const) |
 | [@UserType](#user-types)     | [`optional`](#rule-optional), [`nullable`](#rule-nullable) |
