@@ -10,7 +10,7 @@
 
   [![Telegram support](https://img.shields.io/badge/Support-Telegram-blue)](https://t.me/jsight_support)
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
-  [![License](https://img.shields.io/github/license/jsightapi/specification?colorB=ff0000)](#license)
+  [![License](https://img.shields.io/github/license/jsightapi/specification?colorB=ff0000)](./LICENSE)
   [![JSight on Facebook](https://img.shields.io/badge/Facebook-1877F2?logo=facebook&logoColor=white)](https://www.facebook.com/jsightapi)
   [![JSight on LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/company/jsightapi/)
   [![Twitter Follow](https://img.shields.io/twitter/follow/jsightapi.svg?style=social)](https://twitter.com/jsightapi)
@@ -34,8 +34,8 @@
 **JSight API** and **JSight Schema** languages — you have never specified APIs and data schemas so
 fast! We mean it.
 
-1. 2-4 times less code.
-2. APIs and data schemas designing is 2-3 times faster.
+1. 2—4 times less code.
+2. APIs and data schemas designing is 2—3 times faster.
 3. The describing process does not detract from the design.
 4. It is incredibly convenient to jointly design an API with the whole team in one go. No more
    multiple design iterations and edits required. All you need is to share the screen between the
