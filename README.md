@@ -1294,7 +1294,7 @@ We did not describe this API in OpenAPI. It is too complicated and very long…
 
 The JSight Schema language allows you to describe any data structures with incredible speed and
 convenience. You can read more about it in the [JSight Schema Language
-Specification](./versions/JSight%20Schema/JSight%20Schema%200.3.6.md).
+Specification](./versions/JSight%20Schema/).
 
 The JSight Schema language is actively used by the [JSight
 API](./versions/JSight%20API/JSight%20API%200.3.7.md), language, which is designed to describe API.
