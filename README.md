@@ -1334,7 +1334,7 @@ approach greatly simplifies the data schema and makes it intuitively clear. Prac
 schema is very simple to create, read and edit.
 
 For details, see the JSight Schema Language Specification, in the [section
-“EXAMPLE”](./versions/JSight%20Schema/JSight%20Schema%200.3.6.md#example).
+“EXAMPLE”](./versions/JSight%20Schema/JSight%20Schema%200.3.5.md#example).
 
 <div align="center">
 
@@ -1418,9 +1418,9 @@ It is much more complicated in JSON Schema and other languages.
 For details, see the JSight Schema Language Specification, sections:
 
 - [EXAMPLE requirements for object
-  PROPERTIES](./versions/JSight%20Schema/JSight%20Schema%200.3.6.md#example-requirements-for-object-properties),
+  PROPERTIES](./versions/JSight%20Schema/JSight%20Schema%200.3.5.md#example-requirements-for-object-properties),
 - [EXAMPLE requirements for array
-  ELEMENTS](./versions/JSight%20Schema/JSight%20Schema%200.3.6.md#example-requirements-for-array-elements).
+  ELEMENTS](./versions/JSight%20Schema/JSight%20Schema%200.3.5.md#example-requirements-for-array-elements).
 
 <div align="center">
 
@@ -1541,7 +1541,7 @@ Property descriptions are written in C-like comments. If there are *rules* in th
 property descriptions are separated by a hyphen.
 
 For details, see the JSight Schema Language Specification, [section “Text notes to
-RULES”](./versions/JSight%20Schema/JSight%20Schema%200.3.6.md#text-notes-to-rules).
+RULES”](./versions/JSight%20Schema/JSight%20Schema%200.3.5.md#text-notes-to-rules).
 
 <div align="center">
 
@@ -1649,7 +1649,7 @@ RULES”](./versions/JSight%20Schema/JSight%20Schema%200.3.6.md#text-notes-to-ru
 JSight Schema supports several additional built-in data types that are required for actual work.
 
 Read more about nested data types in the JSight Schema Language Specification, [“section RULE
-"type"”](./versions/JSight%20Schema/JSight%20Schema%200.3.6.md#rule-type).
+"type"”](./versions/JSight%20Schema/JSight%20Schema%200.3.5.md#rule-type).
 
 <div align="center">
 
