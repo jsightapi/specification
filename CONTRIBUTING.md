@@ -46,7 +46,7 @@ is when learning JSight.
 
 Your comments on issues and pull requests are also a great help. Please share your thoughts and
 suggestions, they are important to us.
- 
+
 Kindly re-read your remarks to ensure that they are as courteous as possible.
 
 ## English Language

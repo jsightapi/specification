@@ -244,7 +244,7 @@ paths:
 
 ```
 JSIGHT 0.3
- 
+
 GET /cats      // Get all cats.
   200
     [@cat]
@@ -467,17 +467,17 @@ components:
 
 ```
 JSIGHT 0.3
- 
+
 POST /cats // Create a new cat.
   Request
     {
       "id"  : 123,
       "name": "Tom"
     }
- 
+
   200
     "OK" // {const: true}
- 
+
   404 any
   500 empty
 ```
@@ -563,18 +563,18 @@ paths:
 
 ```
 JSIGHT 0.3
- 
+
 TYPE @pet
 {
   "id"  : 123,
   "name": "Tom"
 }
- 
+
 TYPE @cat
 { // {allOf: "@pet"}
   "likesMouses": true
 }
- 
+
 TYPE @dog
 { // {allOf: "@pet"}
   "teethSize": "big" // {enum: ["big", "small"]}
@@ -659,7 +659,7 @@ components:
 
 ```
 JSIGHT 0.3
- 
+
 GET /cats         // Get all cats.
   200 [@cat]      // Returns all cats.
 
@@ -809,21 +809,21 @@ components:
 
 ```
 JSIGHT 0.3
- 
+
 GET /cats // Get all cats.
   200 [@cat]
   PASTE @errorResponses
- 
+
 GET /cats/{id} // Get a cat by its id.
   200 @cat
   PASTE @errorResponses
- 
+
 TYPE @cat // Type “Cat”.
 {
   "id"  : 1,
   "name": "Tom"
 }
- 
+
 MACRO @errorResponses
   400 any
   401 any
