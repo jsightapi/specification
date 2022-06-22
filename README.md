@@ -585,7 +585,7 @@ This example shows how simple it is to inherit one type from another in JSight u
 `allOf`.
 
 Learn more: [JSight Schema Specification. Rule
-"allOf"](./versions/JSight%20Schema/JSight%20Schema%200.3.6.md#rule-allof).
+"allOf"](./versions/JSight%20Schema/JSight%20Schema%200.3.5.md#rule-allof).
 
 <div align="center">
 
