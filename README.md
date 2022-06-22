@@ -1786,7 +1786,7 @@ document.
 Do you have a bug report or a feature request? 
 
 Please feel free to add a [new
-issue](https://github.com/jsightapi/jsight-schema-go-library/issues/new) or write to us in support:
+issue](https://github.com/jsightapi/specification/issues/new) or write to us in support:
 
 - Email: [support@jsight.io](mailto:support@jsight.io)
 - Telegram: [@jsight_support](https://t.me/jsight_support)
