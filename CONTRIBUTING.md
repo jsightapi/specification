@@ -49,7 +49,7 @@ suggestions, they are important to us.
  
 Kindly re-read your remarks to ensure that they are as courteous as possible.
 
-## Language
+## English Language
 
 We are not native English speakers, but we work hard to ensure that the English in our project is
 perfect. If you are a native speaker and notice an inaccuracy in the specification, please contact
