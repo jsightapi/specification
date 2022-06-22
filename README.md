@@ -139,7 +139,7 @@ https://editor.jsight.io.
 The JSight API language allows you to specify REST APIs with incredible speed and convenience. More
 information can be found in the [Quick
 Tutorial](https://jsight.io/docs/jsight-api-0-3-quick-tutorial) or in the [language
-specification](./versions/JSight%20API/JSight%20API%200.3.7.md). Here we give examples of the same
+specification](./versions/JSight%20API/). Here we give examples of the same
 API described using OpenAPI and JSight API.
 
 <details open><summary>Example 1. The simplest</summary>
