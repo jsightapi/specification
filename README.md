@@ -1725,8 +1725,8 @@ Read more about built-in data types in the JSight Schema Language Specification,
 
 ## :date: &nbsp; Roadmap
 
-- June 2022 — Support for the JSON-RPC 2.0 standard.
-- July-August 2022 — Support for other types of API: gRPC, Kafka, RabbitMQ, WebSocket.
+- July 2022 — Support for the JSON-RPC 2.0 standard.
+- November 2022 — Support for other types of API: gRPC, Kafka, RabbitMQ, WebSocket.
 
 If you have ideas and suggestions, please write to us:
 
