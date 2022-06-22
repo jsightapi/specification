@@ -34,8 +34,8 @@
 **JSight API** and **JSight Schema** languages — you have never specified APIs and data schemas so
 fast! We mean it.
 
-1. 2—4 times less code.
-2. APIs and data schemas designing is 2—3 times faster.
+1. 2–4 times less code.
+2. APIs and data schemas designing is 2–3 times faster.
 3. The describing process does not detract from the design.
 4. It is incredibly convenient to jointly design an API with the whole team in one go. No more
    multiple design iterations and edits required. All you need is to share the screen between the
