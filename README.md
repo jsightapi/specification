@@ -1297,7 +1297,7 @@ convenience. You can read more about it in the [JSight Schema Language
 Specification](./versions/JSight%20Schema/).
 
 The JSight Schema language is actively used by the [JSight
-API](./versions/JSight%20API/JSight%20API%200.3.7.md), language, which is designed to describe API.
+API](./versions/JSight%20API/) language, which is designed to describe API.
 For more information about JSight Schema within the JSight API, see the [Quick
 Tutorial](https://jsight.io/docs/jsight-api-0-3-quick-tutorial/lesson04).
 
