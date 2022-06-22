@@ -97,14 +97,13 @@ https://editor.jsight.io.
 
 <div align="center">
 
-  <a href="https://editor.jsight.io"><img src="./img/try-wide.svg" alt="Try now!" width="400px"/></a>
-
-<div>
-  &nbsp;
-</div>
-
   <a href="https://jsight.io/docs/jsight-api-0-3-quick-tutorial"><img src="./img/tab1.svg" alt="Quick tutorial"/></a>&nbsp;&nbsp;
-  <a href="TODO-link-to-article"><img src="./img/tab2.svg" alt="CRUD REST API in 5 minutes"/></a>
+
+  <div>
+    &nbsp;
+  </div>
+
+  <a href="https://editor.jsight.io"><img src="./img/try-wide.svg" alt="Try now!" width="400px"/></a>
 
 &nbsp;
 
