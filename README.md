@@ -118,16 +118,16 @@ https://editor.jsight.io.
 ## :book: &nbsp; Table of Contents
 
 * [JSight API Language](#scroll--jsight-api-language)
-* [JSight Schema Language](#scroll--jsight-api-language)
+* [JSight Schema Language](#scroll--jsight-schema-language)
 * [Roadmap](#date--roadmap)
 * [Versioning](#bookmark_tabs--versioning)
-* [Dependencies](#dependencies)
+* [Dependencies](#notebook_with_decorative_cover--dependencies)
 * [Contributing](#sunglasses--contributing)
 * [Bugs and Feature Requests](#speech_balloon--bugs-and-feature-requests)
-* [Support](#browser--support)
+* [Support](#grey_question--support)
 * [License](#receipt--license)
 * [Resources](#book--resources)
-* [Partners](#sunglasses--partners)
+* [Partners](#handshake--partners)
 * [Acknowledgments](#trophy--acknowledgments)
 
 <div>  
