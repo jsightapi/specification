@@ -140,7 +140,7 @@ The JSight API language allows you to specify REST APIs with incredible speed an
 information can be found in the [Quick
 Tutorial](https://jsight.io/docs/jsight-api-0-3-quick-tutorial) or in the [language
 specification](./versions/JSight%20API/). Here we give examples of the same
-API described using OpenAPI and JSight API.
+API described using JSight API and Open API.
 
 <details open><summary>Example 1. The simplest</summary>
 
