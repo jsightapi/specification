@@ -43,8 +43,8 @@ fast! We mean it.
    Editor](https://editor.jsight.io).
 5. All this is possible thanks to the compactness and simplicity of the JSight API and JSight Schema
    languages.  
-   [Compare JSight API with Open API](#scroll--jsight-api-language).  
-   [Compare JSight Schema with JSON Schema](#scroll--jsight-schema-language).
+   [Compare **JSight API** with **Open API**](#scroll--jsight-api-language).  
+   [Compare **JSight Schema** with **JSON Schema**](#scroll--jsight-schema-language).
 
 <div>  
   &nbsp; 
