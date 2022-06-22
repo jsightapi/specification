@@ -225,7 +225,7 @@ paths:
 
 </details>
 
-<details><summary>Example 2: Data Types</summary>
+<details><summary>Example 2: User Types</summary>
 
 <table align="center">
 <thead>
@@ -260,11 +260,11 @@ TYPE @cat      // Type “Cat”.
   }
 ```
 
-Pay attention to how convenient it is to work with data types in JSight API. The type name is simply
+Pay attention to how convenient it is to work with user types in JSight API. The type name is simply
 inserted where the type should be in the data schema. Everything is the same as in conventional
 programming languages.
 
-More about data types: [Quick Tutorial. Lesson 2. User
+More about user types: [Quick Tutorial. Lesson 2. User
 types](https://jsight.io/docs/jsight-api-0-3-quick-tutorial/lesson02).
 
 <div align="center">
