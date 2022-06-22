@@ -687,8 +687,6 @@ TYPE @cat // A cat.
 
 A full-fledged CRUD API took only 25 lines.
 
-Learn more: [CRUD REST API in 5 minutes](#TODO: link).
-
 <div align="center">
 
 :star: **Star us on GitHub — it motivates us a lot!**
