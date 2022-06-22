@@ -1648,7 +1648,7 @@ RULES”](./versions/JSight%20Schema/JSight%20Schema%200.3.5.md#text-notes-to-ru
 
 JSight Schema supports several additional built-in data types that are required for actual work.
 
-Read more about built-in data types in the JSight Schema Language Specification, [“section RULE
+Read more about built-in data types in the JSight Schema Language Specification, section [“RULE
 "type"”](./versions/JSight%20Schema/JSight%20Schema%200.3.5.md#rule-type).
 
 <div align="center">
