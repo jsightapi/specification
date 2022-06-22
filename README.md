@@ -1757,7 +1757,7 @@ The **JSight Schema** language specification does not depend on anything.
 
 The **JSight API** language specification depends on the version of the JSight Schema language. This
 dependency is listed in the JSight API language specification in the [section
-“Dependences”](./versions/JSight%20API/JSight%20API%200.3.7.md#dependences). 
+“Dependences”](./versions/JSight%20API/JSight%20API%200.3.6.md#dependences). 
 
 ## :sunglasses: &nbsp; Contributing
 
