@@ -32,8 +32,8 @@ Please get in touch with us and let us know what you think:
 
 ## Opening Issues
 
-Please [raise a new issue](https://github.com/jsightapi/online-editor-frontend/specification/new) if
-you discover a bug.
+Please [raise a new issue](https://github.com/jsightapi/specification/issues/new) if you discover a
+bug.
 
 If you find a way that can help improve the JSight API or JSight Schema languages, that would also
 be a very good reason for an issue.
