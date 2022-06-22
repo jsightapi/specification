@@ -76,6 +76,7 @@ language is a part of the **JSight API** language.
 <div>  
   &nbsp; 
 </div>
+
 **JSight Schema** language is designed to describe data schemas, regardless of the serialization
 format.
 
