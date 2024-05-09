@@ -1,8 +1,9 @@
 # JSight API 0.3 Specification
 
-July 12, 2022
+May 09, 2024
 
-**JSight API version: *0.3.7* **
+**JSight API version: *0.3.7* **  
+Document version: 0.1.21
 
 Authors: *Reznitsky M., Ivanov A., Malyshev K.*
 
@@ -27,7 +28,7 @@ The JSight API language is intended to be used in a number of API development to
 
 ## Dependences
 
-- [JSight Schema 0.3.5](jsight-schema-0-3).
+- [JSight Schema 0.3.6](jsight-schema-0-3).
 
 ## Concept
 
@@ -751,7 +752,7 @@ can give names to servers, TYPES, and macros.
 
 Any user-defined names must start with the symbol `@`.
 
-Built-in names never start with the symbol `@`. For example, names of NOTATIONS `jschema`, `any`,
+Built-in names never start with the symbol `@`. For example, names of NOTATIONS `jsight`, `any`,
 and etc.
 
 Names can contain only the following characters:
@@ -2033,10 +2034,10 @@ GET /cats // Get a page with cats of the right size.
   Query "page=1&per_page=50&filter[size]=XXL"
     {
       "page": 1,
-      "per_page": 50,  // {optional: true}
-      "filter": {      // {optional: true}
-        "size": "XXL", // {optional: true, enum: ["S", "L", "M"]} - Filter by cat's size.
-        "age" : 12     // {optional: true                       } - Filter by cat's age.
+      "per_page": 50, // {optional: true}
+      "filter": {     // {optional: true}
+        "size": "S",  // {optional: true, enum: ["S", "L", "M"]} - Filter by cat's size.
+        "age" : 12    // {optional: true                       } - Filter by cat's age.
       }
     }
 
@@ -2054,10 +2055,10 @@ GET /cats // Get a page with cats of the right size.
   Query
     {
       "page": 1,
-      "per_page": 50,  // {optional: true}
-      "filter": {      // {optional: true}
-        "size": "XXL", // {optional: true, enum: ["S", "L", "M"]} - Filter by cat's size.
-        "age" : 12     // {optional: true                       } - Filter by cat's age.
+      "per_page": 50, // {optional: true}
+      "filter": {     // {optional: true}
+        "size": "L",  // {optional: true, enum: ["S", "L", "M"]} - Filter by cat's size.
+        "age" : 12    // {optional: true                       } - Filter by cat's age.
       }
     }
 
@@ -3518,6 +3519,7 @@ TYPE @cat
 
 |    Date    | JSight API Version | Document version | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |       Author        |
 |:----------:|:------------------:|:----------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------:|
+| 05/09/2022 |       0.3.7        |      0.1.21      | Minor fixes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Konstantin Malyshev |
 | 07/12/2022 |       0.3.7        |      0.1.20      | <ul><li>Added “Language extensions for describing the JSON-RPC 2.0 protocol”.</li><li>Added DIRECTIVE `INCLUDE`.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |    Andrei Ivanov    |
 | 02/11/2022 |       0.3.6        |      0.1.19      | <ul><li>The DIRECTIVE `DIR` has been replaced by DIRECTIVES `MACRO` and `PASTE`.</li><li>Minor improvements to COMMENTS.</li><li>Changed dependency to JSight Schema 0.3.5.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |    Andrei Ivanov    |
 | 01/13/2022 |       0.3.5        |      0.1.18      | Changed dependency on JSight Schema 0.3.4.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Konstantin Malyshev |
